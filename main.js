@@ -1,5 +1,15 @@
 const data = require("./data");
 
+function link(url, text) {
+    if(!text) text = url;
+    let a = document.createElement("a");
+    a.classList.add("button");
+    a.target = "_blank";
+    a.href = url;
+    a.innerText = text;
+    return a;
+}
+
 function item(item) {
     let div = document.createElement("div");
     div.classList.add("item");
@@ -8,6 +18,7 @@ function item(item) {
     div.append(label(item));
     div.append(season(item));
     div.append(event(item));
+    div.append(buttons(item));
     return div;
 }
 
@@ -63,9 +74,39 @@ function event(item) {
     return div;
 }
 
-let itemContainer = document.getElementById("item-container");
+function buttons(item) {
+    let div = document.createElement("div");
+    div.classList.add("item-buttons");
+    div.append(link(data.price(item), "PRICE"));
+    div.append(link(data.listing(item), "LISTING"));
+    let info = document.createElement("button");
+    info.classList.add("button");
+    info.onclick = () => itemInfo(item);
+    info.innerText = "INFO";
+    div.append(info);
+    return div;
+}
+
+function itemInfo(item) {
+    let info = document.getElementById("item-info");
+    info.style.visibility = "visible";
+    let name = document.getElementById("item-name");
+    name.innerText = item.name;
+    let json = document.getElementById("item-json");
+    json.innerText = JSON.stringify(item, undefined, "   ");
+    let price = document.getElementById("item-price")
+    price.innerHTML = "";
+    price.append(link(data.price(item), "PRICE"));
+    let listing = document.getElementById("item-listing");
+    listing.innerHTML = "";
+    listing.append(link(data.listing(item), "LISTING"));
+    let preview = document.getElementById("item-preview");
+    preview.innerHTML = "";
+    preview.append(link(data.preview(item), "PREVIEW"));
+}
+
+let itemList = document.getElementById("item-list");
 data.skins.sort((a, b) => b.rarity - a.rarity);
-for (let i = 0; i < 200; i++) {
-    // itemContainer.append(makeItem(data.skins[Math.floor(Math.random() * data.skins.length)]));
-    itemContainer.append(item(data.skins[i]));
+for (let i = 0; i < 100; i++) {
+    itemList.append(item(data.skins[i]));
 }

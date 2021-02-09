@@ -7,32 +7,32 @@ module.exports.preview = function (a) {
 module.exports.viewer = function (a) {
     if (a)
         if (1 == a.type)
-            return "https://krunker.io/viewer.html?class=9&hat=" + a.i;
+            return "https://krunker.io/viewer.html?class=9&hat=" + a.index;
         else if (2 == a.type)
-            return "https://krunker.io/viewer.html?class=9&back=" + a.i;
+            return "https://krunker.io/viewer.html?class=9&back=" + a.index;
         else if (3 == a.type)
-            return "https://krunker.io/viewer.html?class=9&hidePlayer&melee=" + a.i;
+            return "https://krunker.io/viewer.html?class=9&hidePlayer&melee=" + a.index;
         else if (5 == a.type)
-            return "https://krunker.io/viewer.html?class=9&dye=" + a.i;
+            return "https://krunker.io/viewer.html?class=9&dye=" + a.index;
         else if (6 == a.type)
-            return "https://krunker.io/viewer.html?class=9&waist=" + a.i;
+            return "https://krunker.io/viewer.html?class=9&waist=" + a.index;
         else if (7 == a.type)
-            return "https://krunker.io/viewer.html?class=9&face=" + a.i;
+            return "https://krunker.io/viewer.html?class=9&face=" + a.index;
         else if (8 == a.type)
-            return "https://krunker.io/viewer.html?class=9&shoe=" + a.i;
+            return "https://krunker.io/viewer.html?class=9&shoe=" + a.index;
         else if (second.includes(a.weapon - 1))
-            return "https://krunker.io/viewer.html?hidePlayer&swap=-1&nosup&skinIdS=" + a.i + "&secIndex=" + (a.weapon - 1);
+            return "https://krunker.io/viewer.html?hidePlayer&swap=-1&nosup&skinIdS=" + a.index + "&secIndex=" + (a.weapon - 1);
         else {
-            return "https://krunker.io/viewer.html?class=" + classForWeapon[a.weapon - 1] + "&hidePlayer&nosup&skinIdP=" + a.i;
+            return "https://krunker.io/viewer.html?class=" + classForWeapon[a.weapon - 1] + "&hidePlayer&nosup&skinIdP=" + a.index;
         }
 }
 
 module.exports.price = function(a) {
-    return `https://krunker.io/social.html?p=itemsales&i=${a.i}`;
+    return `https://krunker.io/social.html?p=itemsales&i=${a.index}`;
 }
 
 module.exports.listing = function(a) {
-    return `https://krunker.io/social.html?p=market&i=${a.i}`;
+    return `https://krunker.io/social.html?p=market&i=${a.index}`;
 }
 
 
