@@ -28,8 +28,8 @@ function testItem(item) {
         return false
     }
     if (FILTER.text != null && !(
-        item.name.toLowerCase().contains(FILTER.text.toLowerCase()) ||
-        (item.keyW && item.keyW.toLowerCase().contains(FILTER.text.toLowerCase()))
+        item.name.toLowerCase().includes(FILTER.text.toLowerCase()) ||
+        (item.keyW && item.keyW.toLowerCase().includes(FILTER.text.toLowerCase()))
     )) {
         return false
     }
@@ -244,7 +244,6 @@ let itemList = document.getElementById("item-list");
 let CURRENT_DISPLAYED_SKINS;
 
 function refilter() {
-    document.getElementById("paginate-page").innerText = `Page ${FILTER.page}`;
     let items = [];
     for (let skin of data.skins) {
         items.push(skin);
@@ -260,6 +259,7 @@ function refilter() {
         itemList.append(item(i));
         count++;
     }
+    document.getElementById("paginate-page").innerText = `Page ${FILTER.page}/${Math.ceil(CURRENT_DISPLAYED_SKINS / FILTER.count)}`;
 }
 
 function compare(itemA, itemB) {
@@ -292,4 +292,19 @@ document.getElementById("paginate-right").addEventListener("click", () => {
         FILTER.page++;
         refilter()
     }
+});
+
+document.getElementById("search").addEventListener("change", e => {
+    let text = e.target.value;
+    if(text.length === 0) {
+        text = null;
+    }
+    FILTER.page = 1;
+    FILTER.text = text;
+    refilter();
+});
+
+document.getElementById("animated").addEventListener("change", e => {
+    FILTER.animated = e.target.checked;
+    refilter();
 })

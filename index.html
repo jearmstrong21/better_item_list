@@ -7,11 +7,11 @@
 <body>
 <div id="main">
     <h2 id="item-name" class="item-info"></h2>
-    <div id="item-links" class="item-info">
-        <a id="item-price" target="_blank">PRICE</a>
-        <a id="item-listing" target="_blank">LISTING</a>
-        <a id="item-viewer" target="_blank">VIEWER</a>
-        <a id="item-preview" target="_blank">PREVIEW</a>
+    <div id="item-links">
+        <a id="item-price" target="_blank" class="item-info">PRICE</a>
+        <a id="item-listing" target="_blank" class="item-info">LISTING</a>
+        <a id="item-viewer" target="_blank" class="item-info">VIEWER</a>
+        <a id="item-preview" target="_blank" class="item-info">PREVIEW</a>
     </div>
     <pre id="item-json" class="item-info"></pre>
     <h2 id="version">
@@ -50,8 +50,10 @@
                 </div>
             </div>
         </div>
+        <input id="search" type="text" placeholder="Search"/>
         <div>
-            <input type="text" placeholder="Search"/>
+            <label for="animated">Animations:</label>
+            <input id="animated" type="checkbox" checked/>
         </div>
         <button id="paginate-page">Page 1</button>
         <div id="paginate-buttons">

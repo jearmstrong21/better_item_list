@@ -11,7 +11,7 @@ body {
     overflow: hidden;
 }
 
-#item-links, #search-bar, a, button {
+#item-links, #search-bar, a, button, label {
     color: white;
     background-color: #222;
     text-decoration: none;
@@ -116,6 +116,37 @@ input[type="text"] {
     height: 100%;
 }
 
+input[type="checkbox"] {
+    appearance: none;
+    background-color: #fafafa;
+    /*border: 1px solid #cacece;*/
+    box-shadow: 0 1px 2px rgba(0,0,0,0.05), inset 0px -15px 10px -12px rgba(0,0,0,0.05);
+    margin-top: 5px;
+    padding: 10px;
+    border-radius: 3px;
+    display: inline-block;
+    position: relative;
+    outline: 0;
+}
+
+input[type="checkbox"]:checked {
+    background-color: #111;
+}
+
+input[type="checkbox"]:checked:after {
+    content: "\2714";
+    /*font-size: 14px;*/
+    color: white;
+    position: absolute;
+    top: 0;
+    left: 5px;
+    /*color: #99a1a7;*/
+}
+
+input[type="checkbox"]:not(:checked) {
+    background-color: white;
+}
+
 .dropdown-popup {
     background-color: #222;
     display: none;
@@ -202,6 +233,8 @@ input[type="text"] {
     font-size: 19px;
     width: 100%;
     text-align: center;
+    z-index: 100;
+    text-shadow: -1px -1px 0 #202020, 1px -1px 0 #202020, -1px 1px 0 #202020, 1px 1px 0 #202020, -2px -2px 0 #202020, 2px -2px 0 #202020, -2px 2px 0 #202020, 2px 2px 0 #202020, -3px -3px 0 #202020, 3px -3px 0 #202020, -3px 3px 0 #202020, 3px 3px 0 #202020;
 }
 
 .item-season {
