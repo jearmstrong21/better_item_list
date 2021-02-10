@@ -50,12 +50,21 @@
                 </div>
             </div>
         </div>
+        <div class="dropdown">
+            <div id="dropdown-update-toggle" class="dropdown-toggle">
+                <a id="dropdown-update-label" class="dropdown-label">All updates</a>
+                <div id="dropdown-update" class="dropdown-popup">
+                    <button id="dropdown-update-all">All</button>
+                    <button id="dropdown-update-early"><=3.6.1</button>
+                </div>
+            </div>
+        </div>
         <input id="search" type="text" placeholder="Search"/>
         <div>
-            <label for="animated">Animations:</label>
+            <button>Animations:</button>
             <input id="animated" type="checkbox" checked/>
         </div>
-        <div id="paginate-result-count">0 results</div>
+        <button id="paginate-result-count">0 results</button>
         <button id="paginate-page">Page 1</button>
         <div id="paginate-buttons">
             <button id="paginate-left"><</button>

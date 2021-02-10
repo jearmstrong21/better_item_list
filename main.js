@@ -1,12 +1,31 @@
 const data = require("./krunker/data");
 const krunker = require("./krunker/krunker");
 const weapons = require("./krunker/weapons");
+const updates = require("./updates");
+const MACKY_UPDATE_KEY = "macky___UPDATE";
+const MACKY_UPDATE_EARLY = updates.early;
+{
+    let index = data.skins.length - 1;
+    for (let i = 0; i < updates.length; i++) {
+        let update = updates[i];
+        for (let n = 0; n < update.skins; n++) {
+            data.skins[index][MACKY_UPDATE_KEY] = update.name;
+            console.log(data.skins[index]);
+            index--;
+        }
+    }
+    while (index >= 0) {
+        data.skins[index][MACKY_UPDATE_KEY] = MACKY_UPDATE_EARLY;
+        index--;
+    }
+}
 
 let FILTER = {
     event: null,
     rarity: null,
     weapon: null,
     cosmetic: null,
+    update: null,
     text: null,
     page: 1,
     count: 4 * 6,
@@ -15,30 +34,25 @@ let FILTER = {
 
 function setEvent(event) {
     FILTER.event = event;
-    document.getElementById("dropdown-event-label").innerText = event == null ? "All events" : event;
 }
 
 function setRarity(rarity) {
-    if(isNaN(rarity)) rarity = null;
+    if (isNaN(rarity)) rarity = null;
     FILTER.rarity = rarity;
-    document.getElementById("dropdown-rarity-label").innerText = rarity == null ? "All rarities" : data.rarities[rarity].name;
 }
 
 function setWeapon(weapon) {
-    if(isNaN(weapon)) weapon = null;
+    if (isNaN(weapon)) weapon = null;
     FILTER.weapon = weapon;
-    document.getElementById("dropdown-weapon-label").innerText = weapon == null ? "All weapons" : weapons[weapon].name;
+}
+
+function setUpdate(update) {
+    FILTER.update = update;
 }
 
 function setCosmetic(cosmetic) {
-    if(isNaN(cosmetic)) cosmetic = null;
+    if (isNaN(cosmetic)) cosmetic = null;
     FILTER.cosmetic = cosmetic;
-    if (cosmetic == null) {
-        document.getElementById("dropdown-cosmetic-label").innerText = "All cosmetics";
-    } else {
-        cosmetic = data.types[cosmetic].split("/")[0];
-        document.getElementById("dropdown-cosmetic-label").innerText = cosmetic.charAt(0).toUpperCase() + cosmetic.slice(1);
-    }
 }
 
 function setText(text) {
@@ -46,7 +60,6 @@ function setText(text) {
         text = null;
     }
     FILTER.text = text;
-    document.getElementById("search").value = text || "";
 }
 
 function testItem(item) {
@@ -61,6 +74,9 @@ function testItem(item) {
         return false
     }
     if (FILTER.cosmetic != null && (FILTER.cosmetic === 0 ? !("weapon" in item) : item.type !== FILTER.cosmetic)) {
+        return false
+    }
+    if (FILTER.update != null && FILTER.update !== item[MACKY_UPDATE_KEY]) {
         return false
     }
     if (FILTER.text != null && !(
@@ -280,6 +296,28 @@ document.getElementById("dropdown-cosmetic-all").addEventListener("click", () =>
     refilter();
 })
 
+let dropdownUpdate = document.getElementById("dropdown-update");
+for (let i = 0; i < updates.length; i++) {
+    let button = document.createElement("button");
+    button.innerText = updates[i].name;
+    button.addEventListener("click", () => {
+        FILTER.page = 1;
+        setUpdate(updates[i].name);
+        refilter();
+    });
+    dropdownUpdate.append(button);
+}
+document.getElementById("dropdown-update-all").addEventListener("click", () => {
+    FILTER.page = 1;
+    setUpdate(null);
+    refilter();
+});
+document.getElementById("dropdown-update-early").addEventListener("click", () => {
+    FILTER.page = 1;
+    setUpdate(MACKY_UPDATE_EARLY);
+    refilter();
+});
+
 document.getElementById("paginate-left").addEventListener("click", () => {
     if (FILTER.page > 1) {
         FILTER.page--;
@@ -310,6 +348,17 @@ let itemList = document.getElementById("item-list");
 let CURRENT_DISPLAYED_SKINS;
 
 function refilter() {
+    document.getElementById("dropdown-event-label").innerText = FILTER.event == null ? "All events" : FILTER.event;
+    document.getElementById("dropdown-rarity-label").innerText = FILTER.rarity == null ? "All rarities" : data.rarities[FILTER.rarity].name;
+    document.getElementById("dropdown-weapon-label").innerText = FILTER.weapon == null ? "All weapons" : weapons[FILTER.weapon].name;
+    document.getElementById("dropdown-update-label").innerText = FILTER.update == null ? "All updates" : FILTER.update;
+    if (FILTER.cosmetic == null) {
+        document.getElementById("dropdown-cosmetic-label").innerText = "All cosmetics";
+    } else {
+        let cosmetic = data.types[FILTER.cosmetic].split("/")[0];
+        document.getElementById("dropdown-cosmetic-label").innerText = cosmetic.charAt(0).toUpperCase() + cosmetic.slice(1);
+    }
+    document.getElementById("search").value = FILTER.text || "";
     let params = new URLSearchParams(window.location.search);
     if (FILTER.event !== null) params.set("event", FILTER.event);
     else params.delete("event");
@@ -319,6 +368,8 @@ function refilter() {
     else params.delete("weapon");
     if (FILTER.cosmetic !== null) params.set("cosmetic", FILTER.cosmetic);
     else params.delete("cosmetic");
+    if (FILTER.update !== null) params.set("update", FILTER.update);
+    else params.delete("update");
     if (FILTER.text !== null) params.set("text", FILTER.text);
     else params.delete("text");
     let path = window.location.pathname + "?" + params.toString();
@@ -363,6 +414,7 @@ setEvent(params.get("event"));
 setRarity(parseInt(params.get("rarity")));
 setWeapon(parseInt(params.get("weapon")));
 setCosmetic(parseInt(params.get("cosmetic")));
+setUpdate(params.get("update"));
 setText(params.get("text"));
 if (params.get("item") != null) {
     itemInfo(data.skins[parseInt(params.get("item"))]);
