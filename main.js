@@ -33,13 +33,13 @@ function setCosmetic(cosmetic) {
     if (cosmetic == null) {
         document.getElementById("dropdown-cosmetic-label").innerText = "All cosmetics";
     } else {
-        cosmetic = data.types[i].split("/")[0];
+        cosmetic = data.types[cosmetic].split("/")[0];
         document.getElementById("dropdown-cosmetic-label").innerText = cosmetic.charAt(0).toUpperCase() + cosmetic.slice(1);
     }
 }
 
 function setText(text) {
-    if(text.length === 0) {
+    if (text && text.length === 0) {
         text = null;
     }
     FILTER.text = text;
@@ -157,6 +157,11 @@ function buttons(item) {
 }
 
 function itemInfo(item) {
+    let params = new URLSearchParams(window.location.search);
+    params.set("item", item.index);
+    let path = window.location.pathname + "?" + params.toString();
+    window.history.pushState({path: path}, '', path);
+
     Array.prototype.forEach.call(document.getElementsByClassName("item-info"), elem => {
         elem.style.visibility = "visible";
     });
@@ -302,7 +307,7 @@ let itemList = document.getElementById("item-list");
 let CURRENT_DISPLAYED_SKINS;
 
 function refilter() {
-    let params = new URLSearchParams();
+    let params = new URLSearchParams(window.location.search);
     if (FILTER.event !== null) params.set("event", FILTER.event);
     if (FILTER.rarity !== null) params.set("rarity", FILTER.rarity);
     if (FILTER.weapon !== null) params.set("weapon", FILTER.weapon);
@@ -350,5 +355,8 @@ setRarity(parseInt(params.get("rarity") || null) || null);
 setWeapon(parseInt(params.get("weapon") || null) || null);
 setCosmetic(parseInt(params.get("cosmetic") || null) || null);
 setText(params.get("text") || null);
+if (params.get("item") != null) {
+    itemInfo(data.skins[parseInt(params.get("item"))]);
+}
 
 refilter();
