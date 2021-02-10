@@ -147,6 +147,10 @@ input[type="checkbox"]:not(:checked) {
     background-color: white;
 }
 
+.dropdown {
+    z-index: 100;
+}
+
 .dropdown-popup {
     background-color: #222;
     display: none;
@@ -161,21 +165,17 @@ input[type="checkbox"]:not(:checked) {
     flex-direction: column;
 }
 
-.dropdown-toggle:hover {
+.dropdown-toggle:hover > .dropdown-label {
     border-radius: 10px 10px 0 0;
 }
 
 .dropdown-toggle:hover > .dropdown-popup {
     display: flex;
-    z-index: 1000;
+    z-index: 5;
 }
 
 .dropdown-popup > button {
     border-radius: 0;
-}
-
-.dropdown-popup > button:first-child {
-    border-radius: 0 10px 0 0;
 }
 
 .dropdown-popup > button:last-child {
@@ -233,7 +233,7 @@ input[type="checkbox"]:not(:checked) {
     font-size: 19px;
     width: 100%;
     text-align: center;
-    z-index: 100;
+    z-index: 10;
     text-shadow: -1px -1px 0 #202020, 1px -1px 0 #202020, -1px 1px 0 #202020, 1px 1px 0 #202020, -2px -2px 0 #202020, 2px -2px 0 #202020, -2px 2px 0 #202020, 2px 2px 0 #202020, -3px -3px 0 #202020, 3px -3px 0 #202020, -3px 3px 0 #202020, 3px 3px 0 #202020;
 }
 
