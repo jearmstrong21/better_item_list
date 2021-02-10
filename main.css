@@ -96,15 +96,19 @@ a, button {
     grid-row: 1;
 }
 
-#paginate-page {
+#paginate-result-count {
     grid-column: 1;
 }
 
-#paginate-buttons {
+#paginate-page {
     grid-column: 2;
 }
 
-#paginate-page, #paginate-buttons {
+#paginate-buttons {
+    grid-column: 3;
+}
+
+#paginate-result-count, #paginate-page, #paginate-buttons {
     grid-row: 2;
 }
 

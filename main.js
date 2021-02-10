@@ -19,16 +19,19 @@ function setEvent(event) {
 }
 
 function setRarity(rarity) {
+    if(isNaN(rarity)) rarity = null;
     FILTER.rarity = rarity;
     document.getElementById("dropdown-rarity-label").innerText = rarity == null ? "All rarities" : data.rarities[rarity].name;
 }
 
 function setWeapon(weapon) {
+    if(isNaN(weapon)) weapon = null;
     FILTER.weapon = weapon;
     document.getElementById("dropdown-weapon-label").innerText = weapon == null ? "All weapons" : weapons[weapon].name;
 }
 
 function setCosmetic(cosmetic) {
+    if(isNaN(cosmetic)) cosmetic = null;
     FILTER.cosmetic = cosmetic;
     if (cosmetic == null) {
         document.getElementById("dropdown-cosmetic-label").innerText = "All cosmetics";
@@ -39,7 +42,7 @@ function setCosmetic(cosmetic) {
 }
 
 function setText(text) {
-    if (text && text.length === 0) {
+    if (text != null && text.length === 0) {
         text = null;
     }
     FILTER.text = text;
@@ -309,10 +312,15 @@ let CURRENT_DISPLAYED_SKINS;
 function refilter() {
     let params = new URLSearchParams(window.location.search);
     if (FILTER.event !== null) params.set("event", FILTER.event);
+    else params.delete("event");
     if (FILTER.rarity !== null) params.set("rarity", FILTER.rarity);
+    else params.delete("rarity");
     if (FILTER.weapon !== null) params.set("weapon", FILTER.weapon);
+    else params.delete("weapon");
     if (FILTER.cosmetic !== null) params.set("cosmetic", FILTER.cosmetic);
+    else params.delete("cosmetic");
     if (FILTER.text !== null) params.set("text", FILTER.text);
+    else params.delete("text");
     let path = window.location.pathname + "?" + params.toString();
     window.history.pushState({path: path}, '', path);
     let items = [];
@@ -330,6 +338,7 @@ function refilter() {
         itemList.append(item(i));
         count++;
     }
+    document.getElementById("paginate-result-count").innerText = `${CURRENT_DISPLAYED_SKINS} results`;
     document.getElementById("paginate-page").innerText = `Page ${FILTER.page}/${Math.ceil(CURRENT_DISPLAYED_SKINS / FILTER.count)}`;
 }
 
@@ -350,11 +359,11 @@ function compare(itemA, itemB) {
 }
 
 let params = new URLSearchParams(window.location.search);
-setEvent(params.get("event") || null);
-setRarity(parseInt(params.get("rarity") || null) || null);
-setWeapon(parseInt(params.get("weapon") || null) || null);
-setCosmetic(parseInt(params.get("cosmetic") || null) || null);
-setText(params.get("text") || null);
+setEvent(params.get("event"));
+setRarity(parseInt(params.get("rarity")));
+setWeapon(parseInt(params.get("weapon")));
+setCosmetic(parseInt(params.get("cosmetic")));
+setText(params.get("text"));
 if (params.get("item") != null) {
     itemInfo(data.skins[parseInt(params.get("item"))]);
 }
