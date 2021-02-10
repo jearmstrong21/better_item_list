@@ -116,14 +116,7 @@ module.exports.wheels = [
         tag: "Popular!",
         tagCol: "#ed4242",
         col: "#fa9704"
-    }, {
-        val: 6e4,
-        priceSale: 89.99,
-        price: 99.99,
-        tag: "Best Value!",
-        tagCol: "#E040FB",
-        col: "#ee5356"
-    }
+    }, {val: 6e4, priceSale: 89.99, price: 99.99, tag: "Best Value!", tagCol: "#E040FB", col: "#ee5356"}
 ], module.exports.mobilePurchases = [
     {val: 300, price: .99, productId: "ch.yendis.krunkerhub.kr300"}, {
         val: 600,
@@ -133,13 +126,7 @@ module.exports.wheels = [
         val: 7e3,
         price: 15.99,
         productId: "ch.yendis.krunkerhub.kr7000"
-    }, {
-        val: 2e4,
-        price: 34.99,
-        productId: "ch.yendis.krunkerhub.kr20000",
-        tag: "Popular!",
-        tagCol: "#ed4242"
-    }, {
+    }, {val: 2e4, price: 34.99, productId: "ch.yendis.krunkerhub.kr20000", tag: "Popular!", tagCol: "#ed4242"}, {
         val: 6e4,
         price: 99.99,
         productId: "ch.yendis.krunkerhub.kr60000",
@@ -169,15 +156,7 @@ module.exports.wheels = [
         confCols: ["#b2f252", "#fff"],
         sell: 1,
         fee: 5
-    }, {
-        name: "Rare",
-        rar: 40,
-        color: "#2196F3",
-        confC: 30,
-        confCols: ["#2196F3", "#fff"],
-        sell: 3,
-        fee: 5
-    }, {
+    }, {name: "Rare", rar: 40, color: "#2196F3", confC: 30, confCols: ["#2196F3", "#fff"], sell: 3, fee: 5}, {
         name: "Epic",
         rar: 25,
         color: "#E040FB",
@@ -18909,6 +18888,81 @@ module.exports.wheels = [
         seas: 4,
         hasAnim: !0,
         animS: 1
+    }, {
+        name: "Mechanically Organic",
+        id: 292,
+        creator: "Kcress",
+        weapon: 1,
+        rarity: 3,
+        glow: !0,
+        seas: 4
+    }, {name: "MPIRE", id: 293, creator: "Exxor", weapon: 1, rarity: 3, glow: !0, seas: 4}, {
+        name: "DeathBeat",
+        id: 298,
+        creator: "ReFlick",
+        weapon: 2,
+        rarity: 4,
+        glow: !0,
+        pulsT: .0015,
+        seas: 4
+    }, {
+        name: "RTF",
+        mid: 0,
+        midT: 14,
+        creator: "Luminae",
+        noMuz: !0,
+        weapon: 3,
+        pulsT: .0015,
+        spnScl: 1.3,
+        scl: .9,
+        mScl: .84,
+        zOff: 0,
+        yOff: 0,
+        rarity: 4,
+        glow: !0,
+        seas: 4
+    }, {
+        name: "Toxic Splash",
+        id: 200,
+        creator: "MDebski",
+        weapon: 5,
+        rarity: 3,
+        glow: !0,
+        seas: 4
+    }, {
+        name: "Interconnected",
+        id: 27,
+        creator: "multihawk",
+        weapon: 11,
+        rarity: 3,
+        glow: !0,
+        pulsT: .0015,
+        seas: 4
+    }, {
+        name: "Line Hunter",
+        id: 6,
+        creator: "multihawk",
+        weapon: 16,
+        rarity: 4,
+        glow: !0,
+        pulsT: .0015,
+        seas: 4
+    }, {
+        name: "Noble Hitman",
+        id: 7,
+        creator: "MDebski",
+        weapon: 16,
+        rarity: 3,
+        glow: !0,
+        seas: 4
+    }, {name: "Winter Delight", id: 8, creator: "Nxbulah", weapon: 16, rarity: 4, glow: !0, seas: 4}, {
+        name: "gL!tcH3d",
+        id: 19,
+        creator: "MDebski",
+        weapon: 17,
+        rarity: 4,
+        glow: !0,
+        seas: 4
     }
 ], module.exports.limited = [];
 for (var t = [1, 2, 6, 7, 8], n = 0; n < module.exports.skins.length; n++) module.exports.skins[n].index = n, module.exports.skins[n].type && -1 != t.indexOf(module.exports.skins[n].type) && (null == module.exports.skins[n].sitOff && (module.exports.skins[n].sitOff = 0), null == module.exports.skins[n].sitOffZ && (module.exports.skins[n].sitOffZ = 0), null == module.exports.skins[n].sclMlt && (module.exports.skins[n].sclMlt = 0)), module.exports.skins[n].free && (module.exports.skins[n].limT = "Free", module.exports.skins[n].noSale = !0, module.exports.skins[n].noSpin = !0), module.exports.skins[n].itemShop && (module.exports.skins[n].noSale = 1 == module.exports.skins[n].itemShop, module.exports.skins[n].noSpin = !0, module.exports.skins[n].limited = !0);
