@@ -5,24 +5,61 @@
     <link rel="shortcut icon" href="https://assets.krunker.io/textures/previews/cosmetics/1_0_1.png"/>
 </head>
 <body>
-<p>
-    Currently up-to-date for version 3.6.1
-</p>
 <div id="main">
-    <div id="item-info">
-        <h2 id="item-name"></h2>
-        <div id="item-links">
-            <a id="item-price"></a>
-            <a id="item-listing"></a>
-            <a id="item-preview"></a>
-        </div>
-        <pre id="item-json"></pre>
+    <h2 id="item-name" class="item-info"></h2>
+    <div id="item-links" class="item-info">
+        <a id="item-price" target="_blank">PRICE</a>
+        <a id="item-listing" target="_blank">LISTING</a>
+        <a id="item-viewer" target="_blank">VIEWER</a>
+        <a id="item-preview" target="_blank">PREVIEW</a>
     </div>
-    <div id="item-container">
-        <div id="item-list">
-
+    <pre id="item-json" class="item-info"></pre>
+    <h2 id="version">
+        Currently up-to-date for version 3.6.1
+    </h2>
+    <div id="search-bar">
+        <div class="dropdown">
+            <div id="dropdown-event-toggle" class="dropdown-toggle">
+                <a id="dropdown-event-label" class="dropdown-label">Event</a>
+                <div id="dropdown-event" class="dropdown-popup">
+                    <button id="dropdown-event-all">All</button>
+                </div>
+            </div>
+        </div>
+        <div class="dropdown">
+            <div id="dropdown-rarity-toggle" class="dropdown-toggle">
+                <a id="dropdown-rarity-label" class="dropdown-label">Rarity</a>
+                <div id="dropdown-rarity" class="dropdown-popup">
+                    <button id="dropdown-rarity-all">All</button>
+                </div>
+            </div>
+        </div>
+        <div class="dropdown">
+            <div id="dropdown-weapon-toggle" class="dropdown-toggle">
+                <a id="dropdown-weapon-label" class="dropdown-label">Weapon</a>
+                <div id="dropdown-weapon" class="dropdown-popup">
+                    <button id="dropdown-weapon-all">All</button>
+                </div>
+            </div>
+        </div>
+        <div class="dropdown">
+            <div id="dropdown-cosmetic-toggle" class="dropdown-toggle">
+                <a id="dropdown-cosmetic-label" class="dropdown-label">Cosmetic</a>
+                <div id="dropdown-cosmetic" class="dropdown-popup">
+                    <button id="dropdown-cosmetic-all">All</button>
+                </div>
+            </div>
+        </div>
+        <div>
+            <input type="text" placeholder="Search"/>
+        </div>
+        <button id="paginate-page">Page 1</button>
+        <div id="paginate-buttons">
+            <button id="paginate-left"><</button>
+            <button id="paginate-right">></button>
         </div>
     </div>
+    <div id="item-list"></div>
 </div>
 
 <script src="index.js"></script>

@@ -1,39 +1,3 @@
-//krunker js (I didn't write this)
-module.exports.preview = function (a) {
-    return "https://assets.krunker.io/textures/" + (a.type && 4 == a.type ? "sprays/" + a.id : "previews/" + (a.type && (3 > a.type || 4 < a.type) ? "cosmetics/" + a.type + "_" + a.id + (a.tex ? "_" + a.tex : "") : module.exports.types[a.type || 0] + (a.type && 3 == a.type ? a.id + (null == a.pat ? null == a.tex ? "" : "_" + a.tex : "_c" + a.pat) : (a.weapon || 0) + "_" + (null == a.mid ? null == a.pat ? a.tex ? a.tex : a.id : "c" + a.pat : "m" + a.mid + (null == a.midT ? "" : "_" + a.midT))))) + ".png";
-}
-
-//krunker js (I didn't write this)
-module.exports.viewer = function (a) {
-    if (a)
-        if (1 == a.type)
-            return "https://krunker.io/viewer.html?class=9&hat=" + a.index;
-        else if (2 == a.type)
-            return "https://krunker.io/viewer.html?class=9&back=" + a.index;
-        else if (3 == a.type)
-            return "https://krunker.io/viewer.html?class=9&hidePlayer&melee=" + a.index;
-        else if (5 == a.type)
-            return "https://krunker.io/viewer.html?class=9&dye=" + a.index;
-        else if (6 == a.type)
-            return "https://krunker.io/viewer.html?class=9&waist=" + a.index;
-        else if (7 == a.type)
-            return "https://krunker.io/viewer.html?class=9&face=" + a.index;
-        else if (8 == a.type)
-            return "https://krunker.io/viewer.html?class=9&shoe=" + a.index;
-        else if (second.includes(a.weapon - 1))
-            return "https://krunker.io/viewer.html?hidePlayer&swap=-1&nosup&skinIdS=" + a.index + "&secIndex=" + (a.weapon - 1);
-        else {
-            return "https://krunker.io/viewer.html?class=" + classForWeapon[a.weapon - 1] + "&hidePlayer&nosup&skinIdP=" + a.index;
-        }
-}
-
-module.exports.price = function(a) {
-    return `https://krunker.io/social.html?p=itemsales&i=${a.index}`;
-}
-
-module.exports.listing = function(a) {
-    return `https://krunker.io/social.html?p=market&i=${a.index}`;
-}
 
 
 module.exports.wheels = [{
@@ -42,14 +6,20 @@ module.exports.wheels = [{
     headCol: "#b2f252",
     price: 50,
     icons: 2,
-    rarities: [75, 22, 3, 0, 0, 0]
+    rarities: [75, 22, 3, 0, 0, 0],
+    getRarities: function () {
+        return this.rarities
+    }
 }, {
     name: "Elite",
     primary: !0,
     headCol: "#2196F3",
     price: 100,
     icons: 3,
-    rarities: [50, 30, 15, 5, 0, 0]
+    rarities: [50, 30, 15, 5, 0, 0],
+    getRarities: function () {
+        return this.rarities
+    }
 }, {
     name: "Heroic",
     primary: !0,
@@ -57,7 +27,10 @@ module.exports.wheels = [{
     price: 500,
     icons: 4,
     bigRar: 5,
-    rarities: [0, 48, 35, 14, 2.49, .5, .01]
+    rarities: [0, 48, 35, 14, 2.49, .5, .01],
+    getRarities: function () {
+        return this.rarities
+    }
 }, {
     name: "Free",
     headCol: "#ce504c",
@@ -69,7 +42,10 @@ module.exports.wheels = [{
     priceT: "Follow",
     priceCol: "#00eaff",
     icons: 3,
-    rarities: [0, 48, 35, 14, 3, 0]
+    rarities: [0, 48, 35, 14, 3, 0],
+    getRarities: function () {
+        return this.rarities
+    }
 }, {
     name: "Free KR",
     headCol: "#00bcd4",
@@ -82,14 +58,20 @@ module.exports.wheels = [{
     priceCol: "#00eaff",
     adjRars: !0,
     icons: 0,
-    rarities: [50, 39, 10, 1, 0, 0]
+    rarities: [50, 39, 10, 1, 0, 0],
+    getRarities: function () {
+        return this.rarities
+    }
 }, {
     name: "Valour",
     primary: !0,
     headCol: "#d073af",
     locked: !0,
     icons: 1,
-    rarities: [43, 33, 16, 6, 2, 0]
+    rarities: [43, 33, 16, 6, 2, 0],
+    getRarities: function () {
+        return this.rarities
+    }
 }, {
     name: "Twitch",
     headCol: "#7a59b9",
@@ -99,9 +81,11 @@ module.exports.wheels = [{
     priceCol: "#00eaff",
     limType: "Charity",
     twitch: !0,
-    icons: 0
-}];
-module.exports.events = {
+    icons: 0,
+    getRarities: function () {
+        return [0, 45, 35, 17, 3, 0]
+    }
+}], module.exports.events = {
     Debug: "#000000",
     Easter: null,
     "Twitch #1": "#6441a5",
@@ -114,9 +98,7 @@ module.exports.events = {
     Gift: null,
     Free: null,
     Christmas: null
-};
-module.exports.types = ["weapons/weapon_", "hats/hat_", "body/body_", "melee/melee_", "sprays/", "dyes/", "waist/waist_", "faces/face_", "shoes/shoe_"];
-module.exports.purchases = [{
+}, module.exports.types = ["weapons/weapon_", "hats/hat_", "body/body_", "melee/melee_", "sprays/", "dyes/", "waist/waist_", "faces/face_", "shoes/shoe_"], module.exports.purchases = [{
     val: 300,
     priceSale: .89,
     price: .99,
@@ -140,8 +122,7 @@ module.exports.purchases = [{
     tag: "Best Value!",
     tagCol: "#E040FB",
     col: "#ee5356"
-}];
-module.exports.mobilePurchases = [{val: 300, price: .99, productId: "ch.yendis.krunkerhub.kr300"}, {
+}], module.exports.mobilePurchases = [{val: 300, price: .99, productId: "ch.yendis.krunkerhub.kr300"}, {
     val: 600,
     price: 1.79,
     productId: "ch.yendis.krunkerhub.kr600"
@@ -161,8 +142,7 @@ module.exports.mobilePurchases = [{val: 300, price: .99, productId: "ch.yendis.k
     productId: "ch.yendis.krunkerhub.kr60000",
     tag: "Best Value!",
     tagCol: "#E040FB"
-}];
-module.exports.premium = [{val: 7, price: 2e3, tag: "Starter", tagCol: "#42ed56", headCol: "#2196F3"}, {
+}], module.exports.premium = [{val: 7, price: 2e3, tag: "Starter", tagCol: "#42ed56", headCol: "#2196F3"}, {
     val: 30,
     price: 7500,
     tag: "Popular!",
@@ -174,9 +154,7 @@ module.exports.premium = [{val: 7, price: 2e3, tag: "Starter", tagCol: "#42ed56"
     tag: "Best Value!",
     tagCol: "#E040FB",
     headCol: "#fc9803"
-}];
-module.exports.lootRars = [0, 0, 70, 25.5, 4, .5, 0];
-module.exports.rarities = [{
+}], module.exports.lootRars = [0, 0, 70, 25.5, 4, .5, 0], module.exports.rarities = [{
     name: "Uncommon",
     rar: 60,
     color: "#b2f252",
@@ -233,8 +211,21 @@ module.exports.rarities = [{
     animate: !0,
     sell: 1e4,
     fee: 200
-}];
-module.exports.previews = {
+}], module.exports.getSpnItems = function (a, t, n, i, s) {
+    t = t || 0;
+    var r = [], o = a.itemTypes, l = a.limType, d = a.weaponType;
+    if (a.itemIndexs) return a.itemIndexs;
+    for (var c = 0; c < module.exports.skins.length; ++c) module.exports.skins[c] && !module.exports.skins[c].limited && !module.exports.skins[c].blocked && !module.exports.skins[c].noSpin && !module.exports.skins[c].blackM && (module.exports.skins[c].rarity == t || s && module.exports.skins[c].rarity >= s) && (!l || l == module.exports.skins[c].limT) && (l || !module.exports.skins[c].limT) && !(o && 0 > o.indexOf(module.exports.skins[c].type || 0)) && (!module.exports.skins[c].minRec || module.exports.skins[c].minRec && n && n.level < module.exports.skins[c].minRec) && (module.exports.skins[c].mSeas || (module.exports.skins[c].seas || 1) == i.currentSeason) && (null == d || d == module.exports.skins[c].weapon) && r.push(c);
+    return r
+}, module.exports.calcTradeFee = function (a) {
+    for (var t, n = 0, i = 0; i < a.length; ++i) (t = module.exports.skins[a[i]]) && (n += module.exports.rarities[t.rarity].fee || 0);
+    return n
+}, module.exports.getFreeKR = function (a) {
+    return {kr: module.exports.freeKR[a].kr[0], rarity: module.exports.freeKR[a].rarity}
+}, module.exports.freeKR = [{kr: [5], rarity: 0}, {kr: [10], rarity: 1}, {kr: [20], rarity: 2}, {
+    kr: [500],
+    rarity: 3
+}], module.exports.previews = {
     1: {xOff: -2, yOff: -2.6, zRota: .2, scl: .001376794727638135},
     2: {xOff: -1.4, yOff: -.8, scl: .001148941748743716},
     3: {xOff: 0, yOff: -.2, scl: .000676917226130652},
@@ -250,8 +241,7 @@ module.exports.previews = {
     16: {scl: 1.4, yOff: 1, xOff: -1},
     17: {xOff: 0, yOff: -.2, scl: 3e-4},
     19: {xOff: -1.4, yOff: -.8, scl: .0009095788844221084}
-};
-module.exports.skins = [{name: "Arctic Hunt", id: 0, weapon: 1, rarity: 1}, {
+}, module.exports.skins = [{name: "Arctic Hunt", id: 0, weapon: 1, rarity: 1}, {
     name: "Autumn Hunt",
     id: 1,
     weapon: 1,
@@ -7957,7 +7947,10 @@ module.exports.skins = [{name: "Arctic Hunt", id: 0, weapon: 1, rarity: 1}, {
     noSale: !0,
     blackM: !0,
     funds: 100,
-    reqT: "1 Year Account Age"
+    reqT: "1 Year Account Age",
+    req: function (e) {
+        return (new Date).getTime() - new Date(e.createDate).getTime() >= 31536e6
+    }
 }, {
     name: "2 Year Cape",
     tex: 1,
@@ -7978,7 +7971,10 @@ module.exports.skins = [{name: "Arctic Hunt", id: 0, weapon: 1, rarity: 1}, {
     noSale: !0,
     blackM: !0,
     funds: 100,
-    reqT: "2 Year Account Age"
+    reqT: "2 Year Account Age",
+    req: function (e) {
+        return (new Date).getTime() - new Date(e.createDate).getTime() >= 63072e6
+    }
 }, {
     name: "Arunasura",
     id: 53,
@@ -8834,7 +8830,10 @@ module.exports.skins = [{name: "Arctic Hunt", id: 0, weapon: 1, rarity: 1}, {
     blackM: !0,
     hide: !0,
     funds: 2e3,
-    reqT: "No Greenskins!"
+    reqT: "No Greenskins!",
+    req: function () {
+        return !1
+    }
 }, {
     name: "Nuke Tamer",
     keyW: "Back",
@@ -8853,7 +8852,10 @@ module.exports.skins = [{name: "Arctic Hunt", id: 0, weapon: 1, rarity: 1}, {
     noSale: !0,
     blackM: !0,
     funds: 3e3,
-    reqT: "Call in 1000 Nukes"
+    reqT: "Call in 1000 Nukes",
+    req: function (e) {
+        return e && e.stats && 1e3 <= (e.stats.n || 0)
+    }
 }, {
     name: "Floatie",
     id: 0,
@@ -8971,7 +8973,10 @@ module.exports.skins = [{name: "Arctic Hunt", id: 0, weapon: 1, rarity: 1}, {
     blackM: !0,
     hide: !0,
     funds: 1e4,
-    reqT: "???????"
+    reqT: "???????",
+    req: function () {
+        return !1
+    }
 }, {name: "Tropic Pop", id: 209, creator: "Exxor", weapon: 2, rarity: 2, seas: 3}, {
     name: "Cyclonic Charge",
     id: 188,
@@ -9083,7 +9088,10 @@ module.exports.skins = [{name: "Arctic Hunt", id: 0, weapon: 1, rarity: 1}, {
     noSale: !0,
     blackM: !0,
     funds: 1e4,
-    reqT: "Level 50 Runner"
+    reqT: "Level 50 Runner",
+    req: function (e) {
+        return e && e.stats && 2667778 <= (e.stats.c9 || 0)
+    }
 }, {
     name: "USS TTV",
     keyW: "Waist",
@@ -9677,7 +9685,10 @@ module.exports.skins = [{name: "Arctic Hunt", id: 0, weapon: 1, rarity: 1}, {
     blackM: !0,
     funds: 1e4,
     yOrg: -.2,
-    reqT: "Level 100 Hunter"
+    reqT: "Level 100 Hunter",
+    req: function (e) {
+        return e && e.stats && 1089e4 <= (e.stats.c1 || 0)
+    }
 }, {
     name: "Redux",
     id: 10,
@@ -10932,7 +10943,10 @@ module.exports.skins = [{name: "Arctic Hunt", id: 0, weapon: 1, rarity: 1}, {
     noSale: !0,
     blackM: !0,
     funds: 1e4,
-    reqT: "10000 Thrown Melee Kills"
+    reqT: "10000 Thrown Melee Kills",
+    req: function (e) {
+        return e && e.stats && 1e4 <= (e.stats.tmk || 0)
+    }
 }, {
     name: "Mamba",
     keyW: "Knife",
@@ -15492,7 +15506,10 @@ module.exports.skins = [{name: "Arctic Hunt", id: 0, weapon: 1, rarity: 1}, {
     noSale: !0,
     blackM: !0,
     funds: 1e4,
-    reqT: "Level 100 SMG"
+    reqT: "Level 100 SMG",
+    req: function (e) {
+        return e && e.stats && 1089e4 <= (e.stats.c2 || 0)
+    }
 }, {
     name: "Dusty",
     id: 13,
@@ -16157,7 +16174,10 @@ module.exports.skins = [{name: "Arctic Hunt", id: 0, weapon: 1, rarity: 1}, {
     noSale: !0,
     blackM: !0,
     funds: 1e4,
-    reqT: "Lvl 100 Triggerman"
+    reqT: "Lvl 100 Triggerman",
+    req: function (e) {
+        return e && e.stats && 1089e4 <= (e.stats.c0 || 0)
+    }
 }, {name: "Dismay", id: 268, creator: "Dismay", weapon: 1, rarity: 3, glow: !0, seas: 4}, {
     name: "All Aboard",
     id: 269,
@@ -18878,36 +18898,6 @@ module.exports.skins = [{name: "Arctic Hunt", id: 0, weapon: 1, rarity: 1}, {
     seas: 4,
     hasAnim: !0,
     animS: 1
-}];
-module.exports.limited = [];
-for (var t = [1, 2, 6, 7, 8], n = 0; n < module.exports.skins.length; n++) {
-    let skin = module.exports.skins[n];
-    skin.index = n;
-    if (skin.type) {
-        if (-1 != t.indexOf(skin.type)) {
-            if (skin.sitOff == null) {
-                skin.sitOff = 0;
-            }
-            if (skin.sitOffZ == null) {
-                skin.sitOffZ = 0;
-            }
-            if (skin.sclMlt == null) {
-                skin.sclMlt = 0;
-            }
-        }
-    }
-    if (skin.free) {
-        skin.limT = "Free";
-        skin.noSale = true;
-        skin.noSpin = true;
-    }
-    if (skin.itemShop) {
-        skin.noSale = skin.itemShop == 1;
-        skin.noSpin = true;
-        skin.limited = true;
-    }
-}
-
-for (n = 0; n < module.exports.limited.length; n++) {
-    module.exports.limited[n].i = n;
-}
+}], module.exports.limited = [];
+for (var t = [1, 2, 6, 7, 8], n = 0; n < module.exports.skins.length; n++) module.exports.skins[n].index = n, module.exports.skins[n].type && -1 != t.indexOf(module.exports.skins[n].type) && (null == module.exports.skins[n].sitOff && (module.exports.skins[n].sitOff = 0), null == module.exports.skins[n].sitOffZ && (module.exports.skins[n].sitOffZ = 0), null == module.exports.skins[n].sclMlt && (module.exports.skins[n].sclMlt = 0)), module.exports.skins[n].free && (module.exports.skins[n].limT = "Free", module.exports.skins[n].noSale = !0, module.exports.skins[n].noSpin = !0), module.exports.skins[n].itemShop && (module.exports.skins[n].noSale = 1 == module.exports.skins[n].itemShop, module.exports.skins[n].noSpin = !0, module.exports.skins[n].limited = !0);
+for (n = 0; n < module.exports.limited.length; n++) module.exports.limited[n].i = n

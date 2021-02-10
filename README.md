@@ -8,3 +8,5 @@ Goals:
 2. more search options than yeehow currently provides
 3. url-based searches so you can share search links
 4. more in-depth item info tab on the side with json information and links
+
+Disclaimer: nothing I wrote in `krunker` directory is my own, it is simply taken from `social.html`.
