@@ -69,11 +69,11 @@ a, button {
     grid-row: 2;
 }
 
-#item-json, #item-list {
+#item-json-preview-container, #item-list {
     grid-row: 3;
 }
 
-#item-name, #item-links, #item-json {
+#item-name, #item-links, #item-json-preview-container {
     grid-column: 1;
 }
 
@@ -83,6 +83,11 @@ a, button {
 
 #item-list {
     overflow: auto;
+}
+
+#item-info-preview {
+    float: right;
+    position: relative;
 }
 
 #search-bar {
@@ -110,6 +115,10 @@ a, button {
 
 #paginate-result-count, #paginate-page, #paginate-buttons {
     grid-row: 2;
+}
+
+#item-info-preview > div {
+    margin-right: 0;
 }
 
 input[type="text"] {
@@ -201,24 +210,20 @@ input[type="checkbox"]:not(:checked) {
     background-color: #353535;
 }
 
-.item:hover .item-label {
+.item:hover .item-label:not(.item-label-always-show) {
     visibility: hidden;
 }
 
-.item:not(:hover) .item-event {
+.item:not(:hover) .item-event:not(.item-event-always-show) {
     visibility: hidden;
 }
 
-.item:not(:hover) .item-season {
+.item:not(:hover) .item-season:not(.item-season-always-show) {
     visibility: hidden;
 }
 
 .item:not(:hover) .item-buttons {
     visibility: hidden;
-}
-
-.item:hover .item-preview {
-    opacity: 0.3;
 }
 
 .item-preview {

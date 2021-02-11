@@ -97,15 +97,15 @@ function link(url, text) {
     return a;
 }
 
-function item(item) {
+function item(item, doButtons, alwaysShowExtraInfo) {
     let div = document.createElement("div");
     div.classList.add("item");
     rarity(div, item);
     div.append(preview(item));
-    div.append(label(item));
-    div.append(season(item));
-    div.append(event(item));
-    div.append(buttons(item));
+    div.append(label(item, alwaysShowExtraInfo));
+    div.append(season(item, alwaysShowExtraInfo));
+    div.append(event(item, alwaysShowExtraInfo));
+    if(doButtons !== false) div.append(buttons(item));
     return div;
 }
 
@@ -131,21 +131,27 @@ function preview(item) {
     return img;
 }
 
-function label(item) {
+function label(item, alwaysShowExtraInfo) {
     let div = document.createElement("p");
     div.classList.add("item-label");
+    if(alwaysShowExtraInfo === true) {
+        div.classList.add("item-label-always-show");
+    }
     div.innerText = item.name;
     return div;
 }
 
-function season(item) {
+function season(item, alwaysShowExtraInfo) {
     let div = document.createElement("div");
     div.classList.add("item-season");
+    if(alwaysShowExtraInfo === true) {
+        div.classList.add("item-season-always-show");
+    }
     div.innerText = `Season ${item.seas || 1}`;
     return div;
 }
 
-function event(item) {
+function event(item, alwaysShowExtraInfo) {
     let text, color;
     if (item.limT) {
         text = item.limT;
@@ -158,6 +164,9 @@ function event(item) {
     }
     let div = document.createElement("div");
     div.classList.add("item-event");
+    if(alwaysShowExtraInfo === true) {
+        div.classList.add("item-event-always-show");
+    }
     div.style.backgroundColor = color;
     div.innerText = text;
     return div;
@@ -175,9 +184,9 @@ function buttons(item) {
     return div;
 }
 
-function itemInfo(item) {
+function itemInfo(i) {
     let params = new URLSearchParams(window.location.search);
-    params.set("item", item.index);
+    params.set("item", i.index);
     let path = window.location.pathname + "?" + params.toString();
     window.history.pushState({path: path}, '', path);
 
@@ -185,13 +194,15 @@ function itemInfo(item) {
         elem.style.visibility = "visible";
     });
     let name = document.getElementById("item-name");
-    name.innerText = item.name;
+    name.innerText = i.name;
     let json = document.getElementById("item-json");
-    json.innerText = JSON.stringify(item, undefined, "   ");
-    document.getElementById("item-price").href = krunker.price(item);
-    document.getElementById("item-listing").href = krunker.listing(item);
-    document.getElementById("item-viewer").href = krunker.viewer(item);
-    document.getElementById("item-preview").href = krunker.preview(item);
+    json.innerText = JSON.stringify(i, undefined, "   ");
+    document.getElementById("item-price").href = krunker.price(i);
+    document.getElementById("item-listing").href = krunker.listing(i);
+    document.getElementById("item-viewer").href = krunker.viewer(i);
+    document.getElementById("item-preview").href = krunker.preview(i);
+    document.getElementById("item-info-preview").innerHTML = "";
+    document.getElementById("item-info-preview").append(item(i, false, true));
 }
 
 let dropdownEvent = document.getElementById("dropdown-event");
@@ -348,6 +359,10 @@ let itemList = document.getElementById("item-list");
 let CURRENT_DISPLAYED_SKINS;
 
 function refilter() {
+    let params1 = new URLSearchParams(window.location.search);
+    if (params1.get("item") != null) {
+        itemInfo(data.skins[parseInt(params1.get("item"))]);
+    }
     document.getElementById("dropdown-event-label").innerText = FILTER.event == null ? "All events" : FILTER.event;
     document.getElementById("dropdown-rarity-label").innerText = FILTER.rarity == null ? "All rarities" : data.rarities[FILTER.rarity].name;
     document.getElementById("dropdown-weapon-label").innerText = FILTER.weapon == null ? "All weapons" : weapons[FILTER.weapon].name;
