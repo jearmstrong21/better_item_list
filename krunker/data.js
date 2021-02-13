@@ -18963,7 +18963,231 @@ module.exports.wheels = [
         rarity: 4,
         glow: !0,
         seas: 4
+    }, {
+        name: "X",
+        creator: "Kilfy",
+        id: 192,
+        type: 4,
+        rarity: 3,
+        opacity: .8,
+        keyW: "Sprays",
+        seas: 4,
+        itemShop: 1
+    }, {
+        name: "Piracy",
+        creator: "Bodeneinheit",
+        id: 193,
+        type: 4,
+        rarity: 3,
+        opacity: .8,
+        keyW: "Sprays",
+        seas: 4,
+        itemShop: 1
+    }, {
+        name: "Black Flag",
+        id: 294,
+        creator: "MDebski",
+        weapon: 1,
+        rarity: 3,
+        glow: !0,
+        seas: 4,
+        itemShop: 1
+    }, {
+        name: "Black Pearl",
+        id: 299,
+        creator: "MDebski",
+        weapon: 2,
+        rarity: 3,
+        glow: !0,
+        seas: 4,
+        itemShop: 1
+    }, {name: "Broadside", mid: 0, midT: 0, weapon: 9, rarity: 5, seas: 4, yOff: -.2, itemShop: 1}, {
+        name: "Ahoy",
+        keyW: "Hat",
+        id: 204,
+        rarity: 3,
+        type: 1,
+        seas: 4,
+        sclMlt: .5,
+        sitOff: .6,
+        scl: 1.6,
+        itemShop: 1
+    }, {
+        name: "Patchy",
+        id: 0,
+        tex: 52,
+        rarity: 3,
+        type: 7,
+        keyW: "Face",
+        seas: 4,
+        sitOff: 1,
+        sitOffZ: .005,
+        trans: !0,
+        yOff: -.7,
+        xOff: 1.6,
+        xRot: -.5,
+        itemShop: 1
+    }, {
+        name: "Rusty",
+        id: 0,
+        tex: 53,
+        rarity: 3,
+        type: 7,
+        keyW: "Face",
+        seas: 4,
+        sitOff: 1,
+        sitOffZ: .005,
+        trans: !0,
+        yOff: -.7,
+        xOff: 1.6,
+        xRot: -.5,
+        itemShop: 1
+    }, {
+        name: "Message in a Bottle",
+        id: 104,
+        type: 2,
+        rarity: 3,
+        keyW: "Back",
+        seas: 4,
+        xRot: Math.PI,
+        trans: !0,
+        side: 2,
+        xOff: -.4,
+        sitOff: -.8,
+        sitOffZ: -.55,
+        sclMlt: .6,
+        itemShop: 1
+    }, {
+        name: "Sea Tamer",
+        id: 105,
+        type: 2,
+        rarity: 5,
+        keyW: "Back",
+        seas: 4,
+        scl: 3,
+        sitOff: -1,
+        sitOffZ: -.6,
+        sclMlt: 2.4,
+        rAnim: .0015,
+        rAnimA: "x",
+        itemShop: 1
+    }, {
+        name: "Cutlass",
+        creator: "iSpy",
+        id: 33,
+        rarity: 4,
+        type: 3,
+        sxRot: -.5,
+        sxOff: 0,
+        spnScl: 1.2,
+        sclMlt: .9,
+        scl: 1.4,
+        yOff: -2,
+        keyW: "Melee",
+        seas: 4,
+        itemShop: 1
+    }, {
+        name: "Captain Hook",
+        id: 34,
+        rarity: 5,
+        type: 3,
+        sxOff: .65,
+        szOff: -.04,
+        syOff: -.14,
+        sxRot: 2.9,
+        spnScl: 1.2,
+        sclMlt: .9,
+        scl: 1.4,
+        yOff: -2,
+        oFlip: !0,
+        statc: !0,
+        osyOff: -.69,
+        oszOff: -.57,
+        osxOff: -.15,
+        keyW: "Melee",
+        seas: 4,
+        noRightHand: !0,
+        itemShop: 1
+    }, {
+        name: "Peg",
+        id: 5,
+        rarity: 4,
+        type: 8,
+        yOff: -3,
+        xOff: 1,
+        stump: !0,
+        randomLeg: !0,
+        keyW: "Shoes",
+        seas: 4,
+        itemShop: 1
+    }, {
+        name: "Red Beard",
+        id: 0,
+        tex: 54,
+        rarity: 3,
+        type: 7,
+        keyW: "Face",
+        seas: 4,
+        sitOff: 1,
+        sitOffZ: .005,
+        trans: !0,
+        yOff: -.7,
+        xOff: 1.6,
+        xRot: -.5,
+        itemShop: 1
+    }, {
+        name: "Grumpy Patchy",
+        id: 0,
+        tex: 55,
+        rarity: 3,
+        type: 7,
+        keyW: "Face",
+        seas: 4,
+        sitOff: 1,
+        sitOffZ: .005,
+        trans: !0,
+        yOff: -.7,
+        xOff: 1.6,
+        xRot: -.5,
+        itemShop: 1
+    }, {
+        name: "Angry Patchy",
+        id: 0,
+        tex: 56,
+        rarity: 3,
+        type: 7,
+        keyW: "Face",
+        seas: 4,
+        sitOff: 1,
+        sitOffZ: .005,
+        trans: !0,
+        yOff: -.7,
+        xOff: 1.6,
+        xRot: -.5,
+        itemShop: 1
     }
-], module.exports.limited = [];
+], module.exports.limited = [
+    {n: "Sea Tamer", id: 2857, c: 49999}, {
+        n: "Broadside",
+        id: 2852,
+        c: 49999
+    }, {n: "Captain Hook", id: 2859, c: 49999}, {n: "Cutlass", id: 2858, c: 15999}, {
+        n: "X",
+        id: 2848,
+        c: 999
+    }, {n: "Piracy", id: 2849, c: 999}, {n: "Black Flag", id: 2850, c: 4999}, {
+        n: "Black Pearl",
+        id: 2851,
+        c: 4999
+    }, {n: "Ahoy", id: 2853, c: 1499}, {n: "Patchy", id: 2854, c: 4999}, {
+        n: "Rusty",
+        id: 2855,
+        c: 4999
+    }, {n: "Message in a Bottle", id: 2856, c: 4999}, {n: "Red Beard", id: 2861, c: 4999}, {
+        n: "Grump Patchy",
+        id: 2862,
+        c: 4999
+    }, {n: "Angry Patchy", id: 2863, c: 4999}, {n: "Peg", id: 2860, c: 24999}
+];
 for (var t = [1, 2, 6, 7, 8], n = 0; n < module.exports.skins.length; n++) module.exports.skins[n].index = n, module.exports.skins[n].type && -1 != t.indexOf(module.exports.skins[n].type) && (null == module.exports.skins[n].sitOff && (module.exports.skins[n].sitOff = 0), null == module.exports.skins[n].sitOffZ && (module.exports.skins[n].sitOffZ = 0), null == module.exports.skins[n].sclMlt && (module.exports.skins[n].sclMlt = 0)), module.exports.skins[n].free && (module.exports.skins[n].limT = "Free", module.exports.skins[n].noSale = !0, module.exports.skins[n].noSpin = !0), module.exports.skins[n].itemShop && (module.exports.skins[n].noSale = 1 == module.exports.skins[n].itemShop, module.exports.skins[n].noSpin = !0, module.exports.skins[n].limited = !0);
 for (n = 0; n < module.exports.limited.length; n++) module.exports.limited[n].i = n
