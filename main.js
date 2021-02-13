@@ -6,7 +6,7 @@ const MACKY_UPDATE_KEY = "macky___UPDATE";
 const MACKY_UPDATE_EARLY = updates.early;
 {
     let index = data.skins.length - 1;
-    for (let i = 0; i < updates.length; i++) {
+    for (let i = updates.length - 1; i >= 0; i--) {
         let update = updates[i];
         for (let n = 0; n < update.skins; n++) {
             data.skins[index][MACKY_UPDATE_KEY] = update.name;
