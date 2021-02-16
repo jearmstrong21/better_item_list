@@ -19327,6 +19327,7 @@ module.exports.wheels = [
         itemShop: 1
     }, {
         name: "Red Beard",
+        creator: "Chwoubaka",
         id: 0,
         tex: 54,
         rarity: 3,
@@ -19342,6 +19343,7 @@ module.exports.wheels = [
         itemShop: 1
     }, {
         name: "Grumpy Patchy",
+        creator: "Chwoubaka",
         id: 0,
         tex: 55,
         rarity: 3,
@@ -19357,6 +19359,7 @@ module.exports.wheels = [
         itemShop: 1
     }, {
         name: "Angry Patchy",
+        creator: "Chwoubaka",
         id: 0,
         tex: 56,
         rarity: 3,
@@ -19370,25 +19373,70 @@ module.exports.wheels = [
         xOff: 1.6,
         xRot: -.5,
         itemShop: 1
-    }
+    }, {
+        name: "ZenDrive",
+        id: 301,
+        creator: "creshorTV",
+        weapon: 2,
+        rarity: 4,
+        glow: !0,
+        pulsT: .0015,
+        seas: 4
+    }, {
+        name: "Ashen Ice",
+        id: 302,
+        creator: "Ashen Ice",
+        weapon: 2,
+        rarity: 4,
+        glow: !0,
+        pulsT: .0015,
+        seas: 4
+    }, {
+        name: "Abyssal Storm",
+        id: 262,
+        creator: "multihawk",
+        weapon: 4,
+        rarity: 2,
+        glow: !0,
+        seas: 4
+    }, {name: "Engulfed", id: 201, creator: "Silexen", weapon: 5, rarity: 2, seas: 4}, {
+        name: "Blue Beard",
+        id: 300,
+        creator: "creshorTV",
+        weapon: 2,
+        rarity: 3,
+        glow: !0,
+        seas: 4,
+        itemShop: 1
+    }, {
+        name: "Captain Octo",
+        id: 28,
+        creator: "creshorTV",
+        weapon: 11,
+        rarity: 4,
+        glow: !0,
+        pulsT: .0015,
+        seas: 4,
+        itemShop: 1
+    }, {name: "Released Kraken", id: 20, creator: "FailBucket", weapon: 17, rarity: 2, seas: 4, itemShop: 1}
 ], module.exports.limited = [
-    {n: "Sea Tamer", id: 2857, c: 49999}, {
-        n: "Broadside",
-        id: 2852,
+    {n: "Sea Tamer", id: 2857, c: 49999}, {n: "Broadside", id: 2852, c: 49999}, {
+        n: "Captain Hook",
+        id: 2859,
         c: 49999
-    }, {n: "Captain Hook", id: 2859, c: 49999}, {n: "Cutlass", id: 2858, c: 15999}, {
-        n: "X",
-        id: 2848,
-        c: 999
-    }, {n: "Piracy", id: 2849, c: 999}, {n: "Black Flag", id: 2850, c: 4999}, {
-        n: "Black Pearl",
-        id: 2851,
+    }, {n: "Cutlass", id: 2858, c: 15999}, {n: "X", id: 2848, c: 999}, {n: "Piracy", id: 2849, c: 999}, {
+        n: "Black Flag",
+        id: 2850,
         c: 4999
-    }, {n: "Ahoy", id: 2853, c: 1499}, {n: "Patchy", id: 2854, c: 4999}, {
+    }, {n: "Black Pearl", id: 2851, c: 4999}, {n: "Ahoy", id: 2853, c: 1499}, {n: "Patchy", id: 2854, c: 4999}, {
         n: "Rusty",
         id: 2855,
         c: 4999
-    }, {n: "Message in a Bottle", id: 2856, c: 4999}, {n: "Red Beard", id: 2861, c: 4999}, {
+    }, {n: "Message in a Bottle", id: 2856, c: 4999}, {n: "Blue Beard", id: 2868, c: 4999}, {
+        n: "Captain Octo",
+        id: 2869,
+        c: 7999
+    }, {n: "Released Kraken", id: 2870, c: 999}, {n: "Red Beard", id: 2861, c: 4999}, {
         n: "Grump Patchy",
         id: 2862,
         c: 4999
@@ -21450,6 +21498,10 @@ module.exports = [
     {
         "name": "3.6.3",
         "skins": 16
+    },
+    {
+        "name": "3.6.4",
+        "skins": 7
     }
 ];
 
