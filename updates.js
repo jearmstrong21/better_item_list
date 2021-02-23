@@ -18,4 +18,8 @@ module.exports = [
     }
 ];
 
+/*
+3.6.5, 3.6.6, no skins
+ */
+
 module.exports.early = "<=3.6.1";
