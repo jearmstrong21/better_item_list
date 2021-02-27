@@ -19418,32 +19418,301 @@ module.exports.wheels = [
         pulsT: .0015,
         seas: 4,
         itemShop: 1
-    }, {name: "Released Kraken", id: 20, creator: "FailBucket", weapon: 17, rarity: 2, seas: 4, itemShop: 1}
+    }, {
+        name: "Released Kraken",
+        id: 20,
+        creator: "FailBucket",
+        weapon: 17,
+        rarity: 2,
+        seas: 4,
+        itemShop: 1
+    }, {
+        name: "gunz",
+        mid: 0,
+        midT: 161,
+        creator: "Kltter",
+        scl: .9,
+        mScl: 1,
+        zOff: .28,
+        yOff: -.5,
+        weapon: 6,
+        rarity: 3,
+        glow: !0,
+        seas: 4
+    }, {
+        name: "Captain Red Eye",
+        id: 29,
+        creator: "Destroy007",
+        weapon: 11,
+        rarity: 4,
+        glow: !0,
+        pulsT: .0015,
+        seas: 4
+    }, {
+        name: "soitsu",
+        id: 30,
+        creator: "Kltter",
+        weapon: 11,
+        rarity: 4,
+        glow: !0,
+        pulsT: .0015,
+        seas: 4
+    }, {
+        name: "SRT6 Fade",
+        id: 21,
+        creator: "floatingpoint",
+        weapon: 17,
+        rarity: 3,
+        glow: !0,
+        seas: 4
+    }, {
+        name: "cyalater",
+        id: 22,
+        creator: "Kltter",
+        weapon: 17,
+        rarity: 4,
+        glow: !0,
+        pulsT: .0015,
+        seas: 4
+    }, {
+        name: "Shell Shoked",
+        id: 2,
+        rarity: 4,
+        type: 7,
+        keyW: "Face",
+        seas: 4,
+        sitOff: 1,
+        sitOffZ: .005,
+        glow: !0,
+        pulsT: .0015,
+        trans: !0,
+        yOff: -.7,
+        xOff: 1.6,
+        xRot: -.5,
+        itemShop: 1
+    }, {
+        name: "Lieutenant",
+        keyW: "Hat",
+        id: 143,
+        tex: 1,
+        rarity: 4,
+        type: 1,
+        seas: 4,
+        sclMlt: .5,
+        sitOff: 1,
+        scl: 1.6,
+        itemShop: 1
+    }, {
+        name: "Spitfire",
+        creator: "Multihawk",
+        id: 194,
+        type: 4,
+        rarity: 3,
+        opacity: .8,
+        keyW: "Sprays",
+        seas: 4,
+        itemShop: 1
+    }, {
+        name: "XOXO",
+        creator: "Kristai",
+        id: 195,
+        type: 4,
+        rarity: 3,
+        opacity: .8,
+        keyW: "Sprays",
+        seas: 4,
+        itemShop: 1
+    }, {
+        name: "Krunkroy",
+        creator: "Kristai",
+        id: 196,
+        type: 4,
+        rarity: 3,
+        opacity: .8,
+        keyW: "Sprays",
+        seas: 4,
+        itemShop: 1
+    }, {
+        name: "Shermy",
+        creator: "Multihawk",
+        id: 197,
+        type: 4,
+        rarity: 3,
+        opacity: .8,
+        keyW: "Sprays",
+        seas: 4,
+        itemShop: 1
+    }, {
+        name: "Corsair",
+        id: 295,
+        creator: "Multihawk",
+        weapon: 1,
+        rarity: 3,
+        seas: 4,
+        itemShop: 1
+    }, {name: "Bombs away!", id: 303, creator: "Kristai", weapon: 2, rarity: 4, seas: 4, itemShop: 1}, {
+        name: "Redzone",
+        id: 304,
+        creator: "Destroy007",
+        weapon: 2,
+        rarity: 3,
+        seas: 4,
+        itemShop: 1
+    }, {
+        name: "World War",
+        creator: "Exxor",
+        midT: 15,
+        noMuz: !0,
+        mid: 0,
+        weapon: 3,
+        spnScl: 1.3,
+        scl: .9,
+        mScl: .84,
+        zOff: 0,
+        yOff: 0,
+        rarity: 3,
+        seas: 4,
+        itemShop: 1
+    }, {
+        name: "War Trophy",
+        id: 263,
+        creator: "Nxbulah",
+        weapon: 4,
+        rarity: 3,
+        seas: 4,
+        itemShop: 1
+    }, {
+        name: "Commmander",
+        mid: 0,
+        midT: 162,
+        creator: "Destroy007",
+        scl: .9,
+        mScl: 1,
+        zOff: .28,
+        yOff: -.5,
+        weapon: 6,
+        rarity: 3,
+        seas: 4,
+        itemShop: 1
+    }, {
+        name: "Iron Patriot",
+        id: 164,
+        creator: "Cimota",
+        weapon: 7,
+        rarity: 4,
+        seas: 4,
+        itemShop: 1
+    }, {
+        name: "Battle Tested",
+        mid: 0,
+        midT: 110,
+        creator: "Multihawk",
+        weapon: 8,
+        rarity: 3,
+        seas: 4,
+        itemShop: 1
+    }, {name: "Warhawk", id: 31, creator: "MDebski", weapon: 11, rarity: 3, seas: 4, itemShop: 1}, {
+        name: "Sabre",
+        id: 15,
+        creator: "_irizu",
+        weapon: 14,
+        rarity: 3,
+        seas: 4,
+        itemShop: 1
+    }, {
+        name: "Desert Ace",
+        id: 23,
+        creator: "Multihawk",
+        weapon: 17,
+        rarity: 3,
+        seas: 4,
+        itemShop: 1
+    }, {
+        name: "Model 24 Stielhandgranate",
+        id: 35,
+        rarity: 5,
+        spnScl: 2.4,
+        type: 3,
+        yOff: -2,
+        keyW: "Melee",
+        seas: 4,
+        explode: !0,
+        itemShop: 1
+    }, {
+        name: "Fighter",
+        keyW: "Waist",
+        rarity: 5,
+        seas: 4,
+        id: 16,
+        type: 6,
+        scl: 2.1,
+        spnScl: 2.5,
+        sclMlt: 2.8,
+        yOff: -1.5,
+        xOff: -1,
+        sitOff: 1,
+        prevRot: 4,
+        side: 2,
+        trans: !0,
+        frames: 2,
+        frameT: 100,
+        noLegs: !0,
+        itemShop: 1
+    }, {
+        name: "Lest We Forget",
+        creator: "ReDeagle",
+        id: 198,
+        type: 4,
+        rarity: 3,
+        opacity: .8,
+        keyW: "Sprays",
+        seas: 4,
+        itemShop: 1
+    }, {name: "Kr-98", mid: 8, weapon: 1, aimY: -.3, rarity: 5, seas: 4, noScope: !0, itemShop: 1}, {
+        name: "Woodland",
+        id: 16,
+        shirtCol: [3882027, 6315847, 5131065],
+        sleeveCol: [3882027, 6315847, 5131065],
+        pantsCol: [3882027, 6315847, 5131065],
+        shoeCol: [3882027, 6315847, 5131065],
+        seas: 4,
+        type: 5,
+        rarity: 4,
+        itemShop: 1
+    }
 ], module.exports.limited = [
-    {n: "Sea Tamer", id: 2857, c: 49999}, {n: "Broadside", id: 2852, c: 49999}, {
-        n: "Captain Hook",
-        id: 2859,
+    {n: "Kr-98", id: 2896, c: 59999}, {
+        n: "Model 24 Stielhandgranate",
+        id: 2893,
         c: 49999
-    }, {n: "Cutlass", id: 2858, c: 15999}, {n: "X", id: 2848, c: 999}, {n: "Piracy", id: 2849, c: 999}, {
-        n: "Black Flag",
-        id: 2850,
-        c: 4999
-    }, {n: "Black Pearl", id: 2851, c: 4999}, {n: "Ahoy", id: 2853, c: 1499}, {n: "Patchy", id: 2854, c: 4999}, {
-        n: "Rusty",
-        id: 2855,
-        c: 4999
-    }, {n: "Message in a Bottle", id: 2856, c: 4999}, {n: "Blue Beard", id: 2868, c: 4999}, {
-        n: "Captain Octo",
-        id: 2869,
+    }, {n: "Fighter", id: 2894, c: 44999}, {n: "Shell Shoked", id: 2876, c: 14999}, {
+        n: "Iron Patriot",
+        id: 2888,
         c: 7999
-    }, {n: "Released Kraken", id: 2870, c: 999}, {n: "Red Beard", id: 2861, c: 4999}, {
-        n: "Grump Patchy",
-        id: 2862,
+    }, {n: "Spitfire", id: 2878, c: 999}, {n: "XOXO", id: 2879, c: 999}, {n: "Krunkroy", id: 2880, c: 999}, {
+        n: "Shermy",
+        id: 2881,
+        c: 999
+    }, {n: "Corsair", id: 2882, c: 4999}, {n: "Redzone", id: 2884, c: 5999}, {
+        n: "World War",
+        id: 2885,
         c: 4999
-    }, {n: "Angry Patchy", id: 2863, c: 4999}, {n: "Peg", id: 2860, c: 24999}
+    }, {n: "War Trophy", id: 2886, c: 3999}, {n: "Commmander", id: 2887, c: 5999}, {
+        n: "Battle Tested",
+        id: 2889,
+        c: 4999
+    }, {n: "Warhawk", id: 2890, c: 5999}, {n: "Sabre", id: 2891, c: 5999}, {
+        n: "Desert Ace",
+        id: 2892,
+        c: 3999
+    }, {n: "Lest We Forget", id: 2895, c: 999}, {n: "Bombs away!", id: 2883, c: 7999}, {
+        n: "Lieutenant",
+        id: 2877,
+        c: 11999
+    }, {n: "Woodland", id: 2897, c: 24999}
 ];
 for (var t = [1, 2, 6, 7, 8], n = 0; n < module.exports.skins.length; n++) module.exports.skins[n].index = n, module.exports.skins[n].type && -1 != t.indexOf(module.exports.skins[n].type) && (null == module.exports.skins[n].sitOff && (module.exports.skins[n].sitOff = 0), null == module.exports.skins[n].sitOffZ && (module.exports.skins[n].sitOffZ = 0), null == module.exports.skins[n].sclMlt && (module.exports.skins[n].sclMlt = 0)), module.exports.skins[n].free && (module.exports.skins[n].limT = "Free", module.exports.skins[n].noSale = !0, module.exports.skins[n].noSpin = !0), module.exports.skins[n].itemShop && (module.exports.skins[n].noSale = 1 == module.exports.skins[n].itemShop, module.exports.skins[n].noSpin = !0, module.exports.skins[n].limited = !0);
-for (n = 0; n < module.exports.limited.length; n++) module.exports.limited[n].i = n
+for (n = 0; n < module.exports.limited.length; n++) module.exports.limited[n].i = n, delete module.exports.limited[n].n
 },{}],3:[function(require,module,exports){
 const data = require("./data");
 const weapons = require("./weapons");
@@ -21502,6 +21771,10 @@ module.exports = [
     {
         "name": "3.6.4",
         "skins": 7
+    },
+    {
+        "name": "3.6.7",
+        "skins": 27
     }
 ];
 
