@@ -19679,6 +19679,289 @@ module.exports.wheels = [
         type: 5,
         rarity: 4,
         itemShop: 1
+    }, {
+        name: "Cyberclaw",
+        limT: "Charity",
+        creator: "CreshorTV",
+        streamer: "HeyImZed",
+        drop: !0,
+        time: {start: "March 6, 2021 9:00 AM UTC", end: "March 7, 2021 11:00 AM UTC"},
+        watch: "1 Hour",
+        seas: 4,
+        flipAnim: !0,
+        id: 3,
+        tex: 17,
+        type: 3,
+        scl: 2.6,
+        sclMlt: 1,
+        yOff: -1,
+        xOff: -1.5,
+        rarity: 4,
+        sxRot: .3,
+        sxOff: .35,
+        szOff: -.25,
+        glow: !0,
+        pulsT: .0015
+    }, {
+        name: "Z3D",
+        limT: "Charity",
+        creator: "CreshorTV",
+        streamer: "HeyImZed",
+        drop: !0,
+        time: {start: "March 6, 2021 9:00 AM UTC", end: "March 7, 2021 11:00 AM UTC"},
+        watch: "1 Hour",
+        seas: 4,
+        weapon: 2,
+        id: 305,
+        rarity: 4,
+        glow: !0,
+        pulsT: .0015
+    }, {
+        name: "Vase",
+        limT: "Charity",
+        creator: "Nxbulah",
+        streamer: "SwaggerSouls",
+        drop: !0,
+        time: {start: "March 7, 2021 1:00 AM UTC", end: "March 7, 2021 4:00 AM UTC"},
+        watch: "1 Hour",
+        seas: 4,
+        rarity: 4,
+        id: 36,
+        type: 3,
+        sxOff: .02,
+        sclMlt: 1.1,
+        scl: 2,
+        yOff: -2,
+        glow: !0,
+        pulsT: .1,
+        keyW: "Melee"
+    }, {
+        name: "Crusader",
+        limT: "Charity",
+        creator: "iSpy, Nxbulah",
+        streamer: "SwaggerSouls",
+        drop: !0,
+        time: {start: "March 7, 2021 1:00 AM UTC", end: "March 7, 2021 4:00 AM UTC"},
+        watch: "1 Hour",
+        seas: 4,
+        mid: 0,
+        weapon: 14,
+        rarity: 3
+    }, {
+        name: "Cat Headphones",
+        limT: "Charity",
+        streamer: "TobyOnTheTele",
+        drop: !0,
+        time: {start: "March 7, 2021 4:00 AM UTC", end: "March 7, 2021 7:00 AM UTC"},
+        watch: "1 Hour",
+        seas: 4,
+        id: 205,
+        sclMlt: .5,
+        sitOff: 1.05,
+        type: 1,
+        keyW: "Hat",
+        rarity: 3
+    }, {
+        name: "Toby Backpack",
+        limT: "Charity",
+        streamer: "TobyOnTheTele",
+        drop: !0,
+        time: {start: "March 7, 2021 4:00 AM UTC", end: "March 7, 2021 7:00 AM UTC"},
+        watch: "1 Hour",
+        seas: 4,
+        id: 73,
+        tex: 4,
+        type: 2,
+        rarity: 3,
+        keyW: "Back",
+        scl: .6,
+        yOff: -.5,
+        xRot: Math.PI,
+        sitOff: -.3,
+        sclMlt: .5
+    }, {
+        name: "Emoji Beanie",
+        limT: "Charity",
+        creator: "Nxbulah",
+        streamer: "Kaarson",
+        drop: !0,
+        time: {start: "March 6, 2021 5:00 PM UTC", end: "March 6, 2021 9:00 PM UTC"},
+        watch: "1 Hour",
+        seas: 4,
+        tex: 2,
+        id: 72,
+        rarity: 3,
+        type: 1,
+        keyW: "Hat",
+        sclMlt: .5,
+        yOff: -1.5,
+        sitOff: .8
+    }, {
+        name: "Kaartana",
+        limT: "Charity",
+        creator: "Nxbulah",
+        streamer: "Kaarson",
+        drop: !0,
+        time: {start: "March 6, 2021 5:00 PM UTC", end: "March 6, 2021 9:00 PM UTC"},
+        watch: "1 Hour",
+        seas: 4,
+        id: 10,
+        tex: 4,
+        rarity: 4,
+        type: 3,
+        sxRot: -.3,
+        syOff: .1,
+        szOff: -.1,
+        scl: .8,
+        yOff: -1,
+        keyW: "Melee",
+        pulsT: .0015,
+        glow: !0
+    }, {
+        name: "Just Hanging",
+        limT: "Charity",
+        creator: "Kilfy",
+        streamer: "ImWaspy",
+        drop: !0,
+        time: {start: "March 6, 2021 9:00 PM UTC", end: "March 7, 2021 1:00 AM UTC"},
+        watch: "1 Hour",
+        seas: 4,
+        id: 52,
+        tex: 8,
+        rarity: 4,
+        side: 2,
+        glow: !0,
+        type: 2,
+        keyW: "Body",
+        xRot: 3,
+        xOff: -1,
+        yOff: .5,
+        spnScl: 2.6,
+        sclMlt: 2.4,
+        sitOff: -.5,
+        sitOffZ: -.6
+    }, {
+        name: "Ok Dude",
+        limT: "Charity",
+        creator: "Kilfy",
+        streamer: "ImWaspy",
+        drop: !0,
+        time: {start: "March 6, 2021 9:00 PM UTC", end: "March 7, 2021 1:00 AM UTC"},
+        watch: "1 Hour",
+        seas: 4,
+        id: 91,
+        tex: 7,
+        rarity: 3,
+        type: 1,
+        keyW: "Hat",
+        sclMlt: .5,
+        sitOff: .8
+    }, {
+        name: "Swixie",
+        limT: "Charity",
+        creator: "Nxbulah, Kilfy, CreshorTV",
+        streamer: "SwixieThinks",
+        drop: !0,
+        time: {start: "March 6, 2021 1:00 PM UTC", end: "March 6, 2021 5:00 PM UTC"},
+        watch: "1 Hour",
+        id: 296,
+        seas: 4,
+        weapon: 1,
+        rarity: 3
+    }, {
+        name: "Queen",
+        limT: "Charity",
+        creator: "Kilfy",
+        streamer: "SwixieThinks",
+        drop: !0,
+        time: {start: "March 6, 2021 1:00 PM UTC", end: "March 6, 2021 5:00 PM UTC"},
+        watch: "1 Hour",
+        seas: 4,
+        type: 1,
+        keyW: "Head",
+        scl: 1,
+        sclMlt: .48,
+        sitOff: 1,
+        yOff: -1.9,
+        id: 174,
+        tex: 1,
+        rarity: 3
+    }, {
+        name: "Hand Cannon",
+        id: 297,
+        creator: "ReFlick",
+        weapon: 1,
+        rarity: 3,
+        seas: 4,
+        itemShop: 1
+    }, {
+        name: "Diamond Back",
+        mid: 0,
+        midT: 13,
+        creator: "cimota",
+        noMuz: !0,
+        weapon: 3,
+        spnScl: 1.3,
+        scl: .9,
+        mScl: .84,
+        zOff: 0,
+        yOff: 0,
+        rarity: 4,
+        glow: !0,
+        pulsT: .0015,
+        seas: 4
+    }, {name: "kdc", id: 298, creator: "Kltter", weapon: 1, rarity: 3, glow: !0, seas: 4}, {
+        name: "Unravel",
+        id: 299,
+        creator: "Kcress",
+        weapon: 1,
+        rarity: 4,
+        glow: !0,
+        seas: 4
+    }, {
+        name: "Spirit of the Inferno",
+        id: 306,
+        creator: "Kilfy",
+        weapon: 2,
+        rarity: 4,
+        glow: !0,
+        pulsT: .0015,
+        seas: 4
+    }, {name: "Medic 87", id: 264, creator: "MDebski", weapon: 4, rarity: 2, glow: !0, seas: 4}, {
+        name: "Ahoy!!",
+        id: 202,
+        creator: "Whippii",
+        weapon: 5,
+        rarity: 3,
+        glow: !0,
+        seas: 4
+    }, {name: "Mecha Zombie", id: 203, creator: "MDebski", weapon: 5, rarity: 3, glow: !0, seas: 4}, {
+        name: "Mimir",
+        mid: 0,
+        midT: 163,
+        creator: "MDebski",
+        weapon: 6,
+        rarity: 3,
+        seas: 4,
+        scl: .9,
+        mScl: 1,
+        zOff: .28,
+        yOff: -.5
+    }, {name: "Luminescent Drip", id: 32, creator: "MDebski", weapon: 11, rarity: 3, glow: !0, seas: 4}, {
+        name: "Horus",
+        id: 33,
+        creator: "Exxor",
+        weapon: 11,
+        rarity: 3,
+        seas: 4
+    }, {name: "ColorWave", id: 189, creator: "Destroy007", weapon: 15, rarity: 3, glow: !0, seas: 4}, {
+        name: "Stripez",
+        id: 25,
+        creator: "Exxor",
+        weapon: 17,
+        rarity: 3,
+        glow: !0,
+        seas: 4
     }
 ], module.exports.limited = [
     {n: "Kr-98", id: 2896, c: 59999}, {
@@ -19697,22 +19980,22 @@ module.exports.wheels = [
         n: "World War",
         id: 2885,
         c: 4999
-    }, {n: "War Trophy", id: 2886, c: 3999}, {n: "Commmander", id: 2887, c: 5999}, {
-        n: "Battle Tested",
-        id: 2889,
-        c: 4999
-    }, {n: "Warhawk", id: 2890, c: 5999}, {n: "Sabre", id: 2891, c: 5999}, {
-        n: "Desert Ace",
-        id: 2892,
-        c: 3999
-    }, {n: "Lest We Forget", id: 2895, c: 999}, {n: "Bombs away!", id: 2883, c: 7999}, {
-        n: "Lieutenant",
-        id: 2877,
-        c: 11999
-    }, {n: "Woodland", id: 2897, c: 24999}
+    }, {n: "War Trophy", id: 2886, c: 3999}, {n: "Hand Cannon", id: 2910, c: 4999}, {
+        n: "Commmander",
+        id: 2887,
+        c: 5999
+    }, {n: "Battle Tested", id: 2889, c: 4999}, {n: "Warhawk", id: 2890, c: 5999}, {
+        n: "Sabre",
+        id: 2891,
+        c: 5999
+    }, {n: "Desert Ace", id: 2892, c: 3999}, {n: "Lest We Forget", id: 2895, c: 999}, {
+        n: "Bombs away!",
+        id: 2883,
+        c: 7999
+    }, {n: "Lieutenant", id: 2877, c: 11999}, {n: "Woodland", id: 2897, c: 24999}
 ];
-for (var t = [1, 2, 6, 7, 8], n = 0; n < module.exports.skins.length; n++) module.exports.skins[n].index = n, module.exports.skins[n].type && -1 != t.indexOf(module.exports.skins[n].type) && (null == module.exports.skins[n].sitOff && (module.exports.skins[n].sitOff = 0), null == module.exports.skins[n].sitOffZ && (module.exports.skins[n].sitOffZ = 0), null == module.exports.skins[n].sclMlt && (module.exports.skins[n].sclMlt = 0)), module.exports.skins[n].free && (module.exports.skins[n].limT = "Free", module.exports.skins[n].noSale = !0, module.exports.skins[n].noSpin = !0), module.exports.skins[n].itemShop && (module.exports.skins[n].noSale = 1 == module.exports.skins[n].itemShop, module.exports.skins[n].noSpin = !0, module.exports.skins[n].limited = !0);
-for (n = 0; n < module.exports.limited.length; n++) module.exports.limited[n].i = n, delete module.exports.limited[n].n
+for (var t = [1, 2, 6, 7, 8], n = 0; n < module.exports.skins.length; n++) module.exports.skins[n].index = n, module.exports.skins[n].type && -1 != t.indexOf(module.exports.skins[n].type) && (null == module.exports.skins[n].sitOff && (module.exports.skins[n].sitOff = 0), null == module.exports.skins[n].sitOffZ && (module.exports.skins[n].sitOffZ = 0), null == module.exports.skins[n].sclMlt && (module.exports.skins[n].sclMlt = 0)), module.exports.skins[n].free && (module.exports.skins[n].limT = "Free", module.exports.skins[n].noSale = !0, module.exports.skins[n].noSpin = !0), module.exports.skins[n].itemShop && (module.exports.skins[n].noSale = 1 == module.exports.skins[n].itemShop, module.exports.skins[n].noSpin = !0, module.exports.skins[n].limited = !0), module.exports.skins[n].drop && (module.exports.skins[n].noSale = !0, module.exports.skins[n].noSpin = !0, module.exports.skins[n].limited = !0);
+for (n = 0; n < module.exports.limited.length; n++) module.exports.limited[n].i = n
 },{}],3:[function(require,module,exports){
 const data = require("./data");
 const weapons = require("./weapons");
@@ -21775,6 +22058,10 @@ module.exports = [
     {
         "name": "3.6.7",
         "skins": 27
+    },
+    {
+        "name": "3.7.0",
+        "skins": 25
     }
 ];
 
