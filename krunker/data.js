@@ -19757,37 +19757,169 @@ module.exports.wheels = [
         rarity: 3,
         glow: !0,
         seas: 4
-    }
-], module.exports.limited = [
-    {n: "Kr-98", id: 2896, c: 59999}, {
-        n: "Model 24 Stielhandgranate",
-        id: 2893,
-        c: 49999
-    }, {n: "Fighter", id: 2894, c: 44999}, {n: "Shell Shoked", id: 2876, c: 14999}, {
-        n: "Iron Patriot",
-        id: 2888,
-        c: 7999
-    }, {n: "Spitfire", id: 2878, c: 999}, {n: "XOXO", id: 2879, c: 999}, {n: "Krunkroy", id: 2880, c: 999}, {
-        n: "Shermy",
-        id: 2881,
-        c: 999
-    }, {n: "Corsair", id: 2882, c: 4999}, {n: "Redzone", id: 2884, c: 5999}, {
-        n: "World War",
-        id: 2885,
-        c: 4999
-    }, {n: "War Trophy", id: 2886, c: 3999}, {n: "Hand Cannon", id: 2910, c: 4999}, {
-        n: "Commmander",
-        id: 2887,
-        c: 5999
-    }, {n: "Battle Tested", id: 2889, c: 4999}, {n: "Warhawk", id: 2890, c: 5999}, {
-        n: "Sabre",
-        id: 2891,
-        c: 5999
-    }, {n: "Desert Ace", id: 2892, c: 3999}, {n: "Lest We Forget", id: 2895, c: 999}, {
-        n: "Bombs away!",
-        id: 2883,
-        c: 7999
-    }, {n: "Lieutenant", id: 2877, c: 11999}, {n: "Woodland", id: 2897, c: 24999}
-];
+    }, {
+        name: "Puppeteer",
+        creator: "CreshorTV",
+        id: 0,
+        tex: 57,
+        rarity: 3,
+        type: 7,
+        keyW: "Face",
+        seas: 4,
+        sitOff: 1,
+        sitOffZ: .005,
+        trans: !0,
+        yOff: -.7,
+        xOff: 2.2,
+        xRot: -.5
+    }, {
+        name: "Button-face",
+        creator: "Chwoubaka",
+        id: 0,
+        tex: 58,
+        rarity: 3,
+        type: 7,
+        keyW: "Face",
+        seas: 4,
+        sitOff: 1,
+        sitOffZ: .005,
+        trans: !0,
+        yOff: -.7,
+        xOff: 2.2,
+        xRot: -.5
+    }, {
+        name: "Soulless",
+        creator: "Chwoubaka",
+        id: 0,
+        tex: 59,
+        rarity: 3,
+        type: 7,
+        keyW: "Face",
+        seas: 4,
+        sitOff: 1,
+        sitOffZ: .005,
+        trans: !0,
+        yOff: -.7,
+        xOff: 2.2,
+        xRot: -.5
+    }, {
+        name: "Sly",
+        creator: "Kcress",
+        id: 0,
+        tex: 60,
+        rarity: 3,
+        type: 7,
+        keyW: "Face",
+        seas: 4,
+        sitOff: 1,
+        sitOffZ: .005,
+        trans: !0,
+        yOff: -.7,
+        xOff: 2.2,
+        xRot: -.5
+    }, {
+        name: "Bewildered",
+        creator: "CreshorTV",
+        id: 0,
+        tex: 61,
+        rarity: 3,
+        type: 7,
+        keyW: "Face",
+        seas: 4,
+        sitOff: 1,
+        sitOffZ: .005,
+        trans: !0,
+        yOff: -.7,
+        xOff: 2.2,
+        xRot: -.5
+    }, {
+        name: "Flirtatious",
+        creator: "Atomize",
+        id: 0,
+        tex: 62,
+        rarity: 3,
+        type: 7,
+        keyW: "Face",
+        seas: 4,
+        sitOff: 1,
+        sitOffZ: .005,
+        trans: !0,
+        yOff: -.7,
+        xOff: 2.2,
+        xRot: -.5
+    }, {
+        name: "Creepy Avo",
+        creator: "MDebski",
+        id: 199,
+        type: 4,
+        rarity: 3,
+        opacity: .8,
+        keyW: "Sprays",
+        seas: 4
+    }, {
+        name: "Angry Goomie",
+        creator: "FailBucket",
+        id: 200,
+        type: 4,
+        rarity: 3,
+        opacity: .8,
+        keyW: "Sprays",
+        seas: 4
+    }, {
+        name: "Crazy Goomie",
+        creator: "FailBucket",
+        id: 201,
+        type: 4,
+        rarity: 3,
+        opacity: .8,
+        keyW: "Sprays",
+        seas: 4
+    }, {
+        name: "Happy Goomie",
+        creator: "FailBucket",
+        id: 202,
+        type: 4,
+        rarity: 3,
+        opacity: .8,
+        keyW: "Sprays",
+        seas: 4
+    }, {
+        name: "Peek A Boo",
+        creator: "Xire-fox",
+        id: 203,
+        type: 4,
+        rarity: 3,
+        opacity: .8,
+        keyW: "Sprays",
+        seas: 4
+    }, {
+        name: "V.I.P",
+        creator: "Kilfy",
+        id: 204,
+        type: 4,
+        rarity: 3,
+        opacity: .8,
+        keyW: "Sprays",
+        seas: 4
+    }, {
+        name: "Spade",
+        creator: "Xire-fox",
+        id: 205,
+        type: 4,
+        rarity: 3,
+        opacity: .8,
+        keyW: "Sprays",
+        seas: 4
+    }, {
+        name: "RageHorse",
+        creator: "Xire-fox",
+        id: 206,
+        type: 4,
+        rarity: 3,
+        opacity: .8,
+        keyW: "Sprays",
+        seas: 4
+    }, {name: "Nutz", creator: "Chwoubaka", id: 207, type: 4, rarity: 3, opacity: .8, keyW: "Sprays", seas: 4}
+], module.exports.limited = [];
 for (var t = [1, 2, 6, 7, 8], n = 0; n < module.exports.skins.length; n++) module.exports.skins[n].index = n, module.exports.skins[n].type && -1 != t.indexOf(module.exports.skins[n].type) && (null == module.exports.skins[n].sitOff && (module.exports.skins[n].sitOff = 0), null == module.exports.skins[n].sitOffZ && (module.exports.skins[n].sitOffZ = 0), null == module.exports.skins[n].sclMlt && (module.exports.skins[n].sclMlt = 0)), module.exports.skins[n].free && (module.exports.skins[n].limT = "Free", module.exports.skins[n].noSale = !0, module.exports.skins[n].noSpin = !0), module.exports.skins[n].itemShop && (module.exports.skins[n].noSale = 1 == module.exports.skins[n].itemShop, module.exports.skins[n].noSpin = !0, module.exports.skins[n].limited = !0), module.exports.skins[n].drop && (module.exports.skins[n].noSale = !0, module.exports.skins[n].noSpin = !0, module.exports.skins[n].limited = !0);
 for (n = 0; n < module.exports.limited.length; n++) module.exports.limited[n].i = n
