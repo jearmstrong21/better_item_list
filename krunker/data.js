@@ -198,12 +198,12 @@ module.exports.wheels = [
         sell: 1e4,
         fee: 200
     }
-], module.exports.getSpnItems = function (a, t, n, i, s) {
+], module.exports.getSpnItems = function (a, t, n, i, r) {
     t = t || 0;
-    var r = [], o = a.itemTypes, l = a.limType, d = a.weaponType;
+    var s = [], o = a.itemTypes, l = a.limType, d = a.weaponType;
     if (a.itemIndexs) return a.itemIndexs;
-    for (var c = 0; c < module.exports.skins.length; ++c) module.exports.skins[c] && !module.exports.skins[c].limited && !module.exports.skins[c].blocked && !module.exports.skins[c].noSpin && !module.exports.skins[c].blackM && (module.exports.skins[c].rarity == t || s && module.exports.skins[c].rarity >= s) && (!l || l == module.exports.skins[c].limT) && (l || !module.exports.skins[c].limT) && !(o && 0 > o.indexOf(module.exports.skins[c].type || 0)) && (!module.exports.skins[c].minRec || module.exports.skins[c].minRec && n && n.level < module.exports.skins[c].minRec) && (module.exports.skins[c].mSeas || (module.exports.skins[c].seas || 1) == i.currentSeason) && (null == d || d == module.exports.skins[c].weapon) && r.push(c);
-    return r
+    for (var c = 0; c < module.exports.skins.length; ++c) module.exports.skins[c] && !module.exports.skins[c].limited && !module.exports.skins[c].blocked && !module.exports.skins[c].noSpin && !module.exports.skins[c].blackM && (module.exports.skins[c].rarity == t || r && module.exports.skins[c].rarity >= r) && (!l || l == module.exports.skins[c].limT) && (l || !module.exports.skins[c].limT) && !(o && 0 > o.indexOf(module.exports.skins[c].type || 0)) && (!module.exports.skins[c].minRec || module.exports.skins[c].minRec && n && n.level < module.exports.skins[c].minRec) && (module.exports.skins[c].mSeas || (module.exports.skins[c].seas || 1) == i.currentSeason) && (null == d || d == module.exports.skins[c].weapon) && s.push(c);
+    return s
 }, module.exports.calcTradeFee = function (a) {
     for (var t, n = 0, i = 0; i < a.length; ++i) (t = module.exports.skins[a[i]]) && (n += module.exports.rarities[t.rarity].fee || 0);
     return n
@@ -10963,7 +10963,8 @@ module.exports.wheels = [
         rarity: 4,
         glow: !0,
         pulsT: .0015,
-        seas: 3
+        seas: 3,
+        drop: !0
     }, {
         name: "Celeste",
         limT: "Charity",
@@ -10976,7 +10977,8 @@ module.exports.wheels = [
         glow: !0,
         pulsT: .0015,
         mSeas: !0,
-        seas: 3
+        seas: 3,
+        drop: !0
     }, {
         name: "Warlock",
         limT: "Charity",
@@ -10990,7 +10992,8 @@ module.exports.wheels = [
         sclMlt: .5,
         sitOff: 1,
         yOff: -2,
-        keyW: "Hat"
+        keyW: "Hat",
+        drop: !0
     }, {
         name: "Starlight",
         limT: "Charity",
@@ -11007,7 +11010,8 @@ module.exports.wheels = [
         sitOffZ: -.4,
         yOff: -1,
         xOff: -1,
-        keyW: "Body"
+        keyW: "Body",
+        drop: !0
     }, {
         name: "Magic Wand",
         limT: "Charity",
@@ -11024,7 +11028,8 @@ module.exports.wheels = [
         scl: 1.3,
         yOff: -1.5,
         xOff: -1,
-        keyW: "Melee"
+        keyW: "Melee",
+        drop: !0
     }, {
         name: "Star Power",
         limT: "Charity",
@@ -11036,7 +11041,8 @@ module.exports.wheels = [
         id: 95,
         type: 4,
         opacity: .9,
-        keyW: "Sprays"
+        keyW: "Sprays",
+        drop: !0
     }, {
         name: "Shine Bright",
         limT: "Charity",
@@ -11048,7 +11054,8 @@ module.exports.wheels = [
         id: 96,
         type: 4,
         opacity: .9,
-        keyW: "Sprays"
+        keyW: "Sprays",
+        drop: !0
     }, {name: "Flow", id: 231, creator: "Luminae", weapon: 2, rarity: 4, glow: !0, seas: 3}, {
         name: "Freshmint",
         id: 232,
@@ -16256,7 +16263,8 @@ module.exports.wheels = [
         rarity: 1,
         side: 2,
         trans: !0,
-        alpha: .02
+        alpha: .02,
+        drop: !0
     }, {
         name: "Zero Ground",
         limT: "Charity",
@@ -16277,7 +16285,8 @@ module.exports.wheels = [
         sclMlt: 2.4,
         sitOff: -.5,
         sitOffZ: -.6,
-        seas: 4
+        seas: 4,
+        drop: !0
     }, {
         name: "Krunkstar",
         limT: "Charity",
@@ -16291,7 +16300,8 @@ module.exports.wheels = [
         yOff: -3,
         xOff: 1,
         keyW: "Shoes",
-        seas: 4
+        seas: 4,
+        drop: !0
     }, {
         name: "Telescope",
         limT: "Charity",
@@ -16303,7 +16313,8 @@ module.exports.wheels = [
         rarity: 3,
         glow: !0,
         pulsT: .0015,
-        seas: 4
+        seas: 4,
+        drop: !0
     }, {
         name: "Shooting Star",
         limT: "Charity",
@@ -16315,7 +16326,8 @@ module.exports.wheels = [
         rarity: 3,
         glow: !0,
         pulsT: .0015,
-        seas: 4
+        seas: 4,
+        drop: !0
     }, {
         name: "SubStar",
         limT: "Charity",
@@ -16327,7 +16339,8 @@ module.exports.wheels = [
         rarity: 3,
         glow: !0,
         pulsT: .0015,
-        seas: 4
+        seas: 4,
+        drop: !0
     }, {name: "Neonic", id: 270, creator: "Luminae", weapon: 1, rarity: 3, glow: !0, seas: 4}, {
         name: "Krunker'77",
         id: 271,
@@ -19919,7 +19932,25 @@ module.exports.wheels = [
         opacity: .8,
         keyW: "Sprays",
         seas: 4
-    }, {name: "Nutz", creator: "Chwoubaka", id: 207, type: 4, rarity: 3, opacity: .8, keyW: "Sprays", seas: 4}
+    }, {
+        name: "Nutz",
+        creator: "Chwoubaka",
+        id: 207,
+        type: 4,
+        rarity: 3,
+        opacity: .8,
+        keyW: "Sprays",
+        seas: 4
+    }, {name: "Racer", id: 6, rarity: 4, type: 8, yOff: -3, xOff: 1, keyW: "Shoes", seas: 4}, {
+        name: "Unicorn Slippers",
+        id: 7,
+        rarity: 4,
+        type: 8,
+        yOff: -3,
+        xOff: 1,
+        keyW: "Shoes",
+        seas: 4
+    }
 ], module.exports.limited = [];
-for (var t = [1, 2, 6, 7, 8], n = 0; n < module.exports.skins.length; n++) module.exports.skins[n].index = n, module.exports.skins[n].type && -1 != t.indexOf(module.exports.skins[n].type) && (null == module.exports.skins[n].sitOff && (module.exports.skins[n].sitOff = 0), null == module.exports.skins[n].sitOffZ && (module.exports.skins[n].sitOffZ = 0), null == module.exports.skins[n].sclMlt && (module.exports.skins[n].sclMlt = 0)), module.exports.skins[n].free && (module.exports.skins[n].limT = "Free", module.exports.skins[n].noSale = !0, module.exports.skins[n].noSpin = !0), module.exports.skins[n].itemShop && (module.exports.skins[n].noSale = 1 == module.exports.skins[n].itemShop, module.exports.skins[n].noSpin = !0, module.exports.skins[n].limited = !0), module.exports.skins[n].drop && (module.exports.skins[n].noSale = !0, module.exports.skins[n].noSpin = !0, module.exports.skins[n].limited = !0);
+for (var t = [1, 2, 6, 7, 8], n = 0; n < module.exports.skins.length; n++) module.exports.skins[n].index = n, module.exports.skins[n].type && -1 != t.indexOf(module.exports.skins[n].type) && (null == module.exports.skins[n].sitOff && (module.exports.skins[n].sitOff = 0), null == module.exports.skins[n].sitOffZ && (module.exports.skins[n].sitOffZ = 0), null == module.exports.skins[n].sclMlt && (module.exports.skins[n].sclMlt = 0)), module.exports.skins[n].free && (module.exports.skins[n].limT = "Free", module.exports.skins[n].noSale = !0, module.exports.skins[n].noSpin = !0), module.exports.skins[n].itemShop && (module.exports.skins[n].noSale = 1 == module.exports.skins[n].itemShop, module.exports.skins[n].noSpin = !0, module.exports.skins[n].limited = !0), module.exports.skins[n].drop && (module.exports.skins[n].noSale = !0, module.exports.skins[n].noSpin = !0, module.exports.skins[n].limited = !0, module.exports.skins[n].noQuickSell = !0);
 for (n = 0; n < module.exports.limited.length; n++) module.exports.limited[n].i = n
