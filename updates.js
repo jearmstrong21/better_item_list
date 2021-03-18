@@ -35,6 +35,10 @@ module.exports = [
     {
         "name": "3.7.3",
         "skins": 11
+    },
+    {
+        "name": "3.7.4",
+        "skins": 15
     }
 ];
 
