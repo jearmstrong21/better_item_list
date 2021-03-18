@@ -302,8 +302,21 @@ module.exports.wheels = [
     Canteen: "#fe4002",
     Gift: null,
     Free: null,
-    Christmas: null
-}, module.exports.types = ["weapons/weapon_", "hats/hat_", "body/body_", "melee/melee_", "sprays/", "dyes/", "waist/waist_", "faces/face_", "shoes/shoe_"], module.exports.purchases = [
+    Christmas: null,
+    Burg: "#ADE4F9",
+    Sandstorm: "#ADE4F9",
+    Littletown: "#ADE4F9",
+    Site: "#ADE4F9",
+    Industry: "#ADE4F9",
+    Subzero: "#ADE4F9",
+    Frieght: "#ADE4F9",
+    Undergrowth: "#ADE4F9",
+    Lostworld: "#ADE4F9",
+    Kanji: "#ADE4F9",
+    Citadel: "#ADE4F9",
+    Oasis: "#ADE4F9",
+    Evacuation: "#ADE4F9"
+}, module.exports.types = ["weapons/weapon_", "hats/hat_", "body/body_", "melee/melee_", "sprays/", "dyes/", "waist/waist_", "faces/face_", "shoes/shoe_", "pets/pet_"], module.exports.purchases = [
     {
         val: 300,
         priceSale: .89,
@@ -20272,9 +20285,195 @@ module.exports.wheels = [
         keyW: "Shoes",
         particle: 6,
         seas: 4
+    }, {
+        name: "Schloss",
+        limT: "Burg",
+        id: 309,
+        creator: "Luminae",
+        weapon: 2,
+        rarity: 3,
+        seas: 4,
+        mapReward: !0
+    }, {
+        name: "Town Blueprint",
+        limT: "Littletown",
+        id: 311,
+        creator: "Multihawk",
+        weapon: 2,
+        rarity: 3,
+        glow: !0,
+        seas: 4,
+        mapReward: !0
+    }, {
+        name: "Sandstorm",
+        limT: "Sandstorm",
+        id: 302,
+        creator: "Luminae",
+        weapon: 1,
+        rarity: 3,
+        seas: 4,
+        mapReward: !0
+    }, {
+        name: "FrostBound",
+        limT: "Subzero",
+        id: 206,
+        creator: "Kilfy",
+        weapon: 5,
+        rarity: 4,
+        glow: !0,
+        pulsT: .0015,
+        seas: 4,
+        mapReward: !0
+    }, {
+        name: "Incrementum Aliena",
+        limT: "Undergrowth",
+        id: 9,
+        tex: 3,
+        rarity: 4,
+        type: 3,
+        sxOff: .4,
+        scl: 1.4,
+        yOff: -2,
+        keyW: "Melee",
+        glow: !0,
+        seas: 4,
+        mapReward: !0
+    }, {
+        name: "Freight-14",
+        limT: "Freight",
+        id: 10,
+        creator: "Nxbulah",
+        weapon: 19,
+        rarity: 4,
+        glow: !0,
+        pulsT: .0015,
+        seas: 4,
+        mapReward: !0
+    }, {
+        name: "Fang of Coatl",
+        limT: "Lostworld",
+        keyW: "Knife",
+        glow: !0,
+        tex: 8,
+        id: 2,
+        type: 3,
+        seas: 4,
+        scl: 3,
+        sclMlt: .9,
+        yOff: -2,
+        rarity: 4,
+        mapReward: !0
+    }, {
+        name: "Necromatic",
+        limT: "Citadel",
+        id: 310,
+        creator: "Daemonium",
+        weapon: 2,
+        rarity: 4,
+        glow: !0,
+        pulsT: .0015,
+        seas: 4,
+        noAttach: !0,
+        alpha: .8,
+        side: 2,
+        mapReward: !0
+    }, {
+        name: "Ra's Paradise",
+        limT: "Oasis",
+        mid: 0,
+        midT: 17,
+        creator: "Nxbulah",
+        noMuz: !0,
+        weapon: 3,
+        spnScl: 1.3,
+        scl: .9,
+        mScl: .84,
+        zOff: 0,
+        yOff: 0,
+        glow: !0,
+        pulsT: .0015,
+        rarity: 3,
+        seas: 4,
+        mapReward: !0
+    }, {
+        name: "Neon Dreamer",
+        limT: "Kanji",
+        id: 301,
+        creator: "Whippii",
+        weapon: 1,
+        rarity: 4,
+        glow: !0,
+        seas: 4,
+        mapReward: !0
+    }, {
+        name: "Ghost Town",
+        limT: "Industry",
+        mid: 0,
+        midT: 164,
+        creator: "Nxbulah",
+        weapon: 6,
+        seas: 4,
+        scl: .9,
+        mScl: 1,
+        zOff: .28,
+        yOff: -.5,
+        rarity: 3,
+        glow: !0,
+        pulsT: .0015,
+        mapReward: !0
+    }, {
+        name: "Project-Evac",
+        limT: "Evacuation",
+        id: 34,
+        creator: "JustHollow",
+        weapon: 11,
+        rarity: 3,
+        seas: 4,
+        mapReward: !0
+    }, {
+        name: "Site",
+        limT: "Site",
+        mid: 0,
+        midT: 111,
+        creator: "Luminae",
+        weapon: 8,
+        rarity: 3,
+        glow: !0,
+        seas: 4,
+        mapReward: !0
+    }, {
+        name: "Ghostie",
+        limT: "Raid",
+        keyW: "Pet",
+        id: 0,
+        type: 9,
+        rarity: 6,
+        seas: 4,
+        glow: !0,
+        frames: 2,
+        frameT: 400,
+        trans: !0,
+        side: 2,
+        noSpin: !0,
+        limited: !0
+    }, {
+        name: "Pumpie",
+        keyW: "Pet",
+        id: 1,
+        type: 9,
+        rarity: 6,
+        seas: 4,
+        glow: !0,
+        trans: !0,
+        side: 2,
+        noSpin: !0,
+        noSale: !0,
+        noQuickSell: !0,
+        limited: !0,
+        blocked: !0
     }
 ], module.exports.limited = [];
-for (var t = [1, 2, 6, 7, 8], n = 0; n < module.exports.skins.length; n++) module.exports.skins[n].index = n, module.exports.skins[n].type && -1 != t.indexOf(module.exports.skins[n].type) && (null == module.exports.skins[n].sitOff && (module.exports.skins[n].sitOff = 0), null == module.exports.skins[n].sitOffZ && (module.exports.skins[n].sitOffZ = 0), null == module.exports.skins[n].sclMlt && (module.exports.skins[n].sclMlt = 0)), module.exports.skins[n].free && (module.exports.skins[n].limT = "Free", module.exports.skins[n].noSale = !0, module.exports.skins[n].noSpin = !0), module.exports.skins[n].itemShop && (module.exports.skins[n].noSale = 1 == module.exports.skins[n].itemShop, module.exports.skins[n].noSpin = !0, module.exports.skins[n].limited = !0), module.exports.skins[n].drop && (module.exports.skins[n].noSale = !0, module.exports.skins[n].noSpin = !0, module.exports.skins[n].limited = !0, module.exports.skins[n].noQuickSell = !0);
+for (var t = [1, 2, 6, 7, 8], n = 0; n < module.exports.skins.length; n++) module.exports.skins[n].index = n, module.exports.skins[n].type && -1 != t.indexOf(module.exports.skins[n].type) && (null == module.exports.skins[n].sitOff && (module.exports.skins[n].sitOff = 0), null == module.exports.skins[n].sitOffZ && (module.exports.skins[n].sitOffZ = 0), null == module.exports.skins[n].sclMlt && (module.exports.skins[n].sclMlt = 0)), (module.exports.skins[n].weapon || module.exports.skins[n].type && 3 == module.exports.skins[n].type) && (null == module.exports.skins[n].trans && (module.exports.skins[n].trans = !1), null == module.exports.skins[n].alpha && (module.exports.skins[n].alpha = 0), null == module.exports.skins[n].side && (module.exports.skins[n].side = 0), null == module.exports.skins[n].glow && (module.exports.skins[n].glow = !1), null == module.exports.skins[n].pulsT && (module.exports.skins[n].pulsT = 0)), module.exports.skins[n].free && (module.exports.skins[n].limT = "Free", module.exports.skins[n].noSale = !0, module.exports.skins[n].noSpin = !0), module.exports.skins[n].itemShop && (module.exports.skins[n].noSale = 1 == module.exports.skins[n].itemShop, module.exports.skins[n].noSpin = !0, module.exports.skins[n].limited = !0), module.exports.skins[n].drop && (module.exports.skins[n].noSale = !0, module.exports.skins[n].noSpin = !0, module.exports.skins[n].limited = !0, module.exports.skins[n].noQuickSell = !0), module.exports.skins[n].mapReward && (module.exports.skins[n].noSale = !0, module.exports.skins[n].noSpin = !0, module.exports.skins[n].noQuickSell = !0);
 for (n = 0; n < module.exports.limited.length; n++) module.exports.limited[n].i = n
 },{}],3:[function(require,module,exports){
 const data = require("./data");
@@ -22354,6 +22553,10 @@ module.exports = [
     {
         "name": "3.7.3",
         "skins": 11
+    },
+    {
+        "name": "3.7.4",
+        "skins": 15
     }
 ];
 
