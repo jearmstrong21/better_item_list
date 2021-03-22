@@ -20351,6 +20351,7 @@ module.exports.wheels = [
         mapReward: !0
     }, {
         name: "Fang of Coatl",
+        creator: "Kilfy",
         limT: "Lostworld",
         keyW: "Knife",
         glow: !0,
@@ -20471,8 +20472,380 @@ module.exports.wheels = [
         noQuickSell: !0,
         limited: !0,
         blocked: !0
+    }, {
+        name: "Cyborg",
+        creator: "Atomize",
+        id: 0,
+        tex: 63,
+        rarity: 4,
+        type: 7,
+        keyW: "Face",
+        seas: 4,
+        sitOff: 1,
+        sitOffZ: .005,
+        trans: !0,
+        yOff: -.7,
+        xOff: 2.2,
+        xRot: -.5,
+        itemShop: 1
+    }, {
+        name: "M4RS-V1",
+        creator: "Xire-fox",
+        id: 208,
+        type: 4,
+        rarity: 3,
+        opacity: .8,
+        keyW: "Sprays",
+        seas: 4,
+        itemShop: 1
+    }, {
+        name: "Overseer",
+        creator: "Multihawk",
+        id: 209,
+        type: 4,
+        rarity: 3,
+        opacity: .8,
+        keyW: "Sprays",
+        seas: 4,
+        itemShop: 1
+    }, {
+        name: "Sassy Satellite",
+        creator: "Multihawk",
+        id: 210,
+        type: 4,
+        rarity: 3,
+        opacity: .8,
+        keyW: "Sprays",
+        seas: 4,
+        itemShop: 1
+    }, {
+        name: "Space Vision",
+        creator: "Chwoubaka",
+        id: 211,
+        type: 4,
+        rarity: 3,
+        opacity: .95,
+        glow: !0,
+        keyW: "Sprays",
+        seas: 4,
+        itemShop: 1
+    }, {
+        name: "Spacey Fighter",
+        creator: "Multihawk",
+        id: 212,
+        type: 4,
+        rarity: 3,
+        opacity: .8,
+        glow: !0,
+        keyW: "Sprays",
+        seas: 4,
+        itemShop: 1
+    }, {
+        name: "T.7-CRASH",
+        creator: "JustHollow",
+        seas: 4,
+        flipAnim: !0,
+        id: 3,
+        tex: 20,
+        type: 3,
+        scl: 2.6,
+        sclMlt: 1,
+        yOff: -1,
+        xOff: -1.5,
+        rarity: 4,
+        sxRot: .3,
+        sxOff: .35,
+        szOff: -.25,
+        glow: !0,
+        itemShop: 1
+    }, {
+        name: "Echo Fang",
+        creator: "Kilfy",
+        seas: 4,
+        flipAnim: !0,
+        id: 3,
+        tex: 21,
+        type: 3,
+        scl: 2.6,
+        sclMlt: 1,
+        yOff: -1,
+        xOff: -1.5,
+        rarity: 4,
+        sxRot: .3,
+        sxOff: .35,
+        szOff: -.25,
+        glow: !0,
+        itemShop: 1
+    }, {
+        name: "Xingshi",
+        creator: "_irizu",
+        seas: 4,
+        id: 10,
+        tex: 7,
+        rarity: 5,
+        type: 3,
+        sxRot: -.3,
+        syOff: .1,
+        szOff: -.1,
+        scl: .8,
+        yOff: -1,
+        keyW: "Melee",
+        pulsT: .0015,
+        glow: !0,
+        itemShop: 1
+    }, {
+        name: "KrunkBoard",
+        creator: "iSpy & Kilfy",
+        id: 18,
+        rarity: 5,
+        type: 6,
+        keyW: "Waist",
+        seas: 4,
+        scl: 2.1,
+        spnScl: 3,
+        sclMlt: 2.6,
+        sitOff: 1.4,
+        prevRot: 4,
+        xOff: -2,
+        glow: !0,
+        lowR: !0,
+        noLegs: !0,
+        itemShop: 1
+    }, {
+        name: "EMPG Surge",
+        creator: "iSpy & Nxbulah",
+        mid: 1,
+        midT: 0,
+        weapon: 10,
+        rarity: 5,
+        seas: 4,
+        glow: !0,
+        trans: !0,
+        alpha: .45,
+        side: 2,
+        itemShop: 1
+    }, {
+        name: "Gelion MK 1",
+        creator: "Exxor",
+        mid: 1,
+        weapon: 11,
+        spnScl: 1,
+        rarity: 5,
+        seas: 4,
+        glow: !0,
+        itemShop: 1
+    }, {
+        name: "Space Ranger",
+        id: 303,
+        creator: "Destroy007",
+        weapon: 1,
+        rarity: 4,
+        glow: !0,
+        pulsT: .0015,
+        seas: 4,
+        itemShop: 1
+    }, {
+        name: "City's Gate",
+        id: 304,
+        creator: "Nxbulah",
+        weapon: 1,
+        rarity: 4,
+        glow: !0,
+        pulsT: .0015,
+        seas: 4,
+        itemShop: 1
+    }, {
+        name: "Voltage",
+        id: 312,
+        creator: "Luminae",
+        weapon: 2,
+        rarity: 3,
+        glow: !0,
+        pulsT: .0015,
+        seas: 4,
+        itemShop: 1
+    }, {
+        name: "TP-1502",
+        id: 313,
+        creator: "creshorTV",
+        weapon: 2,
+        rarity: 4,
+        glow: !0,
+        pulsT: .0015,
+        seas: 4,
+        itemShop: 1
+    }, {
+        name: "Stellar",
+        id: 314,
+        creator: "Exxor",
+        weapon: 2,
+        rarity: 3,
+        glow: !0,
+        pulsT: .0015,
+        seas: 4,
+        itemShop: 1
+    }, {
+        name: "X-PLSMA",
+        mid: 0,
+        midT: 18,
+        creator: "Kilfy",
+        noMuz: !0,
+        weapon: 3,
+        spnScl: 1.3,
+        scl: .9,
+        mScl: .84,
+        zOff: 0,
+        yOff: 0,
+        glow: !0,
+        pulsT: .0015,
+        rarity: 4,
+        seas: 4,
+        itemShop: 1
+    }, {
+        name: "Sunspot",
+        id: 265,
+        creator: "multihawk",
+        weapon: 4,
+        rarity: 3,
+        glow: !0,
+        seas: 4,
+        itemShop: 1
+    }, {
+        name: "Terminat-R",
+        id: 207,
+        creator: "Destroy007",
+        weapon: 5,
+        rarity: 4,
+        glow: !0,
+        pulsT: .0015,
+        seas: 4,
+        itemShop: 1
+    }, {
+        name: "Peacekeeper",
+        mid: 0,
+        midT: 165,
+        creator: "Chromatikk",
+        weapon: 6,
+        scl: .9,
+        mScl: 1,
+        zOff: .28,
+        yOff: -.5,
+        rarity: 3,
+        glow: !0,
+        seas: 4,
+        itemShop: 1
+    }, {
+        name: "EQ-9 Decimator",
+        id: 165,
+        creator: "multihawk",
+        weapon: 7,
+        rarity: 4,
+        glow: !0,
+        pulsT: .0015,
+        seas: 4,
+        itemShop: 1
+    }, {
+        name: "T.5-LAUNCH",
+        id: 35,
+        creator: "JustHollow",
+        weapon: 11,
+        rarity: 3,
+        glow: !0,
+        pulsT: .0015,
+        seas: 4,
+        itemShop: 1
+    }, {
+        name: "FMS-08",
+        id: 190,
+        creator: "MDebski",
+        weapon: 15,
+        rarity: 4,
+        glow: !0,
+        seas: 4,
+        itemShop: 1
+    }, {
+        name: "Solar Shot",
+        id: 10,
+        creator: "Kilfy",
+        weapon: 16,
+        rarity: 3,
+        glow: !0,
+        seas: 4,
+        itemShop: 1
+    }, {
+        name: "Voyager-73",
+        id: 26,
+        creator: "Multihawk",
+        weapon: 17,
+        rarity: 3,
+        glow: !0,
+        seas: 4,
+        itemShop: 1
+    }, {
+        name: "Coldheart",
+        id: 11,
+        creator: "Cimota",
+        weapon: 19,
+        rarity: 4,
+        glow: !0,
+        pulsT: .0015,
+        seas: 4,
+        itemShop: 1
+    }, {
+        name: "Brainie",
+        keyW: "Pet",
+        id: 2,
+        type: 9,
+        rarity: 6,
+        seas: 4,
+        glow: !0,
+        trans: !0,
+        side: 2,
+        noSpin: !0,
+        noSale: !0,
+        noQuickSell: !0,
+        limited: !0,
+        blocked: !0
     }
-], module.exports.limited = [];
+], module.exports.limited = [
+    {n: "KrunkBoard", id: 2975, c: 59999}, {
+        n: "EMPG Surge",
+        id: 2976,
+        c: 49999
+    }, {n: "Gelion MK 1", id: 2977, c: 39999}, {n: "City's Gate", id: 2979, c: 14999}, {
+        n: "Overseer",
+        id: 2968,
+        c: 999
+    }, {n: "Sassy Satellite", id: 2969, c: 999}, {n: "Space Vision", id: 2970, c: 1999}, {
+        n: "M4RS-V1",
+        id: 2967,
+        c: 999
+    }, {n: "Spacey Fighter", id: 2971, c: 999}, {n: "Cyborg", id: 2966, c: 8999}, {
+        n: "TP-1502",
+        id: 2981,
+        c: 14999
+    }, {n: "Terminat-R", id: 2985, c: 12999}, {n: "Echo Fang", id: 2973, c: 16999}, {
+        n: "EQ-9 Decimator",
+        id: 2987,
+        c: 12999
+    }, {n: "Space Ranger", id: 2978, c: 11999}, {n: "X-PLSMA", id: 2983, c: 9999}, {
+        n: "FMS-08",
+        id: 2989,
+        c: 7999
+    }, {n: "Coldheart", id: 2992, c: 7999}, {n: "T.7-CRASH", id: 2972, c: 11999}, {
+        n: "Voltage",
+        id: 2980,
+        c: 3999
+    }, {n: "Stellar", id: 2982, c: 4999}, {n: "Sunspot", id: 2984, c: 2499}, {
+        n: "Peacekeeper",
+        id: 2986,
+        c: 3999
+    }, {n: "T.5-LAUNCH", id: 2988, c: 6999}, {n: "Solar Shot", id: 2990, c: 2499}, {
+        n: "Voyager-73",
+        id: 2991,
+        c: 2499
+    }, {n: "Xingshi", id: 2974, c: 29999}
+];
 for (var t = [1, 2, 6, 7, 8], n = 0; n < module.exports.skins.length; n++) module.exports.skins[n].index = n, module.exports.skins[n].type && -1 != t.indexOf(module.exports.skins[n].type) && (null == module.exports.skins[n].sitOff && (module.exports.skins[n].sitOff = 0), null == module.exports.skins[n].sitOffZ && (module.exports.skins[n].sitOffZ = 0), null == module.exports.skins[n].sclMlt && (module.exports.skins[n].sclMlt = 0)), (module.exports.skins[n].weapon || module.exports.skins[n].type && 3 == module.exports.skins[n].type) && (null == module.exports.skins[n].trans && (module.exports.skins[n].trans = !1), null == module.exports.skins[n].alpha && (module.exports.skins[n].alpha = 0), null == module.exports.skins[n].side && (module.exports.skins[n].side = 0), null == module.exports.skins[n].glow && (module.exports.skins[n].glow = !1), null == module.exports.skins[n].pulsT && (module.exports.skins[n].pulsT = 0)), module.exports.skins[n].free && (module.exports.skins[n].limT = "Free", module.exports.skins[n].noSale = !0, module.exports.skins[n].noSpin = !0), module.exports.skins[n].itemShop && (module.exports.skins[n].noSale = 1 == module.exports.skins[n].itemShop, module.exports.skins[n].noSpin = !0, module.exports.skins[n].limited = !0), module.exports.skins[n].drop && (module.exports.skins[n].noSale = !0, module.exports.skins[n].noSpin = !0, module.exports.skins[n].limited = !0, module.exports.skins[n].noQuickSell = !0), module.exports.skins[n].mapReward && (module.exports.skins[n].noSale = !0, module.exports.skins[n].noSpin = !0, module.exports.skins[n].noQuickSell = !0);
 for (n = 0; n < module.exports.limited.length; n++) module.exports.limited[n].i = n
 },{}],3:[function(require,module,exports){
@@ -22557,6 +22930,10 @@ module.exports = [
     {
         "name": "3.7.4",
         "skins": 15
+    },
+    {
+        "name": "3.7.5 (misnamed 3.7.8)",
+        "skins": 28
     }
 ];
 
