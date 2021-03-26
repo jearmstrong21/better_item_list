@@ -20806,6 +20806,43 @@ module.exports.wheels = [
         noQuickSell: !0,
         limited: !0,
         blocked: !0
+    }, {
+        name: "Vandal",
+        keyW: "Knife",
+        animInd: 1,
+        id: 37,
+        type: 3,
+        scl: 2,
+        sclMlt: .9,
+        yOff: -2,
+        rarity: 5,
+        seas: 4,
+        noSale: !0,
+        blackM: !0,
+        sprayI: !0,
+        funds: 1e4,
+        reqT: "50,000 Sprays",
+        req: function (e) {
+            return e && e.stats && 5e4 <= (e.stats.spry || 0)
+        }
+    }, {
+        name: "High Roller",
+        id: 206,
+        sclMlt: .4795,
+        sitOff: 1.0264,
+        sitOffZ: 0,
+        type: 1,
+        keyW: "Hat",
+        rarity: 5,
+        seas: 4,
+        noSale: !0,
+        blackM: !0,
+        funds: 1e4,
+        side: 2,
+        reqT: "Have 1,000,000 KR",
+        req: function (e) {
+            return e && 1e6 <= (e.funds || 0)
+        }
     }
 ], module.exports.limited = [
     {n: "KrunkBoard", id: 2975, c: 59999}, {
@@ -22888,6 +22925,8 @@ if (params.get("item") != null) {
 }
 
 refilter();
+
+document.getElementById("version").innerText = `Currently up-to-date for version ${updates.latest}`;
 },{"./krunker/data":2,"./krunker/krunker":3,"./krunker/weapons":4,"./updates":6}],6:[function(require,module,exports){
 // I manually created and maintained this file
 
@@ -22934,6 +22973,10 @@ module.exports = [
     {
         "name": "3.7.5 (misnamed 3.7.8)",
         "skins": 28
+    },
+    {
+        "name": "3.7.6",
+        "skins": 2
     }
 ];
 
@@ -22942,4 +22985,5 @@ module.exports = [
  */
 
 module.exports.early = "<=3.6.1";
+module.exports.latest = "3.7.6";
 },{}]},{},[5]);
