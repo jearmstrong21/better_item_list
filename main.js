@@ -436,3 +436,5 @@ if (params.get("item") != null) {
 }
 
 refilter();
+
+document.getElementById("version").innerText = `Currently up-to-date for version ${updates.latest}`;
