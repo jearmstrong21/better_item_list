@@ -20638,6 +20638,24 @@ module.exports.wheels = [
         req: function (e) {
             return e && 1e6 <= (e.funds || 0)
         }
+    }, {
+        name: "Master Trader",
+        id: 207,
+        sclMlt: .4835,
+        sitOff: .9827,
+        sitOffZ: 0,
+        type: 1,
+        keyW: "Hat",
+        rarity: 5,
+        seas: 4,
+        noSale: !0,
+        blackM: !0,
+        funds: 1e4,
+        side: 2,
+        reqT: "Complete 5000 Trades",
+        req: function (e) {
+            return e && 5e3 <= (e.trades || 0)
+        }
     }
 ], module.exports.limited = [
     {n: "KrunkBoard", id: 2975, c: 59999}, {
