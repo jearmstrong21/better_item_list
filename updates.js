@@ -59,4 +59,4 @@ module.exports = [
  */
 
 module.exports.early = "<=3.6.1";
-module.exports.latest = "3.7.6";
+module.exports.latest = "3.7.7";
