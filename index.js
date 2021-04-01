@@ -907,7 +907,7 @@ module.exports.wheels = [
         id: 17,
         weapon: 9,
         rarity: 1
-    }, {name: "Omen", glow: !0, id: 24, creator: "Zino", weapon: 1, rarity: 3}, {
+    }, {name: "Omen", glow: !0, id: 24, creator: "zinoob", weapon: 1, rarity: 3}, {
         name: "Scoped Moss",
         id: 25,
         weapon: 1,
@@ -1610,7 +1610,7 @@ module.exports.wheels = [
         rarity: 4
     }, {name: "Vlaine", id: 36, weapon: 1, rarity: 1}, {
         name: "AWP Supersport",
-        creator: "Kitter",
+        creator: "Kltter",
         id: 37,
         weapon: 1,
         rarity: 2
@@ -2347,7 +2347,7 @@ module.exports.wheels = [
         seas: 2
     }, {name: "Exoscarlet", creator: "CyAnIdE", id: 116, weapon: 1, rarity: 1, seas: 2}, {
         name: "Sorable V",
-        creator: "Zino",
+        creator: "zinoob",
         id: 117,
         weapon: 1,
         rarity: 3,
@@ -4613,7 +4613,7 @@ module.exports.wheels = [
     }, {
         name: "World of Light",
         id: 77,
-        creator: "Electrode",
+        creator: "Electrode_",
         glow: !0,
         weapon: 15,
         rarity: 3,
@@ -4789,7 +4789,7 @@ module.exports.wheels = [
     }, {name: "Scarlet", id: 118, creator: "FlowerKid", weapon: 2, rarity: 5, glow: !0, seas: 2}, {
         name: "Lunar Nitro",
         id: 129,
-        creator: "Kitter",
+        creator: "Kltter",
         weapon: 1,
         rarity: 2,
         seas: 2
@@ -4903,7 +4903,7 @@ module.exports.wheels = [
     }, {name: "AWM Federation", id: 135, creator: "jonschmiddy", weapon: 1, rarity: 2, seas: 2}, {
         name: "Soul",
         id: 121,
-        creator: "Zino",
+        creator: "zinoob",
         weapon: 2,
         rarity: 2,
         seas: 2
@@ -4924,11 +4924,11 @@ module.exports.wheels = [
     }, {name: "Sheikah", id: 136, creator: "FlowerKid", weapon: 1, rarity: 4, glow: !0, seas: 2}, {
         name: "Fairy",
         id: 137,
-        creator: "Jhonxay",
+        creator: "Jhonxay_Playz",
         weapon: 1,
         rarity: 2,
         seas: 2
-    }, {name: "Trix", id: 83, creator: "Jhonxay", weapon: 5, rarity: 3, glow: !0, seas: 2}, {
+    }, {name: "Trix", id: 83, creator: "Jhonxay_Playz", weapon: 5, rarity: 3, glow: !0, seas: 2}, {
         name: "Moonlight",
         creator: "FlowerKid",
         midT: 46,
@@ -4954,7 +4954,7 @@ module.exports.wheels = [
         weapon: 1,
         rarity: 1,
         seas: 2
-    }, {name: "Nozomu", id: 140, creator: "Jhonxay", weapon: 1, rarity: 2, seas: 2}, {
+    }, {name: "Nozomu", id: 140, creator: "Jhonxay_Playz", weapon: 1, rarity: 2, seas: 2}, {
         name: "Gilded",
         id: 123,
         creator: "Cimota",
@@ -5686,7 +5686,7 @@ module.exports.wheels = [
     }, {name: "Sense", id: 152, creator: "Nxbulah", weapon: 1, rarity: 3, glow: !0, seas: 3}, {
         name: "Yürei",
         id: 153,
-        creator: "Jhonxay",
+        creator: "Jhonxay_Playz",
         weapon: 1,
         rarity: 2,
         seas: 3
@@ -5700,7 +5700,7 @@ module.exports.wheels = [
     }, {name: "Alligator", id: 156, creator: "Skriller33", weapon: 1, rarity: 2, seas: 3}, {
         name: "Hakan",
         id: 157,
-        creator: "Nxbulah & Kilfy",
+        creator: "Nxbulah, Kilfy",
         weapon: 1,
         rarity: 4,
         glow: !0,
@@ -5859,7 +5859,7 @@ module.exports.wheels = [
     }, {name: "Sagittarius", id: 140, creator: "Chromatikk", weapon: 2, rarity: 4, seas: 3}, {
         name: "VAX",
         id: 141,
-        creator: "KItter",
+        creator: "Kltter",
         weapon: 2,
         rarity: 2,
         glow: !0,
@@ -5867,14 +5867,14 @@ module.exports.wheels = [
     }, {name: "Wims", id: 142, creator: "Nxbulah", weapon: 2, rarity: 3, glow: !0, seas: 3}, {
         name: "Amaterasu",
         id: 143,
-        creator: "KItter",
+        creator: "Kltter",
         weapon: 2,
         rarity: 3,
         seas: 3
     }, {name: "Kanagawa", id: 144, creator: "FlowerKid", weapon: 2, rarity: 2, seas: 3}, {
         name: "AKS",
         id: 145,
-        creator: "KItter",
+        creator: "Kltter",
         weapon: 2,
         rarity: 2,
         seas: 3
@@ -5906,7 +5906,7 @@ module.exports.wheels = [
     }, {name: "Cheetah", id: 151, creator: "Skriller33", weapon: 2, rarity: 2, seas: 3}, {
         name: "Krunkodore",
         id: 152,
-        creator: "KItter",
+        creator: "Kltter",
         weapon: 2,
         rarity: 3,
         glow: !0,
@@ -5928,7 +5928,7 @@ module.exports.wheels = [
         rarity: 4,
         glow: !0,
         seas: 3
-    }, {name: "Toxic Nitro", id: 156, creator: "KItter", weapon: 2, rarity: 3, glow: !0, seas: 3}, {
+    }, {name: "Toxic Nitro", id: 156, creator: "Kltter", weapon: 2, rarity: 3, glow: !0, seas: 3}, {
         name: "Swarm",
         id: 157,
         creator: "Kilfy",
@@ -6098,7 +6098,7 @@ module.exports.wheels = [
         weapon: 4,
         rarity: 2,
         seas: 3
-    }, {name: "Traveller", id: 126, creator: "KItter", weapon: 4, rarity: 3, glow: !0, seas: 3}, {
+    }, {name: "Traveller", id: 126, creator: "Kltter", weapon: 4, rarity: 3, glow: !0, seas: 3}, {
         name: "Abraxas",
         id: 127,
         creator: "Cimota",
@@ -7294,7 +7294,9 @@ module.exports.wheels = [
         glow: !0,
         pulsT: .0015,
         seas: 3,
-        snd: !0
+        snd: !0,
+        cSwing: !0,
+        killSnd: !0
     }, {
         name: "Disintegrator",
         mid: 0,
@@ -8455,7 +8457,7 @@ module.exports.wheels = [
         name: "Krystal",
         mid: 0,
         midT: 40,
-        creator: "KItter",
+        creator: "Kltter",
         weapon: 10,
         rarity: 3,
         glow: !0,
@@ -8470,7 +8472,7 @@ module.exports.wheels = [
         frames: 4,
         frameT: 250,
         seas: 3
-    }, {name: "Kitta", mid: 0, midT: 2, creator: "KItter", weapon: 10, rarity: 2, seas: 3}, {
+    }, {name: "Kitta", mid: 0, midT: 2, creator: "Kltter", weapon: 10, rarity: 2, seas: 3}, {
         name: "Plasma Grime",
         mid: 0,
         midT: 3,
@@ -9088,7 +9090,9 @@ module.exports.wheels = [
         yOff: -.5,
         xOff: -1,
         rarity: 4,
-        seas: 3
+        seas: 3,
+        cSwing: !0,
+        killSnd: !0
     }, {
         name: "Banana Tail",
         id: 2,
@@ -9801,7 +9805,7 @@ module.exports.wheels = [
     }, {
         name: "Sekigahara",
         id: 215,
-        creator: "Flower Kid",
+        creator: "FlowerKid",
         weapon: 1,
         rarity: 4,
         glow: !0,
@@ -9810,7 +9814,7 @@ module.exports.wheels = [
     }, {
         name: "Death Parade",
         id: 216,
-        creator: "Flower Kid",
+        creator: "FlowerKid",
         weapon: 1,
         rarity: 5,
         glow: !0,
@@ -9828,7 +9832,7 @@ module.exports.wheels = [
     }, {
         name: "Cryptic J",
         id: 216,
-        creator: "Nxbulah & Kilfy",
+        creator: "Nxbulah, Kilfy",
         weapon: 2,
         rarity: 4,
         glow: !0,
@@ -11136,6 +11140,8 @@ module.exports.wheels = [
         keyW: "Knife",
         flipAnim: !0,
         snd: !0,
+        cSwing: !0,
+        killSnd: !0,
         id: 19,
         glow: !0,
         type: 3,
@@ -11822,7 +11828,7 @@ module.exports.wheels = [
     }, {
         name: "Quacky Bandana",
         limT: "Canteen",
-        creator: "Quacky",
+        creator: "QuackyTTV",
         noSale: !0,
         noSpin: !0,
         id: 91,
@@ -11836,7 +11842,7 @@ module.exports.wheels = [
     }, {
         name: "Zed Bandana",
         limT: "Canteen",
-        creator: "Quacky",
+        creator: "QuackyTTV",
         noSale: !0,
         noSpin: !0,
         id: 91,
@@ -13961,6 +13967,7 @@ module.exports.wheels = [
         xOff: 1,
         keyW: "Shoes",
         snd: !0,
+        stepSnd: !0,
         seas: 4
     }, {
         name: "Bunnies",
@@ -13971,6 +13978,7 @@ module.exports.wheels = [
         xOff: 1,
         keyW: "Shoes",
         snd: !0,
+        stepSnd: !0,
         seas: 4
     }, {name: "Frosted Bite", id: 107, type: 4, rarity: 4, opacity: .8, keyW: "Sprays", seas: 4}, {
         name: "Antidote",
@@ -14152,7 +14160,7 @@ module.exports.wheels = [
     }, {
         name: "Astral Horror",
         id: 241,
-        creator: "Kilfy & Nxbulah",
+        creator: "Kilfy, Nxbulah",
         weapon: 1,
         rarity: 4,
         glow: !0,
@@ -14176,7 +14184,7 @@ module.exports.wheels = [
     }, {
         name: "Reinga",
         id: 246,
-        creator: "Chromatikk & Kitter",
+        creator: "Chromatikk, Kltter",
         weapon: 1,
         rarity: 4,
         glow: !0,
@@ -14312,7 +14320,7 @@ module.exports.wheels = [
     }, {
         name: "Synergy",
         id: 245,
-        creator: "Nxbulah & Luminae",
+        creator: "Nxbulah, Luminae",
         weapon: 2,
         rarity: 4,
         glow: !0,
@@ -14394,7 +14402,7 @@ module.exports.wheels = [
         weapon: 2,
         rarity: 1,
         seas: 4
-    }, {name: "BoomBox", id: 206, creator: "Kitter", weapon: 4, rarity: 3, glow: !0, seas: 4}, {
+    }, {name: "BoomBox", id: 206, creator: "Kltter", weapon: 4, rarity: 3, glow: !0, seas: 4}, {
         name: "Koi",
         id: 207,
         creator: "Luminae",
@@ -15128,7 +15136,7 @@ module.exports.wheels = [
     }, {name: "Policijia", id: 9, creator: "_irizu", weapon: 14, rarity: 3, seas: 4}, {
         name: "K9X",
         id: 10,
-        creator: "_Xyba",
+        creator: "Xyba",
         weapon: 14,
         rarity: 3,
         seas: 4
@@ -15320,7 +15328,7 @@ module.exports.wheels = [
     }, {
         name: "Pentacore",
         id: 2,
-        creator: "Floatingpoint & Luminae",
+        creator: "Floatingpoint, Luminae",
         weapon: 19,
         rarity: 4,
         glow: !0,
@@ -16627,9 +16635,9 @@ module.exports.wheels = [
         pulsT: .0015,
         seas: 4
     }, {name: "Natrix", id: 239, creator: "Kltter", weapon: 4, rarity: 2, glow: !0, seas: 4}, {
-        name: "Chromatikk",
+        name: "Dark Soul",
         id: 240,
-        creator: "Dark Soul",
+        creator: "Chromatikk",
         weapon: 4,
         rarity: 4,
         glow: !0,
@@ -16651,9 +16659,9 @@ module.exports.wheels = [
         rarity: 2,
         seas: 4
     }, {name: "Ginova", id: 16, creator: "MDebski", weapon: 11, rarity: 3, glow: !0, seas: 4}, {
-        name: "Kristai",
+        name: "Golden Moon",
         id: 17,
-        creator: "Golden Moon",
+        creator: "Kristai",
         weapon: 11,
         rarity: 2,
         seas: 4
@@ -17810,7 +17818,7 @@ module.exports.wheels = [
         noSale: !0,
         mid: 0,
         midT: 0,
-        creator: "Exxor & Multihawk",
+        creator: "Exxor, Multihawk",
         weapon: 17,
         rarity: 5,
         glow: !0,
@@ -18544,9 +18552,9 @@ module.exports.wheels = [
         glow: !0,
         seas: 4
     }, {name: "Grantz", id: 24, creator: "MDebski", weapon: 11, rarity: 3, glow: !0, seas: 4}, {
-        name: "Zinoob",
+        name: "Arcadist",
         id: 185,
-        creator: "Arcadist",
+        creator: "Zinoob",
         weapon: 15,
         rarity: 3,
         glow: !0,
@@ -18885,7 +18893,7 @@ module.exports.wheels = [
         xRot: -.5
     }, {
         name: "Spoof",
-        creator: "RiotAlexis & Elliot4fall",
+        creator: "RiotAlexis, Elliot4fall",
         id: 0,
         tex: 45,
         rarity: 3,
@@ -18900,7 +18908,7 @@ module.exports.wheels = [
         xRot: -.5
     }, {
         name: "Karen",
-        creator: "RiotAlexis & Elliot4fall",
+        creator: "RiotAlexis, Elliot4fall",
         id: 0,
         tex: 46,
         rarity: 3,
@@ -18915,7 +18923,7 @@ module.exports.wheels = [
         xRot: -.5
     }, {
         name: "Wise Man",
-        creator: "RiotAlexis & Elliot4fall",
+        creator: "RiotAlexis, Elliot4fall",
         id: 0,
         tex: 47,
         rarity: 3,
@@ -18930,7 +18938,7 @@ module.exports.wheels = [
         xRot: -.5
     }, {
         name: "Oopsy",
-        creator: "RiotAlexis & Elliot4fall",
+        creator: "RiotAlexis, Elliot4fall",
         id: 0,
         tex: 48,
         rarity: 3,
@@ -20595,7 +20603,7 @@ module.exports.wheels = [
         itemShop: 1
     }, {
         name: "KrunkBoard",
-        creator: "iSpy & Kilfy",
+        creator: "iSpy, Kilfy",
         id: 18,
         rarity: 5,
         type: 6,
@@ -20613,7 +20621,7 @@ module.exports.wheels = [
         itemShop: 1
     }, {
         name: "EMPG Surge",
-        creator: "iSpy & Nxbulah",
+        creator: "iSpy, Nxbulah",
         mid: 1,
         midT: 0,
         weapon: 10,
@@ -20861,46 +20869,490 @@ module.exports.wheels = [
         req: function (e) {
             return e && 5e3 <= (e.trades || 0)
         }
+    }, {
+        name: "Alien Blaster Mastery",
+        creator: "Slymex, Nxbulah",
+        weapon: 12,
+        mid: 0,
+        midT: 0,
+        trans: !0,
+        rarity: 5,
+        seas: 4,
+        noSale: !0,
+        blackM: !0,
+        funds: 1e4,
+        reqT: "Coming Soon",
+        req: function () {
+            return !1
+        }
+    }, {
+        name: "KPD Mastery",
+        snd: !0,
+        killSnd: !0,
+        keyW: "Knife",
+        id: 38,
+        type: 3,
+        scl: 2,
+        sclMlt: .9,
+        yOff: -2,
+        rarity: 5,
+        seas: 4,
+        glow: !0,
+        frames: 2,
+        frameT: 400,
+        noSale: !0,
+        blackM: !0,
+        funds: 1e4,
+        reqT: "Coming Soon",
+        req: function () {
+            return !1
+        }
+    }, {
+        name: "Hobo",
+        creator: "CreshorTV",
+        id: 0,
+        tex: 64,
+        rarity: 4,
+        type: 7,
+        keyW: "Face",
+        seas: 4,
+        sitOff: 1,
+        sitOffZ: .005,
+        trans: !0,
+        yOff: -.7,
+        xOff: 2.2,
+        xRot: -.5
+    }, {
+        name: "Monobrow",
+        creator: "CreshorTV",
+        id: 0,
+        tex: 65,
+        rarity: 4,
+        type: 7,
+        keyW: "Face",
+        seas: 4,
+        sitOff: 1,
+        sitOffZ: .005,
+        trans: !0,
+        yOff: -.7,
+        xOff: 2.2,
+        xRot: -.5
+    }, {
+        name: "Krunkdashian",
+        creator: "CreshorTV",
+        id: 0,
+        tex: 66,
+        rarity: 4,
+        type: 7,
+        keyW: "Face",
+        seas: 4,
+        sitOff: 1,
+        sitOffZ: .005,
+        trans: !0,
+        yOff: -.7,
+        xOff: 2.2,
+        xRot: -.5
+    }, {
+        name: "Anticipation",
+        creator: "CreshorTV",
+        id: 0,
+        tex: 67,
+        rarity: 4,
+        type: 7,
+        keyW: "Face",
+        seas: 4,
+        sitOff: 1,
+        sitOffZ: .005,
+        trans: !0,
+        yOff: -.7,
+        xOff: 2.2,
+        xRot: -.5
+    }, {
+        name: "Angry Chef",
+        creator: "CreshorTV",
+        id: 0,
+        tex: 68,
+        rarity: 4,
+        type: 7,
+        keyW: "Face",
+        seas: 4,
+        sitOff: 1,
+        sitOffZ: .005,
+        trans: !0,
+        yOff: -.7,
+        xOff: 2.2,
+        xRot: -.5
+    }, {
+        name: "Angry KRUNKsketch",
+        creator: "CreshorTV",
+        id: 0,
+        tex: 69,
+        rarity: 4,
+        type: 7,
+        keyW: "Face",
+        seas: 4,
+        sitOff: 1,
+        sitOffZ: .005,
+        trans: !0,
+        yOff: -.7,
+        xOff: 2.2,
+        xRot: -.5
+    }, {
+        name: "Angry Depressy",
+        creator: "CreshorTV",
+        id: 0,
+        tex: 70,
+        rarity: 4,
+        type: 7,
+        keyW: "Face",
+        seas: 4,
+        sitOff: 1,
+        sitOffZ: .005,
+        trans: !0,
+        yOff: -.7,
+        xOff: 2.2,
+        xRot: -.5
+    }, {
+        name: "Paranoid",
+        creator: "Atomize",
+        id: 0,
+        tex: 71,
+        rarity: 4,
+        type: 7,
+        keyW: "Face",
+        seas: 4,
+        sitOff: 1,
+        sitOffZ: .005,
+        trans: !0,
+        frames: 2,
+        frameT: 400,
+        yOff: -.7,
+        xOff: 2.2,
+        xRot: -.5
+    }, {
+        name: "Trance",
+        creator: "Atomize",
+        id: 0,
+        tex: 72,
+        rarity: 4,
+        type: 7,
+        keyW: "Face",
+        seas: 4,
+        sitOff: 1,
+        sitOffZ: .005,
+        trans: !0,
+        frames: 2,
+        frameT: 400,
+        yOff: -.7,
+        xOff: 2.2,
+        xRot: -.5
+    }, {
+        name: "Bad Eye",
+        creator: "CreshorTV",
+        id: 0,
+        tex: 73,
+        rarity: 4,
+        type: 7,
+        keyW: "Face",
+        seas: 4,
+        sitOff: 1,
+        sitOffZ: .005,
+        trans: !0,
+        frames: 2,
+        frameT: 400,
+        yOff: -.7,
+        xOff: 2.2,
+        xRot: -.5
+    }, {
+        name: "Good Eye",
+        creator: "CreshorTV",
+        id: 0,
+        tex: 74,
+        rarity: 4,
+        type: 7,
+        keyW: "Face",
+        seas: 4,
+        sitOff: 1,
+        sitOffZ: .005,
+        trans: !0,
+        frames: 2,
+        frameT: 400,
+        yOff: -.7,
+        xOff: 2.2,
+        xRot: -.5
+    }, {
+        name: "Big Teeth",
+        creator: "CreshorTV",
+        id: 0,
+        tex: 75,
+        rarity: 4,
+        type: 7,
+        keyW: "Face",
+        seas: 4,
+        sitOff: 1,
+        sitOffZ: .005,
+        trans: !0,
+        yOff: -.7,
+        xOff: 2.2,
+        xRot: -.5
+    }, {
+        name: "Cloudy",
+        creator: "Xire-fox",
+        id: 213,
+        type: 4,
+        rarity: 3,
+        opacity: .8,
+        keyW: "Sprays",
+        seas: 4
+    }, {
+        name: "Fry-Chan",
+        creator: "Xire-fox",
+        id: 214,
+        type: 4,
+        rarity: 3,
+        opacity: .8,
+        keyW: "Sprays",
+        seas: 4
+    }, {
+        name: "Sleepy Goomie",
+        creator: "FailBucket",
+        id: 215,
+        type: 4,
+        rarity: 3,
+        opacity: .8,
+        keyW: "Sprays",
+        seas: 4
+    }, {
+        name: "Sad Goomie",
+        creator: "FailBucket",
+        id: 216,
+        type: 4,
+        rarity: 3,
+        opacity: .8,
+        keyW: "Sprays",
+        seas: 4
+    }, {
+        name: "Stacked",
+        creator: "FailBucket",
+        id: 217,
+        type: 4,
+        rarity: 3,
+        opacity: .8,
+        keyW: "Sprays",
+        seas: 4
+    }, {
+        name: "Stargazer",
+        id: 305,
+        creator: "Chromatikk",
+        weapon: 1,
+        rarity: 5,
+        glow: !0,
+        pulsT: .0015,
+        seas: 4
+    }, {name: "Ultra CyberNetiks", id: 266, creator: "Exxor", weapon: 4, rarity: 3, glow: !0, seas: 4}, {
+        name: "Smiley",
+        id: 267,
+        creator: "JustHollow",
+        weapon: 4,
+        rarity: 4,
+        glow: !0,
+        pulsT: .0015,
+        seas: 4
+    }, {
+        name: "Cloud Nine",
+        id: 268,
+        creator: "Multihawk, Luminae",
+        weapon: 4,
+        rarity: 3,
+        glow: !0,
+        pulsT: .0015,
+        seas: 4
+    }, {name: "Kuzer", id: 208, creator: "MDebski", weapon: 5, rarity: 3, glow: !0, seas: 4}, {
+        name: "Toxic Drip",
+        mid: 0,
+        midT: 166,
+        creator: "CreshorTV",
+        scl: .9,
+        mScl: 1,
+        zOff: .28,
+        yOff: -.5,
+        weapon: 6,
+        rarity: 4,
+        glow: !0,
+        pulsT: .0015,
+        seas: 4
+    }, {
+        name: "Arkam",
+        mid: 0,
+        midT: 167,
+        creator: "MDebski",
+        scl: .9,
+        mScl: 1,
+        zOff: .28,
+        yOff: -.5,
+        weapon: 6,
+        rarity: 4,
+        glow: !0,
+        pulsT: .0015,
+        seas: 4
+    }, {
+        name: "Wispering Woods",
+        mid: 0,
+        midT: 112,
+        creator: "Kristai",
+        weapon: 8,
+        rarity: 4,
+        glow: !0,
+        pulsT: .0015,
+        seas: 4
+    }, {
+        name: "IronDwarf",
+        id: 95,
+        creator: "Nxbulah, Kilfy",
+        weapon: 9,
+        rarity: 4,
+        glow: !0,
+        pulsT: .0015,
+        seas: 4
+    }, {
+        name: "Dot Product",
+        mid: 0,
+        midT: 90,
+        creator: "Multihawk",
+        weapon: 10,
+        rarity: 3,
+        glow: !0,
+        pulsT: .0015,
+        seas: 4
+    }, {
+        name: "Barabasz",
+        mid: 0,
+        midT: 91,
+        creator: "MDebski",
+        weapon: 10,
+        rarity: 3,
+        glow: !0,
+        seas: 4
+    }, {
+        name: "Houres",
+        id: 36,
+        creator: "MDebski",
+        weapon: 11,
+        rarity: 3,
+        glow: !0,
+        seas: 4
+    }, {
+        name: "Fadeland Tactical",
+        id: 16,
+        creator: "Multihawk",
+        weapon: 14,
+        rarity: 3,
+        glow: !0,
+        seas: 4
+    }, {
+        name: "Stripes-3",
+        id: 17,
+        creator: "Multihawk",
+        weapon: 14,
+        rarity: 3,
+        glow: !0,
+        seas: 4
+    }, {
+        name: "Violet Ravager",
+        id: 18,
+        creator: "Kilfy",
+        weapon: 14,
+        rarity: 3,
+        glow: !0,
+        pulsT: .0015,
+        seas: 4
+    }, {
+        name: "BLKStripe",
+        id: 19,
+        creator: "Exxor",
+        weapon: 14,
+        rarity: 4,
+        glow: !0,
+        pulsT: .0015,
+        seas: 4
+    }, {name: "Rocket Jet", id: 20, creator: "Destroy007", weapon: 14, rarity: 4, glow: !0, seas: 4}, {
+        name: "Morse-3",
+        id: 21,
+        creator: "Luminae",
+        weapon: 14,
+        rarity: 3,
+        glow: !0,
+        seas: 4
+    }, {name: "Jungle Stalker", id: 22, creator: "Multihawk", weapon: 14, rarity: 3, seas: 4}, {
+        name: "Kaleido",
+        id: 23,
+        creator: "Cimota",
+        weapon: 14,
+        rarity: 3,
+        glow: !0,
+        seas: 4
+    }, {name: "Wraith", id: 24, creator: "Nxbulah", weapon: 14, rarity: 4, glow: !0, seas: 4}, {
+        name: "Zerulaw",
+        id: 191,
+        creator: "MDebski",
+        weapon: 15,
+        rarity: 3,
+        glow: !0,
+        pulsT: .0015,
+        seas: 4
+    }, {name: "Rutilus", id: 27, creator: "MDebski", weapon: 17, rarity: 3, glow: !0, seas: 4}, {
+        name: "Omura-X",
+        id: 28,
+        creator: "CreshorTV, JustHollow",
+        weapon: 17,
+        rarity: 4,
+        glow: !0,
+        pulsT: .0015,
+        seas: 4
+    }, {
+        name: "Crossbow Mastery",
+        creator: "RamanNoodl3s",
+        seas: 4,
+        mid: 1,
+        weapon: 14,
+        rarity: 5,
+        attachYOff: .05,
+        attachZOff: .55,
+        attachScale: 1,
+        aimY: .11,
+        noSale: !0,
+        blackM: !0,
+        funds: 1e4,
+        reqT: "Level 100 Bowman",
+        req: function (e) {
+            return e && e.stats && 1089e4 <= (e.stats.c11 || 0)
+        }
+    }, {
+        name: "Shotgun Mastery",
+        creator: "iSpy, Nxbulah",
+        seas: 4,
+        mid: 1,
+        midT: 168,
+        weapon: 6,
+        rarity: 5,
+        attachYOff: .2,
+        attachScale: 1.3,
+        attachZOff: -1.1,
+        attachBypass: !0,
+        scl: .9,
+        mScl: 1,
+        zOff: .28,
+        yOff: -.5,
+        aimY: .3,
+        noSale: !0,
+        blackM: !0,
+        funds: 1e4,
+        reqT: "Level 100 Vince",
+        req: function (e) {
+            return e && e.stats && 1089e4 <= (e.stats.c4 || 0)
+        }
     }
-], module.exports.limited = [
-    {n: "KrunkBoard", id: 2975, c: 59999}, {
-        n: "EMPG Surge",
-        id: 2976,
-        c: 49999
-    }, {n: "Gelion MK 1", id: 2977, c: 39999}, {n: "City's Gate", id: 2979, c: 14999}, {
-        n: "Overseer",
-        id: 2968,
-        c: 999
-    }, {n: "Sassy Satellite", id: 2969, c: 999}, {n: "Space Vision", id: 2970, c: 1999}, {
-        n: "M4RS-V1",
-        id: 2967,
-        c: 999
-    }, {n: "Spacey Fighter", id: 2971, c: 999}, {n: "Cyborg", id: 2966, c: 8999}, {
-        n: "TP-1502",
-        id: 2981,
-        c: 14999
-    }, {n: "Terminat-R", id: 2985, c: 12999}, {n: "Echo Fang", id: 2973, c: 16999}, {
-        n: "EQ-9 Decimator",
-        id: 2987,
-        c: 12999
-    }, {n: "Space Ranger", id: 2978, c: 11999}, {n: "X-PLSMA", id: 2983, c: 9999}, {
-        n: "FMS-08",
-        id: 2989,
-        c: 7999
-    }, {n: "Coldheart", id: 2992, c: 7999}, {n: "T.7-CRASH", id: 2972, c: 11999}, {
-        n: "Voltage",
-        id: 2980,
-        c: 3999
-    }, {n: "Stellar", id: 2982, c: 4999}, {n: "Sunspot", id: 2984, c: 2499}, {
-        n: "Peacekeeper",
-        id: 2986,
-        c: 3999
-    }, {n: "T.5-LAUNCH", id: 2988, c: 6999}, {n: "Solar Shot", id: 2990, c: 2499}, {
-        n: "Voyager-73",
-        id: 2991,
-        c: 2499
-    }, {n: "Xingshi", id: 2974, c: 29999}
-];
+], module.exports.limited = [];
 for (var t = [1, 2, 6, 7, 8], n = 0; n < module.exports.skins.length; n++) module.exports.skins[n].index = n, module.exports.skins[n].type && -1 != t.indexOf(module.exports.skins[n].type) && (null == module.exports.skins[n].sitOff && (module.exports.skins[n].sitOff = 0), null == module.exports.skins[n].sitOffZ && (module.exports.skins[n].sitOffZ = 0), null == module.exports.skins[n].sclMlt && (module.exports.skins[n].sclMlt = 0)), (module.exports.skins[n].weapon || module.exports.skins[n].type && 3 == module.exports.skins[n].type) && (null == module.exports.skins[n].trans && (module.exports.skins[n].trans = !1), null == module.exports.skins[n].alpha && (module.exports.skins[n].alpha = 0), null == module.exports.skins[n].side && (module.exports.skins[n].side = 0), null == module.exports.skins[n].glow && (module.exports.skins[n].glow = !1), null == module.exports.skins[n].pulsT && (module.exports.skins[n].pulsT = 0)), module.exports.skins[n].free && (module.exports.skins[n].limT = "Free", module.exports.skins[n].noSale = !0, module.exports.skins[n].noSpin = !0), module.exports.skins[n].itemShop && (module.exports.skins[n].noSale = 1 == module.exports.skins[n].itemShop, module.exports.skins[n].noSpin = !0, module.exports.skins[n].limited = !0), module.exports.skins[n].drop && (module.exports.skins[n].noSale = !0, module.exports.skins[n].noSpin = !0, module.exports.skins[n].limited = !0, module.exports.skins[n].noQuickSell = !0), module.exports.skins[n].mapReward && (module.exports.skins[n].noSale = !0, module.exports.skins[n].noSpin = !0, module.exports.skins[n].noQuickSell = !0);
 for (n = 0; n < module.exports.limited.length; n++) module.exports.limited[n].i = n
 },{}],3:[function(require,module,exports){
@@ -22999,6 +23451,10 @@ module.exports = [
     {
         "name": "3.7.7",
         "skins": 1
+    },
+    {
+        "name": "3.7.8",
+        "skins": 45
     }
 ];
 
@@ -23007,5 +23463,5 @@ module.exports = [
  */
 
 module.exports.early = "<=3.6.1";
-module.exports.latest = "3.7.7";
+module.exports.latest = "3.7.8";
 },{}]},{},[5]);
