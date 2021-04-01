@@ -51,6 +51,10 @@ module.exports = [
     {
         "name": "3.7.7",
         "skins": 1
+    },
+    {
+        "name": "3.7.8",
+        "skins": 45
     }
 ];
 
@@ -59,4 +63,4 @@ module.exports = [
  */
 
 module.exports.early = "<=3.6.1";
-module.exports.latest = "3.7.7";
+module.exports.latest = "3.7.8";
