@@ -203,6 +203,9 @@ module.exports = [{
     asset: ""
 }]
 },{}],2:[function(require,module,exports){
+var n = {
+    getPreview: require("./krunker").preview
+}
 module.exports.wheels = [
     {
         name: "Starter",
@@ -293,9 +296,7 @@ module.exports.wheels = [
 ], module.exports.events = {
     Debug: "#000000",
     Easter: null,
-    "Twitch #1": "#6441a5",
-    "Twitch #2": "#6441a5",
-    "Twitch #3": "#6441a5",
+    Twitch: "#6441a5",
     "Clan Wars": null,
     Charity: "#6441a5",
     Raid: "#eb347a",
@@ -321,35 +322,30 @@ module.exports.wheels = [
         val: 300,
         priceSale: .89,
         price: .99,
-        col: "#888888"
-    }, {val: 600, priceSale: 1.61, price: 1.79, col: "#b2f251"}, {
+        col: "#888888",
+        productId: "ch.yendis.krunkerhub.kr300"
+    }, {val: 600, priceSale: 1.61, price: 1.79, col: "#b2f251", productId: "ch.yendis.krunkerhub.kr600"}, {
         val: 2600,
         priceSale: 6.74,
         price: 7.49,
-        col: "#3696f3"
-    }, {val: 7e3, priceSale: 14.39, price: 15.99, col: "#e040fb"}, {
+        col: "#3696f3",
+        productId: "ch.yendis.krunkerhub.kr2600"
+    }, {val: 7e3, priceSale: 14.39, price: 15.99, col: "#e040fb", productId: "ch.yendis.krunkerhub.kr7000"}, {
         val: 2e4,
         priceSale: 31.49,
         price: 34.99,
         tag: "Popular!",
         tagCol: "#ed4242",
-        col: "#fa9704"
-    }, {val: 6e4, priceSale: 89.99, price: 99.99, tag: "Best Value!", tagCol: "#E040FB", col: "#ee5356"}
-], module.exports.mobilePurchases = [
-    {val: 300, price: .99, productId: "ch.yendis.krunkerhub.kr300"}, {
-        val: 600,
-        price: 1.79,
-        productId: "ch.yendis.krunkerhub.kr600"
-    }, {val: 2600, price: 7.49, productId: "ch.yendis.krunkerhub.kr2600"}, {
-        val: 7e3,
-        price: 15.99,
-        productId: "ch.yendis.krunkerhub.kr7000"
-    }, {val: 2e4, price: 34.99, productId: "ch.yendis.krunkerhub.kr20000", tag: "Popular!", tagCol: "#ed4242"}, {
+        col: "#fa9704",
+        productId: "ch.yendis.krunkerhub.kr20000"
+    }, {
         val: 6e4,
+        priceSale: 89.99,
         price: 99.99,
-        productId: "ch.yendis.krunkerhub.kr60000",
         tag: "Best Value!",
-        tagCol: "#E040FB"
+        tagCol: "#E040FB",
+        col: "#ee5356",
+        productId: "ch.yendis.krunkerhub.kr60000"
     }
 ], module.exports.premium = [
     {val: 7, price: 2e3, tag: "Starter", tagCol: "#42ed56", headCol: "#2196F3"}, {
@@ -416,17 +412,17 @@ module.exports.wheels = [
         sell: 1e4,
         fee: 200
     }
-], module.exports.getSpnItems = function (a, t, n, i, r) {
-    t = t || 0;
-    var s = [], o = a.itemTypes, l = a.limType, d = a.weaponType;
-    if (a.itemIndexs) return a.itemIndexs;
-    for (var c = 0; c < module.exports.skins.length; ++c) module.exports.skins[c] && !module.exports.skins[c].limited && !module.exports.skins[c].blocked && !module.exports.skins[c].noSpin && !module.exports.skins[c].blackM && (module.exports.skins[c].rarity == t || r && module.exports.skins[c].rarity >= r) && (!l || l == module.exports.skins[c].limT) && (l || !module.exports.skins[c].limT) && !(o && 0 > o.indexOf(module.exports.skins[c].type || 0)) && (!module.exports.skins[c].minRec || module.exports.skins[c].minRec && n && n.level < module.exports.skins[c].minRec) && (module.exports.skins[c].mSeas || (module.exports.skins[c].seas || 1) == i.currentSeason) && (null == d || d == module.exports.skins[c].weapon) && s.push(c);
-    return s
-}, module.exports.calcTradeFee = function (a) {
-    for (var t, n = 0, i = 0; i < a.length; ++i) (t = module.exports.skins[a[i]]) && (n += module.exports.rarities[t.rarity].fee || 0);
+], module.exports.getSpnItems = function (t, a, n, i, s) {
+    a = a || 0;
+    var r = [], o = t.itemTypes, l = t.limType, d = t.weaponType;
+    if (t.itemIndexs) return t.itemIndexs;
+    for (var c = 0; c < module.exports.skins.length; ++c) module.exports.skins[c] && !module.exports.skins[c].limited && !module.exports.skins[c].blocked && !module.exports.skins[c].noSpin && !module.exports.skins[c].blackM && (module.exports.skins[c].rarity == a || s && module.exports.skins[c].rarity >= s) && (!l || l == module.exports.skins[c].limT) && (l || !module.exports.skins[c].limT) && !(o && 0 > o.indexOf(module.exports.skins[c].type || 0)) && (!module.exports.skins[c].minRec || module.exports.skins[c].minRec && n && n.level < module.exports.skins[c].minRec) && (module.exports.skins[c].mSeas || (module.exports.skins[c].seas || 1) == i.currentSeason) && (null == d || d == module.exports.skins[c].weapon) && r.push(c);
+    return r
+}, module.exports.calcTradeFee = function (t) {
+    for (var a, n = 0, i = 0; i < t.length; ++i) (a = module.exports.skins[t[i]]) && (n += module.exports.rarities[a.rarity].fee || 0);
     return n
-}, module.exports.getFreeKR = function (a) {
-    return {kr: module.exports.freeKR[a].kr[0], rarity: module.exports.freeKR[a].rarity}
+}, module.exports.getFreeKR = function (t) {
+    return {kr: module.exports.freeKR[t].kr[0], rarity: module.exports.freeKR[t].rarity}
 }, module.exports.freeKR = [
     {kr: [5], rarity: 0}, {kr: [10], rarity: 1}, {kr: [20], rarity: 2}, {
         kr: [500],
@@ -9266,7 +9262,7 @@ module.exports.wheels = [
         seas: 3
     }, {
         name: "Stream Suit",
-        limT: "Twitch #1",
+        limT: "Twitch",
         id: 10,
         shirtCol: 6570405,
         sleeveCol: 16448250,
@@ -9307,7 +9303,7 @@ module.exports.wheels = [
     }, {
         name: "USS TTV",
         keyW: "Waist",
-        limT: "Twitch #1",
+        limT: "Twitch",
         tex: 1,
         rarity: 5,
         seas: 3,
@@ -9331,7 +9327,7 @@ module.exports.wheels = [
     }, {
         name: "TTV",
         keyW: "Sprays",
-        limT: "Twitch #1",
+        limT: "Twitch",
         id: 80,
         type: 4,
         rarity: 1,
@@ -9340,7 +9336,7 @@ module.exports.wheels = [
         noSpin: !0
     }, {
         name: "TTV Cape",
-        limT: "Twitch #1",
+        limT: "Twitch",
         id: 52,
         tex: 3,
         rarity: 4,
@@ -9359,7 +9355,7 @@ module.exports.wheels = [
         noSpin: !0
     }, {
         name: "TTV Tron",
-        limT: "Twitch #1",
+        limT: "Twitch",
         id: 32,
         tex: 6,
         rarity: 3,
@@ -9376,7 +9372,7 @@ module.exports.wheels = [
         noSpin: !0
     }, {
         name: "Krunk TTV",
-        limT: "Twitch #1",
+        limT: "Twitch",
         id: 32,
         tex: 7,
         rarity: 3,
@@ -9392,7 +9388,7 @@ module.exports.wheels = [
         noSpin: !0
     }, {
         name: "Twitched",
-        limT: "Twitch #1",
+        limT: "Twitch",
         id: 111,
         rarity: 2,
         type: 1,
@@ -9407,7 +9403,7 @@ module.exports.wheels = [
     }, {
         name: "tRaDeS?",
         keyW: "Sprays",
-        limT: "Twitch #1",
+        limT: "Twitch",
         id: 81,
         type: 4,
         rarity: 1,
@@ -9417,7 +9413,7 @@ module.exports.wheels = [
     }, {
         name: "Partner Push",
         keyW: "Sprays",
-        limT: "Twitch #1",
+        limT: "Twitch",
         id: 82,
         type: 4,
         rarity: 1,
@@ -9427,7 +9423,7 @@ module.exports.wheels = [
     }, {
         name: "Mic'd Up",
         keyW: "Knife",
-        limT: "Twitch #1",
+        limT: "Twitch",
         noSpin: !0,
         rarity: 4,
         seas: 3,
@@ -9444,7 +9440,7 @@ module.exports.wheels = [
     }, {
         name: "Zed",
         keyW: "Sprays",
-        limT: "Twitch #1",
+        limT: "Twitch",
         id: 84,
         type: 4,
         rarity: 1,
@@ -9454,7 +9450,7 @@ module.exports.wheels = [
     }, {
         name: "Kaarson",
         keyW: "Sprays",
-        limT: "Twitch #1",
+        limT: "Twitch",
         id: 86,
         type: 4,
         rarity: 1,
@@ -9463,7 +9459,7 @@ module.exports.wheels = [
         noSpin: !0
     }, {
         name: "TTV Vest",
-        limT: "Twitch #1",
+        limT: "Twitch",
         noSpin: !0,
         id: 58,
         rarity: 2,
@@ -9478,7 +9474,7 @@ module.exports.wheels = [
         xRot: Math.PI
     }, {
         name: "Cheerfull",
-        limT: "Twitch #1",
+        limT: "Twitch",
         noSpin: !0,
         id: 57,
         rarity: 4,
@@ -9495,7 +9491,7 @@ module.exports.wheels = [
         seas: 3
     }, {
         name: "Twitcher",
-        limT: "Twitch #1",
+        limT: "Twitch",
         noSpin: !0,
         id: 210,
         creator: "Nxbulah",
@@ -9506,7 +9502,7 @@ module.exports.wheels = [
         seas: 3
     }, {
         name: "Streamer",
-        limT: "Twitch #1",
+        limT: "Twitch",
         noSpin: !0,
         mid: 0,
         midT: 50,
@@ -9518,7 +9514,7 @@ module.exports.wheels = [
         seas: 3
     }, {
         name: "TTV-Cap",
-        limT: "Twitch #1",
+        limT: "Twitch",
         noSpin: !0,
         tex: 2,
         id: 74,
@@ -9532,7 +9528,7 @@ module.exports.wheels = [
         seas: 3
     }, {
         name: "Bits",
-        limT: "Twitch #1",
+        limT: "Twitch",
         noSpin: !0,
         id: 112,
         rarity: 5,
@@ -9545,8 +9541,8 @@ module.exports.wheels = [
         seas: 3
     }, {
         name: "Just Vibing",
-        limT: "Twitch #1",
-        creator: "???",
+        limT: "Twitch",
+        creator: "ImWaspy, Tehchy",
         pat: 11,
         tex: "weapons/pat/11",
         sameGlow: !0,
@@ -9936,7 +9932,7 @@ module.exports.wheels = [
         shaderId: 1
     }, {
         name: "Jason",
-        limT: "Twitch #2",
+        limT: "Twitch",
         id: 113,
         rarity: 4,
         type: 1,
@@ -9950,7 +9946,7 @@ module.exports.wheels = [
         trans: !0
     }, {
         name: "Sicko",
-        limT: "Twitch #2",
+        limT: "Twitch",
         id: 114,
         glow: !0,
         rarity: 3,
@@ -9965,7 +9961,7 @@ module.exports.wheels = [
         trans: !0
     }, {
         name: "Succubus",
-        limT: "Twitch #2",
+        limT: "Twitch",
         id: 115,
         glow: !0,
         rarity: 3,
@@ -9979,7 +9975,7 @@ module.exports.wheels = [
         xOff: .2
     }, {
         name: "Socket",
-        limT: "Twitch #2",
+        limT: "Twitch",
         noHead: !0,
         id: 116,
         rarity: 3,
@@ -9993,7 +9989,7 @@ module.exports.wheels = [
         xOff: .2
     }, {
         name: "Crunch",
-        limT: "Twitch #2",
+        limT: "Twitch",
         noHead: !0,
         id: 117,
         rarity: 1,
@@ -10007,7 +10003,7 @@ module.exports.wheels = [
         xOff: .2
     }, {
         name: "Paraseye",
-        limT: "Twitch #2",
+        limT: "Twitch",
         noHead: !0,
         id: 118,
         rarity: 2,
@@ -10020,7 +10016,7 @@ module.exports.wheels = [
         yOff: -.7
     }, {
         name: "Puff Puff",
-        limT: "Twitch #2",
+        limT: "Twitch",
         noHead: !0,
         id: 119,
         rarity: 3,
@@ -10033,7 +10029,7 @@ module.exports.wheels = [
         yOff: -.7
     }, {
         name: "Moneybags",
-        limT: "Twitch #2",
+        limT: "Twitch",
         noHead: !0,
         id: 121,
         rarity: 3,
@@ -10046,7 +10042,7 @@ module.exports.wheels = [
         yOff: -.7
     }, {
         name: "Braindead",
-        limT: "Twitch #2",
+        limT: "Twitch",
         noHead: !0,
         id: 122,
         rarity: 2,
@@ -10060,7 +10056,7 @@ module.exports.wheels = [
         trans: !0
     }, {
         name: "Gobbler",
-        limT: "Twitch #2",
+        limT: "Twitch",
         noHead: !0,
         id: 123,
         rarity: 3,
@@ -10073,7 +10069,7 @@ module.exports.wheels = [
         yOff: -.7
     }, {
         name: "Seefood",
-        limT: "Twitch #2",
+        limT: "Twitch",
         noHead: !0,
         id: 124,
         glow: !0,
@@ -10088,7 +10084,7 @@ module.exports.wheels = [
         trans: !0
     }, {
         name: "Mr Doodles",
-        limT: "Twitch #2",
+        limT: "Twitch",
         noHead: !0,
         id: 125,
         rarity: 3,
@@ -10102,7 +10098,7 @@ module.exports.wheels = [
         trans: !0
     }, {
         name: "Drowned",
-        limT: "Twitch #2",
+        limT: "Twitch",
         id: 126,
         rarity: 3,
         type: 1,
@@ -10116,7 +10112,7 @@ module.exports.wheels = [
         trans: !0
     }, {
         name: "Tentacle",
-        limT: "Twitch #2",
+        limT: "Twitch",
         id: 59,
         rarity: 4,
         type: 2,
@@ -10129,7 +10125,7 @@ module.exports.wheels = [
         sitOffZ: -.65
     }, {
         name: "Observer",
-        limT: "Twitch #2",
+        limT: "Twitch",
         id: 60,
         rarity: 5,
         type: 2,
@@ -10145,7 +10141,7 @@ module.exports.wheels = [
         rAnimA: "x"
     }, {
         name: "Butcher",
-        limT: "Twitch #2",
+        limT: "Twitch",
         id: 61,
         rarity: 2,
         type: 2,
@@ -10159,7 +10155,7 @@ module.exports.wheels = [
         prevRot: -.1
     }, {
         name: "Scales",
-        limT: "Twitch #2",
+        limT: "Twitch",
         id: 62,
         rarity: 2,
         type: 2,
@@ -10174,7 +10170,7 @@ module.exports.wheels = [
         xRot: Math.PI
     }, {
         name: "Pauldrons",
-        limT: "Twitch #2",
+        limT: "Twitch",
         id: 64,
         rarity: 2,
         type: 2,
@@ -10187,7 +10183,7 @@ module.exports.wheels = [
         xRot: Math.PI
     }, {
         name: "Walpurgis",
-        limT: "Twitch #2",
+        limT: "Twitch",
         id: 5,
         rarity: 4,
         type: 6,
@@ -10202,7 +10198,7 @@ module.exports.wheels = [
         noLegs: !0
     }, {
         name: "Scales",
-        limT: "Twitch #2",
+        limT: "Twitch",
         id: 7,
         rarity: 3,
         type: 6,
@@ -10218,7 +10214,7 @@ module.exports.wheels = [
         xRot: .6 * Math.PI
     }, {
         name: "Monster V",
-        limT: "Twitch #2",
+        limT: "Twitch",
         id: 89,
         type: 4,
         rarity: 1,
@@ -10227,7 +10223,7 @@ module.exports.wheels = [
         keyW: "Sprays"
     }, {
         name: "Monster III",
-        limT: "Twitch #2",
+        limT: "Twitch",
         id: 91,
         type: 4,
         rarity: 1,
@@ -10236,7 +10232,7 @@ module.exports.wheels = [
         keyW: "Sprays"
     }, {
         name: "Monster X",
-        limT: "Twitch #2",
+        limT: "Twitch",
         id: 92,
         type: 4,
         rarity: 1,
@@ -10245,7 +10241,7 @@ module.exports.wheels = [
         keyW: "Sprays"
     }, {
         name: "Demonic Haze",
-        limT: "Twitch #2",
+        limT: "Twitch",
         id: 218,
         creator: "Kilfy",
         weapon: 1,
@@ -10254,23 +10250,23 @@ module.exports.wheels = [
         seas: 3
     }, {
         name: "Vassago",
-        limT: "Twitch #2",
+        limT: "Twitch",
         id: 219,
         creator: "Lxckless",
         weapon: 1,
         rarity: 3,
         glow: !0,
         seas: 3
-    }, {name: "Cranium", limT: "Twitch #2", id: 220, weapon: 1, rarity: 2, seas: 3}, {
+    }, {name: "Cranium", limT: "Twitch", id: 220, weapon: 1, rarity: 2, seas: 3}, {
         name: "Ignis",
-        limT: "Twitch #2",
+        limT: "Twitch",
         id: 221,
         weapon: 1,
         rarity: 1,
         seas: 3
     }, {
         name: "Poseidon",
-        limT: "Twitch #2",
+        limT: "Twitch",
         id: 217,
         creator: "Atomize",
         weapon: 2,
@@ -10278,7 +10274,7 @@ module.exports.wheels = [
         seas: 3
     }, {
         name: "Overseer",
-        limT: "Twitch #2",
+        limT: "Twitch",
         id: 218,
         creator: "Luminae",
         weapon: 2,
@@ -10288,7 +10284,7 @@ module.exports.wheels = [
         seas: 3
     }, {
         name: "Etona",
-        limT: "Twitch #2",
+        limT: "Twitch",
         id: 219,
         creator: "Nxbulah",
         weapon: 2,
@@ -10297,7 +10293,7 @@ module.exports.wheels = [
         seas: 3
     }, {
         name: "NeoTitan",
-        limT: "Twitch #2",
+        limT: "Twitch",
         id: 220,
         creator: "FlowerKid",
         weapon: 2,
@@ -10307,7 +10303,7 @@ module.exports.wheels = [
         seas: 3
     }, {
         name: "Full Moon",
-        limT: "Twitch #2",
+        limT: "Twitch",
         id: 221,
         creator: "Kristai",
         weapon: 2,
@@ -10317,7 +10313,7 @@ module.exports.wheels = [
         seas: 3
     }, {
         name: "Nightmare",
-        limT: "Twitch #2",
+        limT: "Twitch",
         id: 222,
         creator: "CreshorTV",
         weapon: 2,
@@ -10327,7 +10323,7 @@ module.exports.wheels = [
         seas: 3
     }, {
         name: "Crimson",
-        limT: "Twitch #2",
+        limT: "Twitch",
         id: 223,
         creator: "Chromatikk",
         weapon: 2,
@@ -10337,7 +10333,7 @@ module.exports.wheels = [
         seas: 3
     }, {
         name: "Corruption",
-        limT: "Twitch #2",
+        limT: "Twitch",
         id: 224,
         creator: "Chromatikk",
         weapon: 2,
@@ -10347,7 +10343,7 @@ module.exports.wheels = [
         seas: 3
     }, {
         name: "Overwatch",
-        limT: "Twitch #2",
+        limT: "Twitch",
         id: 194,
         creator: "Destroy007",
         weapon: 4,
@@ -10355,32 +10351,32 @@ module.exports.wheels = [
         glow: !0,
         pulsT: .0015,
         seas: 3
-    }, {name: "Ignis", limT: "Twitch #2", id: 195, weapon: 4, rarity: 1, seas: 3}, {
+    }, {name: "Ignis", limT: "Twitch", id: 195, weapon: 4, rarity: 1, seas: 3}, {
         name: "Cranium",
-        limT: "Twitch #2",
+        limT: "Twitch",
         id: 196,
         weapon: 4,
         rarity: 2,
         seas: 3
     }, {
         name: "Symbiote",
-        limT: "Twitch #2",
+        limT: "Twitch",
         id: 139,
         creator: "Whippii",
         weapon: 5,
         rarity: 4,
         glow: !0,
         seas: 3
-    }, {name: "Cranium", limT: "Twitch #2", id: 140, weapon: 5, rarity: 2, seas: 3}, {
+    }, {name: "Cranium", limT: "Twitch", id: 140, weapon: 5, rarity: 2, seas: 3}, {
         name: "Ignis",
-        limT: "Twitch #2",
+        limT: "Twitch",
         id: 141,
         weapon: 5,
         rarity: 1,
         seas: 3
     }, {
         name: "Ignis",
-        limT: "Twitch #2",
+        limT: "Twitch",
         mid: 0,
         midT: 107,
         scl: .9,
@@ -10392,7 +10388,7 @@ module.exports.wheels = [
         seas: 3
     }, {
         name: "Cranium",
-        limT: "Twitch #2",
+        limT: "Twitch",
         mid: 0,
         midT: 108,
         scl: .9,
@@ -10404,7 +10400,7 @@ module.exports.wheels = [
         seas: 3
     }, {
         name: "Toxic Rider",
-        limT: "Twitch #2",
+        limT: "Twitch",
         id: 125,
         creator: "Destroy007",
         weapon: 7,
@@ -10414,22 +10410,22 @@ module.exports.wheels = [
         seas: 3
     }, {
         name: "Knightingale",
-        limT: "Twitch #2",
+        limT: "Twitch",
         id: 126,
         creator: "FailBucket",
         weapon: 7,
         rarity: 2,
         seas: 3
-    }, {name: "Cranium", limT: "Twitch #2", id: 127, weapon: 7, rarity: 2, seas: 3}, {
+    }, {name: "Cranium", limT: "Twitch", id: 127, weapon: 7, rarity: 2, seas: 3}, {
         name: "Ignis",
-        limT: "Twitch #2",
+        limT: "Twitch",
         id: 128,
         weapon: 7,
         rarity: 1,
         seas: 3
     }, {
         name: "Wildlife",
-        limT: "Twitch #2",
+        limT: "Twitch",
         mid: 0,
         midT: 55,
         creator: "Destroy007",
@@ -10437,17 +10433,17 @@ module.exports.wheels = [
         rarity: 3,
         glow: !0,
         seas: 3
-    }, {name: "Ignis", limT: "Twitch #2", mid: 0, midT: 56, weapon: 8, rarity: 1, seas: 3}, {
+    }, {name: "Ignis", limT: "Twitch", mid: 0, midT: 56, weapon: 8, rarity: 1, seas: 3}, {
         name: "Cranium",
-        limT: "Twitch #2",
+        limT: "Twitch",
         mid: 0,
         midT: 57,
         weapon: 8,
         rarity: 2,
         seas: 3
-    }, {name: "Ignis", limT: "Twitch #2", mid: 0, midT: 46, weapon: 10, rarity: 1, seas: 3}, {
+    }, {name: "Ignis", limT: "Twitch", mid: 0, midT: 46, weapon: 10, rarity: 1, seas: 3}, {
         name: "Cranium",
-        limT: "Twitch #2",
+        limT: "Twitch",
         mid: 0,
         midT: 47,
         weapon: 10,
@@ -10455,23 +10451,23 @@ module.exports.wheels = [
         seas: 3
     }, {
         name: "Devourer",
-        limT: "Twitch #2",
+        limT: "Twitch",
         id: 2,
         creator: "Kilfy",
         weapon: 11,
         rarity: 5,
         glow: !0,
         seas: 3
-    }, {name: "Ignis", limT: "Twitch #2", id: 128, weapon: 15, rarity: 1, seas: 3}, {
+    }, {name: "Ignis", limT: "Twitch", id: 128, weapon: 15, rarity: 1, seas: 3}, {
         name: "Cranium",
-        limT: "Twitch #2",
+        limT: "Twitch",
         id: 129,
         weapon: 15,
         rarity: 2,
         seas: 3
     }, {
         name: "Arachnidis",
-        limT: "Twitch #2",
+        limT: "Twitch",
         id: 46,
         tex: 1,
         rarity: 5,
@@ -10487,7 +10483,7 @@ module.exports.wheels = [
         shaderId: 3
     }, {
         name: "Infinity Cloak",
-        limT: "Twitch #2",
+        limT: "Twitch",
         id: 52,
         tex: 5,
         rarity: 5,
@@ -10506,7 +10502,7 @@ module.exports.wheels = [
     }, {
         name: "Sorable",
         keyW: "Sprays",
-        limT: "Twitch #2",
+        limT: "Twitch",
         id: 93,
         type: 4,
         rarity: 1,
@@ -10515,7 +10511,7 @@ module.exports.wheels = [
     }, {
         name: "Stremz",
         keyW: "Sprays",
-        limT: "Twitch #2",
+        limT: "Twitch",
         id: 94,
         type: 4,
         rarity: 2,
@@ -10610,7 +10606,7 @@ module.exports.wheels = [
         seas: 3
     }, {
         name: "Tedssyt",
-        limT: "Twitch #2",
+        limT: "Twitch",
         id: 228,
         creator: "Cimota",
         weapon: 1,
@@ -10620,7 +10616,7 @@ module.exports.wheels = [
         seas: 3
     }, {name: "Onamu", id: 226, creator: "Nxbulah", weapon: 2, rarity: 4, glow: !0, seas: 3}, {
         name: "Pestilence",
-        limT: "Twitch #2",
+        limT: "Twitch",
         id: 227,
         creator: "Chromatikk",
         weapon: 2,
@@ -10629,7 +10625,7 @@ module.exports.wheels = [
         seas: 3
     }, {
         name: "Siktis",
-        limT: "Twitch #2",
+        limT: "Twitch",
         id: 198,
         creator: "FlowerKid",
         weapon: 4,
@@ -10733,7 +10729,7 @@ module.exports.wheels = [
         seas: 3
     }, {name: "Modular", id: 0, creator: "Floatingpoint", weapon: 17, rarity: 3, seas: 3}, {
         name: "Googly",
-        limT: "Twitch #2",
+        limT: "Twitch",
         id: 127,
         rarity: 4,
         type: 1,
@@ -11766,6 +11762,7 @@ module.exports.wheels = [
     }, {
         name: "OMEGASOUL",
         limT: "Raid",
+        creator: "ItsAbsent",
         rarity: 2,
         seas: 4,
         id: 103,
@@ -15633,7 +15630,7 @@ module.exports.wheels = [
     }, {
         name: "Psychofang",
         keyW: "Knife",
-        creator: "Uvaiz",
+        creator: "uvaizfasel",
         flipAnim: !0,
         id: 3,
         tex: 14,
@@ -19718,9 +19715,9 @@ module.exports.wheels = [
         limT: "Charity",
         creator: "CreshorTV",
         streamer: "HeyImZed",
+        event: 0,
         drop: !0,
         time: {start: "March 6, 2021 9:00 AM UTC", end: "March 7, 2021 11:00 AM UTC"},
-        watch: "1 Hour",
         seas: 4,
         flipAnim: !0,
         id: 3,
@@ -19741,9 +19738,9 @@ module.exports.wheels = [
         limT: "Charity",
         creator: "CreshorTV",
         streamer: "HeyImZed",
+        event: 0,
         drop: !0,
         time: {start: "March 6, 2021 9:00 AM UTC", end: "March 7, 2021 11:00 AM UTC"},
-        watch: "1 Hour",
         seas: 4,
         weapon: 2,
         id: 305,
@@ -19755,9 +19752,9 @@ module.exports.wheels = [
         limT: "Charity",
         creator: "Nxbulah",
         streamer: "SwaggerSouls",
+        event: 0,
         drop: !0,
         time: {start: "March 7, 2021 1:00 AM UTC", end: "March 7, 2021 4:00 AM UTC"},
-        watch: "1 Hour",
         seas: 4,
         rarity: 4,
         id: 36,
@@ -19774,9 +19771,9 @@ module.exports.wheels = [
         limT: "Charity",
         creator: "iSpy, Nxbulah",
         streamer: "SwaggerSouls",
+        event: 0,
         drop: !0,
         time: {start: "March 7, 2021 1:00 AM UTC", end: "March 7, 2021 4:00 AM UTC"},
-        watch: "1 Hour",
         seas: 4,
         mid: 0,
         weapon: 14,
@@ -19785,9 +19782,9 @@ module.exports.wheels = [
         name: "Cat Headphones",
         limT: "Charity",
         streamer: "TobyOnTheTele",
+        event: 0,
         drop: !0,
         time: {start: "March 7, 2021 4:00 AM UTC", end: "March 7, 2021 7:00 AM UTC"},
-        watch: "1 Hour",
         seas: 4,
         id: 205,
         sclMlt: .5,
@@ -19799,9 +19796,9 @@ module.exports.wheels = [
         name: "Toby Backpack",
         limT: "Charity",
         streamer: "TobyOnTheTele",
+        event: 0,
         drop: !0,
         time: {start: "March 7, 2021 4:00 AM UTC", end: "March 7, 2021 7:00 AM UTC"},
-        watch: "1 Hour",
         seas: 4,
         id: 73,
         tex: 4,
@@ -19818,9 +19815,9 @@ module.exports.wheels = [
         limT: "Charity",
         creator: "Nxbulah",
         streamer: "Kaarson",
+        event: 0,
         drop: !0,
         time: {start: "March 6, 2021 5:00 PM UTC", end: "March 6, 2021 9:00 PM UTC"},
-        watch: "1 Hour",
         seas: 4,
         tex: 2,
         id: 72,
@@ -19835,9 +19832,9 @@ module.exports.wheels = [
         limT: "Charity",
         creator: "Nxbulah",
         streamer: "Kaarson",
+        event: 0,
         drop: !0,
         time: {start: "March 6, 2021 5:00 PM UTC", end: "March 6, 2021 9:00 PM UTC"},
-        watch: "1 Hour",
         seas: 4,
         id: 10,
         tex: 4,
@@ -19856,9 +19853,9 @@ module.exports.wheels = [
         limT: "Charity",
         creator: "Kilfy",
         streamer: "ImWaspy",
+        event: 0,
         drop: !0,
         time: {start: "March 6, 2021 9:00 PM UTC", end: "March 7, 2021 1:00 AM UTC"},
-        watch: "1 Hour",
         seas: 4,
         id: 52,
         tex: 8,
@@ -19879,9 +19876,9 @@ module.exports.wheels = [
         limT: "Charity",
         creator: "Kilfy",
         streamer: "ImWaspy",
+        event: 0,
         drop: !0,
         time: {start: "March 6, 2021 9:00 PM UTC", end: "March 7, 2021 1:00 AM UTC"},
-        watch: "1 Hour",
         seas: 4,
         id: 91,
         tex: 7,
@@ -19895,9 +19892,9 @@ module.exports.wheels = [
         limT: "Charity",
         creator: "Nxbulah, Kilfy, CreshorTV",
         streamer: "SwixieThinks",
+        event: 0,
         drop: !0,
         time: {start: "March 6, 2021 1:00 PM UTC", end: "March 6, 2021 5:00 PM UTC"},
-        watch: "1 Hour",
         id: 296,
         seas: 4,
         weapon: 1,
@@ -19907,9 +19904,9 @@ module.exports.wheels = [
         limT: "Charity",
         creator: "Kilfy",
         streamer: "SwixieThinks",
+        event: 0,
         drop: !0,
         time: {start: "March 6, 2021 1:00 PM UTC", end: "March 6, 2021 5:00 PM UTC"},
-        watch: "1 Hour",
         seas: 4,
         type: 1,
         keyW: "Head",
@@ -21351,11 +21348,380 @@ module.exports.wheels = [
         req: function (e) {
             return e && e.stats && 1089e4 <= (e.stats.c4 || 0)
         }
+    }, {
+        name: "Cotton Candy",
+        creator: "ImWaspy, Tehchy",
+        streamer: "ImWaspy",
+        event: 1,
+        drop: !0,
+        id: 17,
+        shirtCol: 16757721,
+        sleeveCol: 65535,
+        pantsCol: 65535,
+        shoeCol: 16757721,
+        hairCol: 65535,
+        seas: 4,
+        type: 5,
+        rarity: 4
+    }, {
+        name: "Mood",
+        creator: "LizSwitch, Tehchy",
+        streamer: "LizSwitch",
+        event: 1,
+        drop: !0,
+        id: 18,
+        shirtCol: 655464,
+        sleeveCol: 4325517,
+        pantsCol: 2490491,
+        shoeCol: 655464,
+        seas: 4,
+        type: 5,
+        rarity: 4
+    }, {
+        name: "Moonflyer",
+        creator: "iSpy, Nxbulah",
+        streamer: "MoonJuice",
+        event: 1,
+        drop: !0,
+        rarity: 4,
+        seas: 4,
+        id: 20,
+        type: 6,
+        keyW: "Waist",
+        scl: 2.1,
+        spnScl: 2.5,
+        sclMlt: 2.8,
+        yOff: -1.5,
+        xOff: -1,
+        sitOff: 0,
+        prevRot: 4,
+        noLegs: !0,
+        lowR: !0
+    }, {
+        name: "Meaty’s Cleaver",
+        creator: "iSpy, Nxbulah",
+        streamer: "TheMeatman",
+        event: 1,
+        drop: !0,
+        id: 39,
+        type: 3,
+        keyW: "Knife",
+        animInd: 1,
+        seas: 4,
+        scl: 2,
+        sclMlt: .9,
+        yOff: -2,
+        rarity: 4
+    }, {
+        name: "RiotAlexis",
+        id: 317,
+        creator: "Nxbulah",
+        streamer: "RiotAlexis",
+        event: 1,
+        drop: !0,
+        weapon: 2,
+        rarity: 4,
+        glow: !0,
+        seas: 4
+    }, {
+        name: "Car-Sun",
+        creator: "iSpy, Nxbulah",
+        streamer: "Kaarson",
+        event: 1,
+        drop: !0,
+        id: 19,
+        rarity: 3,
+        type: 6,
+        keyW: "Waist",
+        seas: 4,
+        scl: 3.6,
+        spnScl: 3.5,
+        yOff: -2,
+        side: 2,
+        sclMlt: 2.6,
+        sitOff: 1.4,
+        prevRot: 4
+    }, {
+        name: "Z3AGLE",
+        id: 37,
+        creator: "Nxbulah",
+        streamer: "HeyImZed",
+        event: 1,
+        drop: !0,
+        weapon: 11,
+        rarity: 4,
+        glow: !0,
+        pulsT: .0015,
+        seas: 4
+    }, {
+        name: "Nav",
+        id: 306,
+        creator: "Nxbulah",
+        streamer: "NavF",
+        event: 1,
+        drop: !0,
+        weapon: 1,
+        rarity: 4,
+        glow: !0,
+        seas: 4
+    }, {
+        name: "Quacker",
+        creator: "Flowerkid",
+        streamer: "Quacky",
+        event: 1,
+        drop: !0,
+        mid: 4,
+        seas: 4,
+        weapon: 2,
+        rarity: 4
+    }, {
+        name: "Elimination",
+        id: 315,
+        creator: "Kilfy",
+        streamer: "Breme",
+        event: 1,
+        drop: !0,
+        weapon: 2,
+        rarity: 3,
+        glow: !0,
+        seas: 4
+    }, {
+        name: "Whippard",
+        creator: "Nxbulah",
+        streamer: "Whippii",
+        event: 1,
+        drop: !0,
+        id: 219,
+        type: 4,
+        rarity: 3,
+        opacity: .8,
+        keyW: "Sprays",
+        seas: 4
+    }, {
+        name: "CONSP11RE",
+        id: 269,
+        creator: "Kilfy",
+        streamer: "Conspiire",
+        event: 1,
+        drop: !0,
+        weapon: 4,
+        rarity: 3,
+        glow: !0,
+        seas: 4
+    }, {
+        name: "Vkingrev",
+        id: 316,
+        creator: "Kilfy",
+        streamer: "Vikingrev",
+        event: 1,
+        drop: !0,
+        weapon: 2,
+        rarity: 4,
+        glow: !0,
+        seas: 4
+    }, {
+        name: "Frankie",
+        creator: "Kilfy",
+        streamer: "Geoff2F",
+        event: 1,
+        drop: !0,
+        id: 218,
+        type: 4,
+        rarity: 3,
+        opacity: .8,
+        keyW: "Sprays",
+        seas: 4
+    }, {
+        name: "ThiccChemist",
+        id: 38,
+        creator: "Nxbulah",
+        streamer: "ThiccChemist",
+        event: 1,
+        drop: !0,
+        weapon: 11,
+        rarity: 3,
+        glow: !0,
+        pulsT: .0015,
+        seas: 4
+    }, {
+        name: "Cyberdragon",
+        id: 270,
+        creator: "Multihawk, Luminae",
+        event: 1,
+        drop: !0,
+        weapon: 4,
+        rarity: 4,
+        glow: !0,
+        pulsT: .0015,
+        seas: 4
+    }, {
+        name: "Parade Poncho",
+        creator: "FlowerKid",
+        streamer: "ItsAbsent",
+        event: 1,
+        drop: !0,
+        id: 52,
+        tex: 10,
+        rarity: 4,
+        side: 2,
+        glow: !0,
+        type: 2,
+        keyW: "Body",
+        xRot: 3,
+        xOff: -1,
+        yOff: .5,
+        spnScl: 2.6,
+        sclMlt: 2.4,
+        sitOff: -.5,
+        sitOffZ: -.6,
+        seas: 4
+    }, {
+        name: "Killa",
+        creator: "CreshorTV",
+        id: 3,
+        rarity: 5,
+        type: 7,
+        keyW: "Face",
+        seas: 4,
+        sitOff: 1,
+        sitOffZ: 0,
+        sitMlt: 0,
+        trans: !0,
+        yOff: -.7,
+        xOff: 2.2,
+        xRot: -.5,
+        noSale: !0,
+        blackM: !0,
+        funds: 1e4,
+        reqT: "Get 50,000 kills",
+        req: function (e) {
+            return e && e.kills && 5e4 <= e.kills
+        }
+    }, {
+        name: "Redneck",
+        creator: "CreshorTV",
+        id: 0,
+        tex: 76,
+        rarity: 3,
+        type: 7,
+        keyW: "Face",
+        seas: 4,
+        sitOff: 1,
+        sitOffZ: .005,
+        trans: !0,
+        yOff: -.7,
+        xOff: 2.2,
+        xRot: -.5
+    }, {
+        name: "DownUnder",
+        creator: "CreshorTV",
+        id: 0,
+        tex: 77,
+        rarity: 4,
+        type: 7,
+        keyW: "Face",
+        seas: 4,
+        sitOff: 1,
+        sitOffZ: .005,
+        trans: !0,
+        yOff: -.7,
+        xOff: 2.2,
+        xRot: -.5
+    }, {
+        name: "Yas Queen",
+        creator: "CreshorTV",
+        id: 0,
+        tex: 78,
+        rarity: 4,
+        type: 7,
+        keyW: "Face",
+        seas: 4,
+        sitOff: 1,
+        sitOffZ: .005,
+        trans: !0,
+        yOff: -.7,
+        xOff: 2.2,
+        xRot: -.5
+    }, {
+        name: "Four Eyes",
+        creator: "CreshorTV",
+        id: 0,
+        tex: 79,
+        rarity: 3,
+        type: 7,
+        keyW: "Face",
+        seas: 4,
+        sitOff: 1,
+        sitOffZ: .005,
+        trans: !0,
+        yOff: -.7,
+        xOff: 2.2,
+        xRot: -.5
+    }, {
+        name: "Sniffer",
+        creator: "CreshorTV",
+        id: 0,
+        tex: 80,
+        rarity: 3,
+        type: 7,
+        keyW: "Face",
+        seas: 4,
+        sitOff: 1,
+        sitOffZ: .005,
+        trans: !0,
+        yOff: -.7,
+        xOff: 2.2,
+        xRot: -.5
+    }, {
+        name: "Brows",
+        creator: "CreshorTV",
+        id: 0,
+        tex: 81,
+        rarity: 3,
+        type: 7,
+        keyW: "Face",
+        seas: 4,
+        sitOff: 1,
+        sitOffZ: .005,
+        trans: !0,
+        yOff: -.7,
+        xOff: 2.2,
+        xRot: -.5
+    }, {
+        name: "Hangry",
+        creator: "CreshorTV",
+        id: 0,
+        tex: 82,
+        rarity: 4,
+        type: 7,
+        keyW: "Face",
+        seas: 4,
+        sitOff: 1,
+        sitOffZ: .005,
+        trans: !0,
+        yOff: -.7,
+        xOff: 2.2,
+        xRot: -.5
+    }, {
+        name: "Forced Smile",
+        creator: "CreshorTV",
+        id: 0,
+        tex: 83,
+        rarity: 3,
+        type: 7,
+        keyW: "Face",
+        seas: 4,
+        sitOff: 1,
+        sitOffZ: .005,
+        trans: !0,
+        yOff: -.7,
+        xOff: 2.2,
+        xRot: -.5
     }
 ], module.exports.limited = [];
-for (var t = [1, 2, 6, 7, 8], n = 0; n < module.exports.skins.length; n++) module.exports.skins[n].index = n, module.exports.skins[n].type && -1 != t.indexOf(module.exports.skins[n].type) && (null == module.exports.skins[n].sitOff && (module.exports.skins[n].sitOff = 0), null == module.exports.skins[n].sitOffZ && (module.exports.skins[n].sitOffZ = 0), null == module.exports.skins[n].sclMlt && (module.exports.skins[n].sclMlt = 0)), (module.exports.skins[n].weapon || module.exports.skins[n].type && 3 == module.exports.skins[n].type) && (null == module.exports.skins[n].trans && (module.exports.skins[n].trans = !1), null == module.exports.skins[n].alpha && (module.exports.skins[n].alpha = 0), null == module.exports.skins[n].side && (module.exports.skins[n].side = 0), null == module.exports.skins[n].glow && (module.exports.skins[n].glow = !1), null == module.exports.skins[n].pulsT && (module.exports.skins[n].pulsT = 0)), module.exports.skins[n].free && (module.exports.skins[n].limT = "Free", module.exports.skins[n].noSale = !0, module.exports.skins[n].noSpin = !0), module.exports.skins[n].itemShop && (module.exports.skins[n].noSale = 1 == module.exports.skins[n].itemShop, module.exports.skins[n].noSpin = !0, module.exports.skins[n].limited = !0), module.exports.skins[n].drop && (module.exports.skins[n].noSale = !0, module.exports.skins[n].noSpin = !0, module.exports.skins[n].limited = !0, module.exports.skins[n].noQuickSell = !0), module.exports.skins[n].mapReward && (module.exports.skins[n].noSale = !0, module.exports.skins[n].noSpin = !0, module.exports.skins[n].noQuickSell = !0);
-for (n = 0; n < module.exports.limited.length; n++) module.exports.limited[n].i = n
-},{}],3:[function(require,module,exports){
+for (var i = [1, 2, 6, 7, 8], s = 0; s < module.exports.skins.length; s++) module.exports.skins[s].index = s, module.exports.skins[s].type && -1 != i.indexOf(module.exports.skins[s].type) && (null == module.exports.skins[s].sitOff && (module.exports.skins[s].sitOff = 0), null == module.exports.skins[s].sitOffZ && (module.exports.skins[s].sitOffZ = 0), null == module.exports.skins[s].sclMlt && (module.exports.skins[s].sclMlt = 0)), (module.exports.skins[s].weapon || module.exports.skins[s].type && 3 == module.exports.skins[s].type) && (null == module.exports.skins[s].trans && (module.exports.skins[s].trans = !1), null == module.exports.skins[s].alpha && (module.exports.skins[s].alpha = 0), null == module.exports.skins[s].side && (module.exports.skins[s].side = 0), null == module.exports.skins[s].glow && (module.exports.skins[s].glow = !1), null == module.exports.skins[s].pulsT && (module.exports.skins[s].pulsT = 0)), module.exports.skins[s].free && (module.exports.skins[s].limT = "Free", module.exports.skins[s].noSale = !0, module.exports.skins[s].noSpin = !0), module.exports.skins[s].itemShop && (module.exports.skins[s].noSale = 1 == module.exports.skins[s].itemShop, module.exports.skins[s].noSpin = !0, module.exports.skins[s].limited = !0), module.exports.skins[s].drop && (module.exports.skins[s].noSale = !0, module.exports.skins[s].noSpin = !0, module.exports.skins[s].limited = !0, module.exports.skins[s].noQuickSell = !0, module.exports.skins[s].limT = "Twitch"), module.exports.skins[s].mapReward && (module.exports.skins[s].noSale = !0, module.exports.skins[s].noSpin = !0, module.exports.skins[s].noQuickSell = !0), module.exports.skins[s].thumbnail = n.getPreview(module.exports.skins[s], module.exports);
+for (s = 0; s < module.exports.limited.length; s++) module.exports.limited[s].i = s
+},{"./krunker":3}],3:[function(require,module,exports){
 const data = require("./data");
 const weapons = require("./weapons");
 const classes = require("./classes");
@@ -23455,6 +23821,10 @@ module.exports = [
     {
         "name": "3.7.8",
         "skins": 45
+    },
+    {
+        "name": "3.8.1",
+        "skins": 26
     }
 ];
 
@@ -23463,5 +23833,5 @@ module.exports = [
  */
 
 module.exports.early = "<=3.6.1";
-module.exports.latest = "3.7.8";
+module.exports.latest = "3.8.1";
 },{}]},{},[5]);
